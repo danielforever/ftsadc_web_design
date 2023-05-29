@@ -1,0 +1,11 @@
+.zoom-box {
+    background-color:transparent;
+    transition: transform .2s; /* Animation */
+  }
+  
+  .zoom-box:hover {
+    transform: scale(1.06);
+  }
+  .zoom-box:active {
+    transform: scale(1.05);
+  }
