@@ -28,7 +28,7 @@
 
 
 <!-- PROJECT LOGO -->
- [![React][React.js]][React-url] [![Node][Node.js]][Node-url] [![Tailwind][Tailwind.js]][Tailwind-url] [![Express][Express.js]][Express-url]
+[![React][React.js]][React-url] [![Node][Node.js]][Node-url] [![Tailwind][Tailwind.js]][Tailwind-url] [![Express][Express.js]][Express-url]
 <br />
 
 <div align="center">
@@ -104,11 +104,15 @@ Use the `BLANK_README.md` to get started.
 
 ### Built With
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-
+* [![React][React.js]][React-url]
+* [![Node][Node.js]][Node-url]
+* [![Tailwind][Tailwind.js]][Tailwind-url]
+* [![Express][Express.js]][Express-url]
 * [![Bootstrap][Bootstrap.com]][Bootstrap-url]
 * [![JQuery][JQuery.com]][JQuery-url]
 
+
+   
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
