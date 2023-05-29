@@ -9,7 +9,6 @@ import 'react-awesome-button/dist/styles.css';
 import './Navbar.css';
 
 const Navbar = ({state}) => {
-  /* const [open, setOpen] = useState(false); */
 
   return (
     <div>
@@ -121,7 +120,7 @@ const Navbar = ({state}) => {
                 <div className={state.langMode ? "hidden" : "shown"} onClick={() => state.setOpen(!state.open)}> 
                   SIGN IN
                 </div>
-                <div className={state.langMode ? "shown" : "hidden"} onClick={() => state.setOpen(!state.open)}> //weird?
+                <div className={state.langMode ? "shown" : "hidden"} onClick={() => state.setOpen(!state.open)}>
                   登入
                 </div>  
               </Button>

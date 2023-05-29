@@ -4,7 +4,7 @@ import './HeroSection.css';
 import { Button } from './Button';
 import videodc from "../../assets/videos/dc.mp4";
 
-const HeroSection = () => {
+const HeroSection = ({state}) => {
   return (
     <div className="hero-container">
       <p className="inline-flex text-4xl font-sans md:font-serif pb-4 text-white dark:text-gray-900">FTSADC</p>

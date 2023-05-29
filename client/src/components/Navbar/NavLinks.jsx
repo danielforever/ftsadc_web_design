@@ -214,7 +214,7 @@ const NavLinks = ({state}) => {
                     }`}
                   >
                     {slinks.sublink.map((slink) => (
-                      <li className="py-3 pl-14">
+                      <li className="py-3 pl-14 dark:text-white">
                         <Link to={slink.link} onClick={() => state.setOpen(!state.open)}>{slink.ch_name}</Link>
                       </li>
                     ))}

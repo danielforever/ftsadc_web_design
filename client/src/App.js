@@ -39,7 +39,7 @@ const App = () => {
 
   return (
     <div className={darkMode ? "dark": ""} >
-      <div className="App bg-neutral-100 dark:bg-dark_third"> 
+      <div className="App bg-neutral-100 dark:bg-dark_third duration-500"> 
         <Router>
           <Navbar state={state}/>
 {/*           <div> This is language mode: {langMode ? 'Chinese' : 'English'}</div> */}

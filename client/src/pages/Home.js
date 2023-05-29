@@ -11,7 +11,7 @@ function Home({state}) {
     <>
     <div>
       <section className="pt-10">
-        <HeroSection />
+        <HeroSection state={state}/>
       </section>
       
       <div className='w-screen h-fit grid grid-rows-1 text-white text-4xl md:grid-cols-2'>
@@ -20,9 +20,9 @@ function Home({state}) {
         </div>
           <div className='flex h-screen items-center w-full text-black centered md:h-screen pb-10 justify-center'>
             <div class="mx-auto pt-10">
-              <p className={`mb-8 font-normal text-center text-gray-500 text-3xl px-12 sm:px-16 xl:pl-5 dark:text-gray-400 ${state.langMode ? "hidden" : "shown"}`}>FTSADC</p>
-              <p className={`mb-8 font-normal text-center text-gray-500 text-3xl px-12 sm:px-16 xl:pl-5 dark:text-gray-400 ${state.langMode ? "shown" : "hidden"}`}>大華府地區臺灣同學會聯合會</p>
-              <p className={`mb-8 text-lg font-normal text-left text-gray-500 lg:text-xl px-10 sm:px-16 xl:pl-10 dark:text-gray-400 ${state.langMode ? "hidden" : "shown"}`}>Hello everyone, we are so thrilled to introduce us since FTSADC (The Federation of Taiwanese Student Association in Washington DC) is a newly founded organization. FTSADC aims at uniting Taiwanese students, assisting each university's Taiwanese Student Associations, and enhancing the cultural interaction of our students in the U.S ❣️ Our members include Taiwanese Student Associations from colleges across 11 states and District of Columbia that are in the range of 
+              <p className={`mb-8 font-normal text-center text-gray-500 text-3xl px-12 sm:px-16 xl:pl-5 dark:text-gray-200 ${state.langMode ? "hidden" : "shown"}`}>FTSADC</p>
+              <p className={`mb-8 font-normal text-center text-gray-500 text-3xl px-12 sm:px-16 xl:pl-5 dark:text-gray-200 ${state.langMode ? "shown" : "hidden"}`}>大華府地區臺灣同學會聯合會</p>
+              <p className={`mb-8 text-lg font-normal text-left text-gray-500 lg:text-xl px-10 sm:px-16 xl:pl-10 dark:text-gray-200 ${state.langMode ? "hidden" : "shown"}`}>Hello everyone, we are so thrilled to introduce us since FTSADC (The Federation of Taiwanese Student Association in Washington DC) is a newly founded organization. FTSADC aims at uniting Taiwanese students, assisting each university's Taiwanese Student Associations, and enhancing the cultural interaction of our students in the U.S ❣️ Our members include Taiwanese Student Associations from colleges across 11 states and District of Columbia that are in the range of 
               <Link
               to='https://www.taiwanembassy.org/us_en/index.html'
               target='_blank'
@@ -49,7 +49,7 @@ function Home({state}) {
             >
             &nbsp;LINKEDIN
             </Link> for more updates🌱We hope to create a community with shared network and resource, we will see you soon!</p>
-              <p className={`mb-8 text-lg font-normal text-left text-gray-500 lg:text-xl px-10 sm:px-16 xl:pl-10 dark:text-gray-400 ${state.langMode ? "shown" : "hidden"}`}>哈囉大家！首先要來跟各位介紹FTSADC 「大華府地區台灣同學會聯合會」🌱 我們的成立目的在於團結大華府地區的留美臺灣學生，輔助各校臺灣同學會服務臺灣同學、增進各校臺灣同學情誼，並促進臺灣學生與美國本土文化的互動交流。參與本學聯的臺灣同學會都是以位於
+              <p className={`mb-8 text-lg font-normal text-left text-gray-500 lg:text-xl px-10 sm:px-16 xl:pl-10 dark:text-gray-200 ${state.langMode ? "shown" : "hidden"}`}>哈囉大家！首先要來跟各位介紹FTSADC 「大華府地區台灣同學會聯合會」🌱 我們的成立目的在於團結大華府地區的留美臺灣學生，輔助各校臺灣同學會服務臺灣同學、增進各校臺灣同學情誼，並促進臺灣學生與美國本土文化的互動交流。參與本學聯的臺灣同學會都是以位於
               <Link
               to='https://www.taiwanembassy.org/us_en/index.html'
               target='_blank'
