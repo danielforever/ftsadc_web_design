@@ -13,7 +13,7 @@ const NavLinks = ({state}) => {
         <div className="py-2 z-40">
           <div className="px-4 text-left xl:cursor-pointer group group-hover:rotate-180 group-hover:-mt-2">
             <h1
-              className={`py-2 flex justify-between items-center xl:pr-0 pr-3 group dark:text-white ${state.langMode ? "hidden" : "shown"}`}
+              className={`py-2 flex justify-between items-center text-center xl:pr-0 pr-3 group dark:text-white ${state.langMode ? "hidden" : "shown"}`}
               onClick={() => {
                 heading !== link.name ? setHeading(link.name) : setHeading("");
                 setSubHeading("");
@@ -42,7 +42,7 @@ const NavLinks = ({state}) => {
                 setSubHeading("");
               }}
             >
-              <Link to={link.link} className="hover:text-primary">
+              <Link to={link.link} className="dark:text-white hover:text-primary">
               {link.ch_name}
               </Link>
               
@@ -70,16 +70,16 @@ const NavLinks = ({state}) => {
                   <div className="bg-slate-300 shadow-lg dark:bg-dark_third p-4 grid grid-cols-2 gap-5 rounded-xl">
                     {link.sublinks.map((mysublinks) => (
                       <div>
-                        <h1 className="text-lg font-semibold">
+                        <h1 className="text-lg font-semibold dark:text-white">
                             <HashLink smooth to={mysublinks.link} className="hover:text-primary">{mysublinks.Head}</HashLink>
                         </h1>
                         {mysublinks.sublink.map((slink) => (
-                          <li className="text-sm text-gray-600 my-2.5">
+                          <li className="text-sm text-gray-600 my-2.5 dark:text-white">
                             <Link
                               to={slink.link}
                               className="hover:text-primary"
                             >
-                              {slink.name}
+                             &nbsp;&nbsp;{slink.name}
                             </Link>
                           </li>
                         ))}
@@ -100,16 +100,16 @@ const NavLinks = ({state}) => {
                   <div className="bg-slate-300 dark:bg-dark_third p-4 grid grid-cols-2 gap-5 rounded-xl">
                     {link.sublinks.map((mysublinks) => (
                       <div>
-                        <h1 className="text-lg font-semibold">
+                        <h1 className="text-lg font-semibold dark:text-white">
                             <HashLink smooth to={mysublinks.link} className="hover:text-primary">{mysublinks.ch_Head}</HashLink>
                         </h1>
                         {mysublinks.sublink.map((slink) => (
-                          <li className="text-sm text-gray-600 my-2.5">
+                          <li className="text-sm text-gray-600 dark:text-white my-2.5">
                             <Link
                               to={slink.link}
                               className="hover:text-primary"
                             >
-                              {slink.ch_name}
+                              &nbsp;&nbsp;{slink.ch_name}
                             </Link>
                           </li>
                         ))}

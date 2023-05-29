@@ -11,7 +11,7 @@ import './Navbar.css';
 const Navbar = ({state}) => {
 
   return (
-    <div>
+    <div className="... sticky top-0">
       <nav className="pt-3 pb-3 duration-500">
           <div className="px-3 w-1280 inline-flex items-center font-medium shadow-lg rounded-2xl bg-slate-300 dark:bg-dark_primary duration-500">
             <div className="z-50 p-3 flex flex-shrink-0 justify-between">
@@ -29,7 +29,7 @@ const Navbar = ({state}) => {
             </div>
             <ul className="xl:flex hidden uppercase text-sm items-center gap-6 font-[Poppins]">
               <li>
-                <Link to="/" className="py-7 px-3 inline-block dark:text-white">
+                <Link to="/" className="py-7 px-3 inline-block text-center dark:text-white">
                   <div className={state.langMode ? "hidden" : "shown"} >
                   Home Page
                   </div>
@@ -40,7 +40,7 @@ const Navbar = ({state}) => {
               </li>
               <NavLinks state={state}/>
               <li>
-                <Link to="/sponsors" className="py-7 px-3 inline-block dark:text-white">
+                <Link to="/sponsors" className="py-7 px-3 inline-block text-center dark:text-white">
                   <div className={state.langMode ? "hidden" : "shown"}>
                     Sponsors
                   </div>
@@ -50,7 +50,7 @@ const Navbar = ({state}) => {
                 </Link>
               </li>
               <li>
-                <Link to="/contactus" className="py-7 px-3 inline-block dark:text-white">
+                <Link to="/contactus" className="py-7 px-3 inline-block text-center dark:text-white">
                 <div className={state.langMode ? "hidden" : "shown"}>
                   Contact Us
                 </div>

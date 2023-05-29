@@ -54,13 +54,13 @@ export const links = [
         ch_Head:"學聯會成員",
         link: "/aboutus/#ourMember",
         sublink: [
-          { name: "President & Vice-President", ch_name: "正副會長", link: "/" },
+/*           { name: "President & Vice-President", ch_name: "正副會長", link: "/" },
           { name: "Secretary", ch_name: "秘書組", link: "/" },
           { name: "Treasury", ch_name: "財務組", link: "/" },
           { name: "Event Planning Officer", ch_name: "活動組", link: "/" },
           { name: "Campus Public Relation", ch_name: "校學公關組", link: "/" },
           { name: "Cooperate Public Relation", ch_name: "企業公關組", link: "/" },
-          { name: "Tech & Web Engineer", ch_name: "行銷資訊組", link: "/" },
+          { name: "Tech & Web Engineer", ch_name: "行銷資訊組", link: "/" }, */
         ],
       },
     ],
@@ -103,7 +103,7 @@ export const links = [
     link: "/alltsa",
     sublinks: [
       {
-        Head: "各地區活動",
+        Head: "All Area",
         ch_Head:"各地區TSA",
         link: "/",
         sublink: [
