@@ -28,7 +28,7 @@
 
 
 <!-- PROJECT LOGO -->
-[![React][React.js]][React-url] [![Node][Node.js]][Node-url]
+[![React][React.js]][React-url] [![Node][Node.js]][Node-url] [![Tailwind][Tailwind.js]][Tailwind-url]
 <br />
 
 <div align="center">
@@ -254,6 +254,10 @@ Use this space to list resources you find helpful and would like to give credit 
 [React-url]: https://reactjs.org/
 [Node.js]: https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white
 [Node-url]: https://nodejs.org/en
+[Tailwind.js]: https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white
+[Tailwind-url]: https://tailwindcss.com/
+
+
 [Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
 [Bootstrap-url]: https://getbootstrap.com
 [JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
