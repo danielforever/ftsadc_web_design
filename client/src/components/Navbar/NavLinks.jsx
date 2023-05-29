@@ -64,10 +64,10 @@ const NavLinks = ({state}) => {
                 <div className="absolute top-15 hidden group-hover:xl:block hover:xl:block">
                   <div className="py-3 ">
                     <div
-                      className="w-4 h-4 left-6 absolute mt-2 bg-white dark:bg-dark_third rotate-45"
+                      className="w-4 h-4 left-6 absolute mt-2 shadow-lg bg-slate-300 dark:bg-dark_third rotate-45"
                     ></div>
                   </div>
-                  <div className="bg-white dark:bg-dark_third p-4 grid grid-cols-2 gap-5 rounded-xl">
+                  <div className="bg-slate-300 shadow-lg dark:bg-dark_third p-4 grid grid-cols-2 gap-5 rounded-xl">
                     {link.sublinks.map((mysublinks) => (
                       <div>
                         <h1 className="text-lg font-semibold">
@@ -94,10 +94,10 @@ const NavLinks = ({state}) => {
                 <div className="absolute top-15 hidden group-hover:xl:block hover:xl:block">
                   <div className="py-3 ">
                     <div
-                      className="w-4 h-4 left-6 absolute mt-2 bg-white dark:bg-dark_third rotate-45"
+                      className="w-4 h-4 left-6 absolute mt-2 bg-slate-300 dark:bg-dark_third rotate-45"
                     ></div>
                   </div>
-                  <div className="bg-white dark:bg-dark_third p-4 grid grid-cols-2 gap-5 rounded-xl">
+                  <div className="bg-slate-300 dark:bg-dark_third p-4 grid grid-cols-2 gap-5 rounded-xl">
                     {link.sublinks.map((mysublinks) => (
                       <div>
                         <h1 className="text-lg font-semibold">
@@ -131,7 +131,7 @@ const NavLinks = ({state}) => {
                   <h1 onClick={() =>subHeading !== slinks.Head  ? setSubHeading(slinks.Head)  : setSubHeading("")}
                     className={`py-4 pl-7 font-semibold md:pr-0 flex justify-between items-center xl:pr-0 pr-5`}
                   >
-                    <HashLink smooth to={slinks.link} className="hover:text-primary" onClick={() => state.setOpen(!state.open)}>{slinks.Head}</HashLink>
+                    <HashLink smooth to={slinks.link} className="dark:text-white hover:text-primary" onClick={() => state.setOpen(!state.open)}>{slinks.Head}</HashLink>
 {/*                   <Link
                     to={slinks.link}
                     className="hover:text-primary"
@@ -156,7 +156,7 @@ const NavLinks = ({state}) => {
                     }`}
                   >
                     {slinks.sublink.map((slink) => (
-                      <li className="py-3 pl-14">
+                      <li className="py-3 pl-14 dark:text-white">
                         <Link to={slink.link} onClick={() => state.setOpen(!state.open)}>{slink.name}</Link>
                       </li>
                     ))}
@@ -181,7 +181,7 @@ const NavLinks = ({state}) => {
                   <h1 onClick={() =>subHeading !== slinks.ch_Head  ? setSubHeading(slinks.ch_Head)  : setSubHeading("")}
                     className={`py-4 pl-7 font-semibold md:pr-0 flex justify-between items-center xl:pr-0 pr-5`}
                   >
-                  <HashLink smooth to={slinks.link} className="hover:text-primary" onClick={() => state.setOpen(!state.open)}>{slinks.ch_Head}</HashLink>
+                  <HashLink smooth to={slinks.link} className="dark:text-white hover:text-primary" onClick={() => state.setOpen(!state.open)}>{slinks.ch_Head}</HashLink>
 
                     <span className="text-xl xl:mt-1 xl:ml-2 inline">
                       <ion-icon

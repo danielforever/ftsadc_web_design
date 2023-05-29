@@ -13,8 +13,8 @@ const Navbar = ({state}) => {
 
   return (
     <div>
-      <nav className="pt-3 pb-3">
-          <div className="px-3 w-1280 inline-flex items-center font-medium shadow-lg rounded-2xl bg-slate-300 dark:bg-dark_primary">
+      <nav className="pt-3 pb-3 duration-500">
+          <div className="px-3 w-1280 inline-flex items-center font-medium shadow-lg rounded-2xl bg-slate-300 dark:bg-dark_primary duration-500">
             <div className="z-50 p-3 flex flex-shrink-0 justify-between">
               <img src={Logo} className="xl:cursor-pointer h-12" />
               <div className="p-3 text-3xl xl:hidden" onClick={() => state.setOpen(!state.open)}>
@@ -81,12 +81,12 @@ const Navbar = ({state}) => {
             {/* Mobile nav */}
             <ul
               className={`
-              z-40 xl:hidden  bg-white dark:bg-dark_third fixed w-full top-0 overflow-y-auto bottom-0 py-24 pl-4
+              z-40 xl:hidden  bg-slate-300 dark:bg-dark_third fixed w-full top-0 overflow-y-auto bottom-0 py-24 pl-4
             duration-500 ${state.open ? "left-0" : "left-[-100%]"}
             `}
             >
               <li>
-                <Link to="/" className="py-4 px-4 inline-block">
+                <Link to="/" className="py-4 px-4 inline-block dark:text-white">
                   <div className={state.langMode ? "hidden" : "shown"} onClick={() => state.setOpen(!state.open)}>
                   Home Page
                   </div>
@@ -97,7 +97,7 @@ const Navbar = ({state}) => {
               </li>
               <NavLinks state={state}/>
               <li>
-                <Link to="/" className="py-4 px-4 inline-block">
+                <Link to="/" className="py-4 px-4 inline-block dark:text-white">
                 <div className={state.langMode ? "hidden" : "shown"} onClick={() => state.setOpen(!state.open)}>
                     Sponsors
                   </div>
@@ -107,7 +107,7 @@ const Navbar = ({state}) => {
                 </Link>
               </li>
               <li>
-                <Link to="/contactus" className="py-4 px-4 inline-block">
+                <Link to="/contactus" className="py-4 px-4 inline-block dark:text-white">
                 <div className={state.langMode ? "hidden" : "shown"} onClick={() => state.setOpen(!state.open)}>
                   Contact Us
                 </div>
