@@ -28,7 +28,7 @@
 
 
 <!-- PROJECT LOGO -->
-### Built With [![React][React.js]][React-url] [![Node][Node.js]][Node-url] [![Tailwind][Tailwind.js]][Tailwind-url] [![Express][Express.js]][Express-url]
+ [![React][React.js]][React-url] [![Node][Node.js]][Node-url] [![Tailwind][Tailwind.js]][Tailwind-url] [![Express][Express.js]][Express-url]
 <br />
 
 <div align="center">
