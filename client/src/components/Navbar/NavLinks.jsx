@@ -130,7 +130,7 @@ const NavLinks = ({state}) => {
               <div>
                 <div>
                   <h1 onClick={() =>subHeading !== slinks.Head ? setSubHeading(slinks.Head) : setSubHeading("")}
-                    className={`py-4 pl-7 font-semibold md:pr-0 flex justify-between items-center xl:pr-0 pr-5`}
+                    className={`py-4 pl-7 font-semibold flex justify-between items-center xl:pr-0 pr-9`}
                   >
                     <HashLink smooth to={slinks.link} className="dark:text-white hover:text-primary" onClick={() => state.setOpen(!state.open)}>&nbsp;&nbsp;&nbsp;&nbsp;{slinks.Head}</HashLink>
                     
@@ -168,7 +168,7 @@ const NavLinks = ({state}) => {
               <div>
                 <div>
                   <h1 onClick={() =>subHeading !== slinks.ch_Head ? setSubHeading(slinks.ch_Head) : setSubHeading("")}
-                    className={`py-4 pl-7 font-semibold md:pr-0 flex justify-between items-center xl:pr-0 pr-5`}
+                    className={`py-4 pl-7 font-semibold flex justify-between items-center xl:pr-0 pr-9`}
                   >
                   <HashLink smooth to={slinks.link} className="dark:text-white hover:text-primary" onClick={() => state.setOpen(!state.open)}>&nbsp;&nbsp;&nbsp;&nbsp;{slinks.ch_Head}</HashLink>
 
