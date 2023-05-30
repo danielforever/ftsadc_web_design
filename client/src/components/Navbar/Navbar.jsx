@@ -20,12 +20,12 @@ const Navbar = ({state}) => {
                 <ion-icon name={`${state.open ? "close" : "menu"}`}></ion-icon>
               </div>
               <ul>
-              <li className="p-3 xl:hidden">
-                <BsFillMoonStarsFill onClick={() => {state.setDarkMode(!state.darkMode)}} className=" cursor-pointer text-2xl"/>
+                <li className="p-3 xl:hidden">
+                  <BsFillMoonStarsFill onClick={() => {state.setDarkMode(!state.darkMode)}} className=" cursor-pointer text-2xl"/>
                 
-              </li>
-            </ul>
-            <div className="p-3 xl:hidden"><FaLanguage onClick={() => {state.setLanguage(!state.langMode)}} className=" cursor-pointer text-3xl "/></div>
+                </li>
+              </ul>
+              <div className="p-3 xl:hidden"><FaLanguage onClick={() => {state.setLanguage(!state.langMode)}} className=" cursor-pointer text-3xl "/></div>
             </div>
             <ul className="xl:flex hidden uppercase text-sm items-center gap-6 font-[Poppins]">
               <li>
@@ -72,7 +72,7 @@ const Navbar = ({state}) => {
             </div>
             <ul>
             <li className="p-3 hidden xl:block" >
-                <BsFillMoonStarsFill onClick={() => {state.setDarkMode(!state.darkMode); state.setLanguage("English");}} className=" cursor-pointer text-2xl"/>
+                <BsFillMoonStarsFill onClick={() => {state.setDarkMode(!state.darkMode);}} className=" cursor-pointer text-2xl"/>
             </li>
             
             </ul>
