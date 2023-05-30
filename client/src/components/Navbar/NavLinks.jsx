@@ -18,10 +18,13 @@ const NavLinks = ({state}) => {
               onClick={() => {
                 heading !== link.name ? setHeading(link.name) : setHeading("");
                 setSubHeading("");
-                //state.setOpen(!state.open);
               }}
             >
-              <Link to={link.link} className="hover:text-primary">
+              <Link to={link.link}
+                onClick={() => {
+                  state.setOpen(!state.open);
+                }}
+                className="hover:text-primary">
               {link.name}
               </Link>
               <span className="text-xl xl:hidden inline">
@@ -43,7 +46,11 @@ const NavLinks = ({state}) => {
                 setSubHeading("");
               }}
             >
-              <Link to={link.link} className="dark:text-white hover:text-primary">
+              <Link to={link.link} 
+                onClick={() => {
+                  state.setOpen(!state.open);
+                }}              
+              className="dark:text-white hover:text-primary">
               {link.ch_name}
               </Link>
               

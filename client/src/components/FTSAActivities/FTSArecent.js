@@ -5,13 +5,13 @@ function FTSArecent({state}) {
   return (
     
     <div>
-      <div>
+{/*       <div>
         <p className={`p-10 mb-15 font-normal float-right text-gray-500 text-xl px-12 sm:px-16 xl:pl-5 dark:text-gray-400 ${state.langMode ? "hidden" : "shown"}`}>All FTSA Events!</p>
         <p className={`p-10 mb-15 font-normal float-right text-gray-500 text-xl px-12 sm:px-16 xl:pl-5 dark:text-gray-400 ${state.langMode ? "shown" : "hidden"}`}>更多學聯活動!</p>
-      </div>
+      </div> */}
     <div className='pb-20'>
       <p className={`mb-15 font-normal text-center text-gray-500 text-4xl px-12 sm:px-16 xl:pl-5 dark:text-gray-400 ${state.langMode ? "hidden" : "shown"}`}>FTSADC RECENT COMING EVENT!</p>
-      <p className={`mb-15 font-normal text-center text-gray-500 text-4xl px-12 sm:px-16 xl:pl-5 dark:text-gray-400 ${state.langMode ? "shown" : "hidden"}`}>FTSADC 近期活動!</p>
+      <p className={`mb-15 font-normal text-center text-gray-500 text-4xl sm:px-16  dark:text-gray-400 ${state.langMode ? "shown" : "hidden"}`}>FTSADC 近期活動!</p>
     </div>
     <div className="grid grid-cols-1 gap-6 xl:grid-cols-2 pb-20">
       <a href="https://ustwhack.super.site/" target="_blank">
