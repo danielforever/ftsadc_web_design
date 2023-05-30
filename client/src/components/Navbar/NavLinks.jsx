@@ -124,7 +124,7 @@ const NavLinks = ({state}) => {
           <div
             className={`${heading === link.name ? "xl:hidden" : "hidden" } ${state.langMode ? "hidden" : "shown"}`}
           >
-            {/* sublinks */}
+            {/* sublinks for English version*/}
             {link.sublinks.map((slinks) => (
               <div>
                 <div>
@@ -157,7 +157,7 @@ const NavLinks = ({state}) => {
                   >
                     {slinks.sublink.map((slink) => (
                       <li className="py-3 pl-14 dark:text-white">
-                        <Link to={slink.link} onClick={() => state.setOpen(!state.open)}>{slink.name}</Link>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<Link to={slink.link} onClick={() => state.setOpen(!state.open)}>{slink.name}</Link>
                       </li>
                     ))}
                   </div>
@@ -166,15 +166,10 @@ const NavLinks = ({state}) => {
             ))}
           </div>
 
-
-
-
-
-
           <div
             className={`${heading === link.ch_name ? "xl:hidden" : "hidden" } ${state.langMode ? "shown" : "hidden"}`}
           >
-            {/* sublinks */}
+            {/* sublinks for Chinese version*/}
             {link.sublinks.map((slinks) => (
               <div>
                 <div>
@@ -215,7 +210,7 @@ const NavLinks = ({state}) => {
                   >
                     {slinks.sublink.map((slink) => (
                       <li className="py-3 pl-14 dark:text-white">
-                        <Link to={slink.link} onClick={() => state.setOpen(!state.open)}>{slink.ch_name}</Link>
+                        &nbsp;&nbsp;<Link to={slink.link} onClick={() => state.setOpen(!state.open)}>{slink.ch_name}</Link>
                       </li>
                     ))}
                   </div>
