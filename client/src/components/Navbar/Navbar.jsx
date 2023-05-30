@@ -10,8 +10,10 @@ import './Navbar.css';
 
 const Navbar = ({state}) => {
 
+  const scrollDirection = useScrollDirection();
+
   return (
-    <div className="... sticky top-0">
+    <div className={`... sticky ${ scrollDirection === "down" ? "-top-40" : "top-0"} transition-all duration-900`}>
       <nav className="pt-3 pb-3 duration-500">
           <div className="px-3 w-1280 inline-flex items-center font-medium shadow-lg rounded-2xl bg-slate-300 dark:bg-dark_primary duration-500">
             <div className="z-50 p-3 flex flex-shrink-0 justify-between">
@@ -132,4 +134,29 @@ const Navbar = ({state}) => {
   );
 };
 
+
+
 export default Navbar;
+
+function useScrollDirection() {
+  const [scrollDirection, setScrollDirection] = useState(null);
+
+  useEffect(() => {
+    let lastScrollY = window.pageYOffset;
+
+    const updateScrollDirection = () => {
+      const scrollY = window.pageYOffset;
+      const direction = scrollY > lastScrollY ? "down" : "up";
+      if (direction !== scrollDirection && (scrollY - lastScrollY > 10 || scrollY - lastScrollY < -10)) {
+        setScrollDirection(direction);
+      }
+      lastScrollY = scrollY > 0 ? scrollY : 0;
+    };
+    window.addEventListener("scroll", updateScrollDirection); // add event listener
+    return () => {
+      window.removeEventListener("scroll", updateScrollDirection); // clean up
+    }
+  }, [scrollDirection]);
+
+  return scrollDirection;
+};

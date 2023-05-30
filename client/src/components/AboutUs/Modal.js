@@ -20,8 +20,16 @@ export default function Modal( {selected, setSelected}) {
                 onClick={(e) => e.stopPropagation()}
                 className="w-full max-w-[700px] mx-auto my-8 px-8 cursor-default"
             >
+
                 <motion.div layoutId={`card-${selected.id}`}>
-                    <img src={selected.url} />
+                <div>
+                <div className="text-right text-4xl" onClick={()=> setSelected(null)} >
+                    <ion-icon name="close"></ion-icon>
+                </div>
+                <img src={selected.url} />
+
+                </div>
+                    
                 </motion.div>
                 <motion.div
                 initial= {{
