@@ -20,7 +20,7 @@ function FTSArecent({state}) {
       <div class="mb-3 p-10 md:pr-20 md:pl-10 text-gray-500 dark:text-gray-400">
         <div class="mx-auto pt-10">
         <a href="https://ustwhack.super.site/" target="_blank">
-          <p className={`hover:text-primary mb-8 font-normal text-center text-gray-500 text-3xl px-12 sm:px-16 xl:pl-5 dark:text-gray-400 `}>2023 “USTW System Upgrade” Hackathon</p>
+          <p className={`hover:text-primary mb-8 font-normal text-center text-gray-500 text-3xl sm:px-16 xl:pl-5 dark:text-gray-400 `}>2023 “USTW System Upgrade” Hackathon</p>
         </a>
           <p className={`mb-8 text-lg font-normal text-left text-gray-500 lg:text-xl px-10 sm:px-16 xl:pl-10 dark:text-gray-400`}>In recent years, with the escalating conflict between the United States and China, US-Taiwan issues have gradually heated up. The United States Taiwan Watch (USTW) hopes to uphold its original spirit by organizing the "US-Taiwan System Upgrade Hackathon." The event calls for like-minded friends from home and abroad who are interested in promoting US-Taiwan relations to gather together and jointly devise strategies for Taiwan's future!</p>
           <p className={`pt-10 mb-1 text-lg font-normal text-left text-gray-500 lg:text-md px-10 sm:px-16 xl:pl-10 dark:text-gray-400 `}>Event Date: July 1st to 3rd</p>
