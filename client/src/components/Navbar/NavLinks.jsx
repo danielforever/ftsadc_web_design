@@ -10,7 +10,7 @@ const NavLinks = ({state}) => {
   return (
     <>
       {links.map((link) => (
-        <div className="py-2 z-40">
+        <div className="py-2 z-6">
           <div className="px-4 text-left xl:cursor-pointer group group-hover:rotate-180 group-hover:-mt-2">
             {/* English version */}
             <h1

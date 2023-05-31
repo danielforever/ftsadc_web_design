@@ -1,9 +1,12 @@
 import React from 'react';
 import Sign from "../components/Sign/Sign";
 
-function SignIn() {
+function SignIn({state}) {
   return (
     <div class="flex">
+{/*       {!state.open && (<section className="py-10 hidden md:block">
+        < Sign/>
+      </section>)} */}
       <section className="py-10 hidden md:block">
         < Sign/>
       </section>

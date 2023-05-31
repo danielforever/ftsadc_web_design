@@ -25,7 +25,7 @@ function Sign() {
     })
  };
   return (
-    <div >
+    <div /* class="z-5" */>
     <SignUpAnima.Container>
       <SignUpAnima.SignUpContainer signingIn={signIn}>
         <SignUpAnima.Form>

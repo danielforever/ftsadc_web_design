@@ -13,11 +13,11 @@ const Navbar = ({state}) => {
   const scrollDirection = useScrollDirection();
 
   return (
-    <div className={`... sticky ${ scrollDirection === "down" ? "-top-40" : "top-0"} transition-all duration-900`}>
+    <div className={`... sticky ${ scrollDirection === "down" ? "-top-40" : "top-0"} transition-all duration-900 z-40`}>
       <nav className="pt-3 pb-3 duration-500">
           <div className="px-3 w-1280 inline-flex items-center font-medium shadow-lg rounded-2xl bg-slate-300 dark:bg-dark_primary duration-500">
             <div className="z-50 p-3 flex flex-shrink-0 justify-between">
-              <img src={Logo} className="xl:cursor-pointer h-12" />
+              <img src={Logo} className="xl:cursor-pointer h-12" />  
               <div className="p-3 text-3xl xl:hidden" onClick={() => state.setOpen(!state.open)}>
                 <ion-icon name={`${state.open ? "close" : "menu"}`}></ion-icon>
               </div>
@@ -33,7 +33,7 @@ const Navbar = ({state}) => {
               <li>
                 <Link to="/" className="py-7 px-3 inline-block text-center dark:text-white">
                   <div className={state.langMode ? "hidden" : "shown"} >
-                  Home Page
+                    Home Page
                   </div>
                   <div className={state.langMode ? "shown" : "hidden"} >
                     首頁
@@ -68,7 +68,7 @@ const Navbar = ({state}) => {
                   SIGN IN
                 </div>
                 <div className={state.langMode ? "shown" : "hidden"} >
-                登入
+                  登入
                 </div>    
               </Button>
             </div>
@@ -82,14 +82,14 @@ const Navbar = ({state}) => {
             {/* Mobile nav */}
             <ul
               className={`
-              z-40 xl:hidden  bg-slate-300 dark:bg-dark_third fixed w-full top-0 overflow-y-auto bottom-0 py-24 pl-4
+              z-auto xl:hidden  bg-slate-300 dark:bg-dark_third fixed w-full top-0 overflow-y-auto bottom-0 py-24 pl-4
             duration-500 ${state.open ? "left-0" : "left-[-100%]"}
             `}
             >
               <li>
                 <Link to="/" className="py-4 px-4 inline-block dark:text-white">
                   <div className={state.langMode ? "hidden" : "shown"} onClick={() => state.setOpen(!state.open)}>
-                  Home Page
+                    Home Page
                   </div>
                   <div className={state.langMode ? "shown" : "hidden"} onClick={() => state.setOpen(!state.open)}>
                     首頁

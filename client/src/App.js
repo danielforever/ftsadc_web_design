@@ -42,7 +42,6 @@ const App = () => {
       <div className="App bg-neutral-100 dark:bg-dark_third duration-500"> 
         <Router>
           <Navbar state={state}/>
-{/*           <div> This is language mode: {langMode ? 'Chinese' : 'English'}</div> */}
           <Routes>
             <Route path="/" element={<Home state={state} />} />
             <Route path="/activities" element={<Activities state={state} />} />

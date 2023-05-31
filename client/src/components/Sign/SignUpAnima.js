@@ -46,7 +46,6 @@ export const SignUpContainer = styled.div`
   left: 0;
   width: 50%;
   opacity: 0;
-  z-index: 1;
   ${props =>
     props.signingIn !== true
       ? `
@@ -131,7 +130,7 @@ export const OverlayContainer = styled.div`
   height: 100%;
   overflow: hidden;
   transition: transform 0.6s ease-in-out;
-  z-index: 100;
+  z-index: 5;
   ${props =>
     props.signingIn !== true ? `transform: translateX(-100%);` : null}
 `;
