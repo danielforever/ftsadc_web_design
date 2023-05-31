@@ -78,11 +78,15 @@ const Navbar = ({state}) => {
             </div>
             <ul>
             <li className="p-3 hidden xl:block" >
-                <BsFillMoonStarsFill onClick={() => {state.setDarkMode(!state.darkMode);}} className=" cursor-pointer text-2xl"/>
+              {!state.darkMode && <BsFillMoonStarsFill onClick={() => {state.setDarkMode(!state.darkMode)}} className=" cursor-pointer text-2xl"/>}
+              {state.darkMode && <BsMoonStars onClick={() => {state.setDarkMode(!state.darkMode)}} className=" cursor-pointer text-2xl"/>}
             </li>
             
             </ul>
-            <div className="p-3 hidden xl:block"><FaLanguage onClick={() => {state.setLanguage(!state.langMode)}} className=" cursor-pointer text-3xl "/></div>
+            <div className="p-3 hidden xl:block">
+              {!state.langMode && <RiEnglishInput onClick={() => {state.setLanguage(!state.langMode)}} className=" cursor-pointer text-3xl "/>}
+              {state.langMode && <RiEmphasisCn onClick={() => {state.setLanguage(!state.langMode)}} className=" cursor-pointer text-3xl "/>}
+            </div>
             {/* Mobile nav */}
             <ul
               className={`
