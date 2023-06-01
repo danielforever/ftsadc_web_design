@@ -29,8 +29,8 @@ const Navbar = ({state}) => {
                 </li>
               </ul>
               <div className="p-3 xl:hidden">
-                {!state.langMode && <RiEnglishInput onClick={() => {state.setLanguage(!state.langMode)}} className=" cursor-pointer text-3xl "/>}
-                {state.langMode && <RiEmphasisCn onClick={() => {state.setLanguage(!state.langMode)}} className=" cursor-pointer text-3xl "/>}
+                {state.langMode && <RiEnglishInput onClick={() => {state.setLanguage(!state.langMode)}} className=" cursor-pointer text-3xl "/>}
+                {!state.langMode && <RiEmphasisCn onClick={() => {state.setLanguage(!state.langMode)}} className=" cursor-pointer text-3xl "/>}
               </div>
             </div>
             <ul className="xl:flex hidden uppercase text-sm items-center gap-6 font-[Poppins]">
@@ -84,8 +84,8 @@ const Navbar = ({state}) => {
             
             </ul>
             <div className="p-3 hidden xl:block">
-              {!state.langMode && <RiEnglishInput onClick={() => {state.setLanguage(!state.langMode)}} className=" cursor-pointer text-3xl "/>}
-              {state.langMode && <RiEmphasisCn onClick={() => {state.setLanguage(!state.langMode)}} className=" cursor-pointer text-3xl "/>}
+              {state.langMode && <RiEnglishInput onClick={() => {state.setLanguage(!state.langMode)}} className=" cursor-pointer text-3xl "/>}
+              {!state.langMode && <RiEmphasisCn onClick={() => {state.setLanguage(!state.langMode)}} className=" cursor-pointer text-3xl "/>}
             </div>
             {/* Mobile nav */}
             <ul
