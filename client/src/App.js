@@ -11,6 +11,7 @@ import AllTSA from './pages/AllTSA';
 import Sponsors from './pages/Sponsors';
 import ContactUs from './pages/ContactUs';
 import SignIn from './pages/SignIn';
+import Register from './pages/Register';
 
 import Navbar from "./components/Navbar/Navbar";
 import Footer from './components/Footer/Footer';
@@ -53,6 +54,7 @@ const App = () => {
             <Route path="/sponsors" element={<Sponsors state={state} />} />
             <Route path="/contactus" element={<ContactUs state={state} />} />
             <Route path="/signin" element={<SignIn state={state} />} />
+            <Route path="/Register" element={<Register state={state} />} />
           </Routes>
         <Footer state={state}/>
         </Router> 

@@ -1,12 +1,12 @@
 import React from 'react';
-import './Button.css';
+import './ButtonStyle.css';
 import { Link } from 'react-router-dom';
 
 const STYLES = ['btn--primary', 'btn--outline', 'btn--test'];
 
 const SIZES = ['btn--medium', 'btn--large'];
 
-export const Button = ({
+export const ButtonStyle = ({
   children,
   type,
   onClick,
@@ -33,4 +33,4 @@ export const Button = ({
 };
 
 
-export default Button;
+export default ButtonStyle;

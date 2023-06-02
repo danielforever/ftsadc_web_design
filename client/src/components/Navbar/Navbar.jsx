@@ -1,7 +1,7 @@
 import React, { useState, useEffect} from "react";
 import { Link } from "react-router-dom";
 import Logo from "../../assets/images/cropftsadclogo.png";
-import Button from "./Button";
+import ButtonStyle from "./ButtonStyle";
 import NavLinks from "./NavLinks";
 import {BsFillMoonStarsFill, BsMoonStars} from 'react-icons/bs';
 import { FaLanguage  } from "react-icons/fa";
@@ -67,14 +67,14 @@ const Navbar = ({state}) => {
               </li>
             </ul>
             <div className="xl:block hidden">
-              <Button className='btns_tailer' buttonStyle='btn--primary' buttonSize='btn--large' onClick={console.log('hey')}>
+              <ButtonStyle className='btns_tailer' buttonStyle='btn--primary' buttonSize='btn--large' onClick={console.log('hey')}>
                 <div className={state.langMode ? "hidden" : "shown"}>
                   SIGN IN
                 </div>
                 <div className={state.langMode ? "shown" : "hidden"} >
                   登入
                 </div>    
-              </Button>
+              </ButtonStyle>
             </div>
             <ul>
             <li className="p-3 hidden xl:block" >
@@ -95,7 +95,7 @@ const Navbar = ({state}) => {
             `}
             >
               <li>
-                <Link to="/" className="py-4 px-4 inline-block dark:text-white">
+                <Link to="/" className="py-4 px-4 inline-block  dark:text-white">
                   <div className={state.langMode ? "hidden" : "shown"} onClick={() => state.setOpen(!state.open)}>
                     Home Page
                   </div>
@@ -106,7 +106,7 @@ const Navbar = ({state}) => {
               </li>
               <NavLinks state={state}/>
               <li>
-                <Link to="/" className="py-4 px-4 inline-block dark:text-white">
+                <Link to="/" className="py-4 px-4 inline-block  dark:text-white">
                 <div className={state.langMode ? "hidden" : "shown"} onClick={() => state.setOpen(!state.open)}>
                     Sponsors
                   </div>
@@ -116,7 +116,7 @@ const Navbar = ({state}) => {
                 </Link>
               </li>
               <li>
-                <Link to="/contactus" className="py-4 px-4 inline-block dark:text-white">
+                <Link to="/contactus" className="py-4 px-4 inline-block  dark:text-white">
                 <div className={state.langMode ? "hidden" : "shown"} onClick={() => state.setOpen(!state.open)}>
                   Contact Us
                 </div>
@@ -126,14 +126,14 @@ const Navbar = ({state}) => {
                 </Link>
               </li>
               <div className="pl-5 pt-10">
-              <Button className='btns_tailer' buttonStyle='btn--primary' buttonSize='btn--large' onClick={console.log('hey')}>
+              <ButtonStyle className='btns_tailer' buttonStyle='btn--primary' buttonSize='btn--large' onClick={console.log('hey')}>
                 <div className={state.langMode ? "hidden" : "shown"} onClick={() => state.setOpen(!state.open)}> 
                   SIGN IN
                 </div>
                 <div className={state.langMode ? "shown" : "hidden"} onClick={() => state.setOpen(!state.open)}>
                   登入
                 </div>  
-              </Button>
+              </ButtonStyle>
               </div>
             </ul>
           </div>
