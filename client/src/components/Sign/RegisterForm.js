@@ -13,6 +13,10 @@ const REGISTER_URL = '/register';
 
 function RegisterForm() {
 
+  const DisableButton = {
+    state: false 
+  }
+
   const userRef = useRef();
   const errRef = useRef();
 
@@ -167,7 +171,7 @@ function RegisterForm() {
               Must match the first password input field.
           </p>
           <div className='pt-3 self-center'>
-            <ButtonStyle disabled={!validName || !validPwd || !validMatch ? true : false}>Sign Up</ButtonStyle>
+            <button disabled={!validName || !validPwd || !validMatch ? true : false}>Sign Up</button>
           </div>
           
       </form>
