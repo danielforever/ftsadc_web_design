@@ -56,6 +56,7 @@ function RegisterForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     // if button enabled with JS hack
+    // checking the submit information is same as the filled form
     const v1 = USER_REGEX.test(user);
     const v2 = PWD_REGEX.test(pwd);
     if (!v1 || !v2) {
@@ -64,6 +65,7 @@ function RegisterForm() {
     }
     try {
         const response = await axios.post(REGISTER_URL,
+            //JSON.stringify({ user:username, pwd:password }),
             JSON.stringify({ user, pwd }),
             {
                 headers: { 'Content-Type': 'application/json' },
@@ -80,12 +82,12 @@ function RegisterForm() {
         setPwd('');
         setMatchPwd('');
     } catch (err) {
-        if (!err?.response) {
+        if (!err?.response) { //this is including possiblities of losing internet connection
             setErrMsg('No Server Response');
         } else if (err.response?.status === 409) {
             setErrMsg('Username Taken');
         } else {
-            setErrMsg('Registration Failed')
+            setErrMsg('Registration Failed');
         }
         errRef.current.focus();
     }
@@ -95,6 +97,18 @@ function RegisterForm() {
 
 
   return (
+    <>
+      {success ? (
+        <section1>
+          <h1>
+            Success!
+          </h1>
+          <p>
+            <a href="/signin"> Sign In</a>
+          </p>
+        </section1>
+      ) : (
+      
     <section1>
       <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
       <h1>Register</h1>
@@ -145,7 +159,7 @@ function RegisterForm() {
           <p id="pwdnote" className={`text-xs ${pwdFocus && !validPwd ? "instructions" : "offscreen"}`}>
               <FontAwesomeIcon icon={faInfoCircle} />
               8 to 24 characters.<br />
-              Must include uppercase and lowercase letters, a number and a special character.<br />
+              Must include uppercase and lowercase letters,<br /> a number and a special character.<br />
               Allowed special characters: <span aria-label="exclamation mark">!</span> <span aria-label="at symbol">@</span> <span aria-label="hashtag">#</span> <span aria-label="dollar sign">$</span> <span aria-label="percent">%</span>
           </p>
 
@@ -179,10 +193,11 @@ function RegisterForm() {
         Already registered?<br />
         <span className="line">
             {/*put router link here*/}
-            <v href="#">Sign In</v>
+            <a href="/signin">Sign In</a>
         </span>
       </p>
     </section1>
+    )}</>
   )
 }
 

@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Link } from 'react-router-dom';
 import dcimage from "../assets/images/dcimage.jpg";
 import HeroSection from '../components/Home/HeroSection';
 
@@ -13,7 +13,6 @@ function Home({state}) {
       <section className="pt-10">
         <HeroSection state={state}/>
       </section>
-      
       <div className='w-screen h-fit grid grid-rows-1 text-white text-4xl md:grid-cols-2'>
         <div class="hero container flex-shrink-0 max-w-screen-lg pt-10 md:pt0 mx-auto pb-20 flex justify-center pr-5">
           <img src={dcimage} alt="image" className=' h-40 sm:h-60 lg:h-80 rounded-2xl'/>  

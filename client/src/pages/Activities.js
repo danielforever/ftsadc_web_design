@@ -1,4 +1,4 @@
-import {React, useState} from 'react';
+import {React} from 'react';
 /* import Statecard from '../components/State/Statecard';
 import allstates from "../components/State/data"; */
 import FTSArecent from '../components/FTSAActivities/FTSArecent';
@@ -6,7 +6,7 @@ import SchoolRecent from '../components/SchoolActivities/SchoolRecent';
 
 function Activities({state}) {
 
-  const [selected, setSelected] = useState(null);
+//  const [selected, setSelected] = useState(null);
 // -mt-10 md:-mt-16 ml-3 md:ml-0 h-20 w-20 md:h-32 md:w-32 border-[6px] border-white bg-white
   return (
   <div className='py-20'>
