@@ -1,4 +1,0 @@
-20230608	16:12:00	7c894f32-43dc-4aca-a054-82935984808c	TypeError: Cannot read properties of undefined (reading 'length')	POST	/users	undefined
-20230608	16:12:42	5e7a6c41-5550-418a-9cdf-ba37d712a825	TypeError: Cannot read properties of undefined (reading 'length')	POST	/users	undefined
-20230608	16:12:43	3ab59041-73f7-49b7-87e3-f19604f8cead	TypeError: Cannot read properties of undefined (reading 'length')	POST	/users	undefined
-20230608	16:21:05	7f444c4f-90d2-4254-b773-1527e3f12dbb	MongoWriteConcernError: No write concern mode named 'majority;' found in replica set configuration	POST	/users	undefined
