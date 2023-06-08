@@ -1,10 +1,26 @@
+require('dovend')
 const express = require('express');
+const app = express();
 const path = require('path');
+const { logger } = require('./middleware/logger')
 let mongoose = require('mongoose');
 let cors = require('cors');
+const cookieParser = require('cookie-parser');
+const corsOptions = require('./config/corsOptions');
 let bodyParser = require('body-parser');
 const userRoute = require('../server/routes/blog');
 const dbURL = 'mongodb+srv://testuser:12345@cluster0.qrz4436.mongodb.net/test';
+
+
+app.use(logger);
+
+app.use(cors(corsOptions));
+
+app.use(express.json())
+
+app.use(cookieParser)
+
+
 
 
 mongoose
@@ -15,12 +31,12 @@ mongoose
   .catch((err) => {
     console.error('Error connecting to mongo', err.reason)
   })
-const app = express();
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
     extended: true
 }));
-app.use(cors());
+
 
 
 
