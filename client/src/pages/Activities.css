@@ -1,0 +1,8 @@
+.zoom-box {
+    background-color:#CF4B32;
+    transition: transform .2s; /* Animation */
+  }
+  
+  .zoom-box:hover {
+    transform: scale(1.06);
+  }
