@@ -27,6 +27,7 @@ const createNewUser = asyncHandler(async (req, res) => {
 
     // Confirm data
     if (!username || !password || !Array.isArray(roles) || !roles.length) {
+
         return res.status(400).json({ message: 'All fields are required' })
     }
 

@@ -4,14 +4,11 @@ const app = express();
 const path = require('path');
 const { logger, logEvents } = require('./middleware/logger');
 const errorHandler = require('./middleware/errorHandler');
-let mongoose = require('mongoose');
-let cors = require('cors');
 const cookieParser = require('cookie-parser');
+let cors = require('cors');
 const corsOptions = require('./config/corsOptions');
 const connectDB = require('./config/dbConn')
-let bodyParser = require('body-parser');
-const userRoute = require('../server/routes/blog');
-//const dbURL = 'mongodb+srv://testuser:12345@cluster0.qrz4436.mongodb.net/test';
+let mongoose = require('mongoose');
 const PORT = process.env.PORT || 3500;
 
 
@@ -44,39 +41,6 @@ app.all('*', (req, res) => {
       res.type('txt').send('404 Not Found')
   }
 })
-
-/* mongoose
-  .connect(dbURL)
-  .then((x) => {
-    console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
-  })
-  .catch((err) => {
-    console.error('Error connecting to mongo', err.reason)
-  })
-
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({
-    extended: true
-})); */
-
-
-
-
-/* app.use('/users', userRoute) */
-
-
-/* const server = app.listen(PORT, () => {
-    console.log('Connected to port ' + PORT)
-}) */
-// Error Handling
-/* app.use((req, res, next) => {
-    next(createError(404));
-});
-app.use(function (err, req, res, next) {
-    console.error(err.message);
-    if (!err.statusCode) err.statusCode = 500;
-    res.status(err.statusCode).send(err.message);
-}); */
 
 app.use(errorHandler)
 
