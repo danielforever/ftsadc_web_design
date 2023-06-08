@@ -1,6 +1,6 @@
 import React from "react";
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter as Link } from 'react-router-dom';
+import {  Link } from 'react-router-dom';
 import dcimage from "../assets/images/dcimage.jpg";
 import HeroSection from '../components/Home/HeroSection';
 

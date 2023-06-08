@@ -1,4 +1,5 @@
-let express = require('express');
+const express = require('express');
+const path = require('path');
 let mongoose = require('mongoose');
 let cors = require('cors');
 let bodyParser = require('body-parser');
@@ -20,8 +21,12 @@ app.use(bodyParser.urlencoded({
     extended: true
 }));
 app.use(cors());
+
+
+
 app.use('/users', userRoute)
-const port = process.env.PORT || 4000;
+const port = process.env.PORT || 3500;
+
 const server = app.listen(port, () => {
     console.log('Connected to port ' + port)
 })
