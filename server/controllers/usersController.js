@@ -3,6 +3,10 @@ const Note = require('../models/Note')
 const asyncHandler = require('express-async-handler') //keep sending try catch blocks to get the password passing from fromend
 const bcrypt = require('bcrypt')
 
+
+
+const EMAIL_REGEX = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.+-]+\.edu$/
+
 // @desc Get all users
 // @route GET /users
 // @access Private
@@ -25,6 +29,8 @@ const getAllUsers = asyncHandler(async (req, res) => {
 const createNewUser = asyncHandler(async (req, res) => {
     const { username, password, email, roles } = req.body
 
+    
+    console.log(username, password, email, roles)
     // Confirm data
     if (!username || !password || !Array.isArray(roles) || !roles.length || !email) {
 
@@ -33,21 +39,27 @@ const createNewUser = asyncHandler(async (req, res) => {
 
     // Check for duplicate username
     const duplicateUsername = await User.findOne({ username }).lean().exec()
-    // Check for duplicate email
-    const duplicateEmail = await User.findOne({ email }).lean().exec()
 
     if (duplicateUsername) {
         return res.status(409).json({ message: 'Duplicate username' })
     }
 
+    // Check for duplicate email
+    const duplicateEmail = await User.findOne({ email }).lean().exec()
+
     if(duplicateEmail) {
         return res.status(409).json({ message: 'Duplicate email' })
+    }
+
+    // Check edu email
+    if (!EMAIL_REGEX.test(email)) {
+        return res.status(409).json({ message: 'This is not a valid edu email' })
     }
 
     // Hash password 
     const hashedPwd = await bcrypt.hash(password, 10) // salt rounds
 
-    const userObject = { username, "password": hashedPwd, roles }
+    const userObject = { username, "password": hashedPwd, email, roles }
 
     // Create and store new user 
     const user = await User.create(userObject)
@@ -59,17 +71,17 @@ const createNewUser = asyncHandler(async (req, res) => {
     }
 })
 
+
+// TODO:
+
 // @desc Update a user
 // @route PATCH /users
 // @access Private
 const updateUser = asyncHandler(async (req, res) => {
-    const { _id, username, roles, active, password } = req.body
-
+/*     const { _id, username, roles, email, active, password } = req.body */
+    const { _id, username, roles, email, active} = req.body
     // Confirm data 
-    if (!_id || !username || !Array.isArray(roles) || !roles.length || typeof active !== 'boolean') {
-        console.log(_id)
-        console.log(username)
-        console.log(roles)
+    if (!_id || !username || !Array.isArray(roles) || !roles.length || typeof active !== 'boolean' || !email) {
         return res.status(400).json({ message: 'All fields except password are required' })
     }
 
@@ -80,22 +92,36 @@ const updateUser = asyncHandler(async (req, res) => {
         return res.status(400).json({ message: 'User not found' })
     }
 
-    // Check for duplicate 
-    const duplicate = await User.findOne({ username }).lean().exec()
+    // Check for duplicate Username
+    const duplicateUsername = await User.findOne({ username }).lean().exec()
 
     // Allow updates to the original user 
-    if (duplicate && duplicate?._id.toString() !== _id) {
+    if (duplicateUsername && duplicateUsername?._id.toString() !== _id) {
         return res.status(409).json({ message: 'Duplicate username' })
     }
 
+
+    // Check for duplicate Email
+    const duplicateEmail = await User.findOne({email}).lean().exec()
+
+    if (duplicateEmail && duplicateEmail?._id.toString() !== _id) {
+        return res.status(409).json({ message: 'Duplicate email' })
+    }
+    // Check for edu email
+
+    if (!EMAIL_REGEX.test(email)) {
+        return res.status(409).json({ message: 'This is not a valid edu email' })
+    }
+
     user.username = username
+    user.email = email
     user.roles = roles
     user.active = active
 
-    if (password) {
+/*     if (password) {
         // Hash password 
         user.password = await bcrypt.hash(password, 10) // salt rounds 
-    }
+    } */
 
     const updatedUser = await user.save()
 
@@ -139,3 +165,5 @@ module.exports = {
     updateUser,
     deleteUser
 }
+
+
