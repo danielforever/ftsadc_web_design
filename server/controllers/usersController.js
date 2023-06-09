@@ -72,7 +72,7 @@ const createNewUser = asyncHandler(async (req, res) => {
 })
 
 
-// TODO:
+// TODO: add phone number (not require) | association | position
 
 // @desc Update a user
 // @route PATCH /users
