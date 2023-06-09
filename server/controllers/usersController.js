@@ -23,19 +23,25 @@ const getAllUsers = asyncHandler(async (req, res) => {
 // @route POST /users
 // @access Private
 const createNewUser = asyncHandler(async (req, res) => {
-    const { username, password, roles } = req.body
+    const { username, password, email, roles } = req.body
 
     // Confirm data
-    if (!username || !password || !Array.isArray(roles) || !roles.length) {
+    if (!username || !password || !Array.isArray(roles) || !roles.length || !email) {
 
         return res.status(400).json({ message: 'All fields are required' })
     }
 
     // Check for duplicate username
-    const duplicate = await User.findOne({ username }).lean().exec()
+    const duplicateUsername = await User.findOne({ username }).lean().exec()
+    // Check for duplicate email
+    const duplicateEmail = await User.findOne({ email }).lean().exec()
 
-    if (duplicate) {
+    if (duplicateUsername) {
         return res.status(409).json({ message: 'Duplicate username' })
+    }
+
+    if(duplicateEmail) {
+        return res.status(409).json({ message: 'Duplicate email' })
     }
 
     // Hash password 
