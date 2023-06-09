@@ -79,9 +79,9 @@ const createNewUser = asyncHandler(async (req, res) => {
 // @access Private
 const updateUser = asyncHandler(async (req, res) => {
 /*     const { _id, username, roles, email, active, password } = req.body */
-    const { _id, username, roles, email, active} = req.body
+    const { _id, username, roles, email, active, association, position, phone} = req.body
     // Confirm data 
-    if (!_id || !username || !Array.isArray(roles) || !roles.length || typeof active !== 'boolean' || !email) {
+    if (!_id || !username || !Array.isArray(roles) || !roles.length || typeof active !== 'boolean' || !email || !association || !position) {
         return res.status(400).json({ message: 'All fields except password are required' })
     }
 
@@ -113,10 +113,20 @@ const updateUser = asyncHandler(async (req, res) => {
         return res.status(409).json({ message: 'This is not a valid edu email' })
     }
 
+    // Check assoication is visible
+
+    // position is not empty
+
+    //Check is phone format is correct
+
+
     user.username = username
     user.email = email
     user.roles = roles
     user.active = active
+    user.position = position
+    user.association = association
+    user.phone = phone 
 
 /*     if (password) {
         // Hash password 
