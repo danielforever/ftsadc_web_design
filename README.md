@@ -235,9 +235,9 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+aniel Huang - [@your_linkedin](https://www.linkedin.com/in/daniel-huang-2468a3155/) - danielhuang371@gmail.com
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Project Link: [https://github.com/danielforever/ftsadc_web_design](https://github.com/danielforever/ftsadc_web_design)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
