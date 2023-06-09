@@ -168,14 +168,36 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 <!-- ROADMAP -->
 ## Roadmap
-
-- [x] Add Changelog
-- [x] Add back to top links
-- [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
-- [ ] Multi-language Support
-    - [ ] Chinese
-    - [ ] Spanish
+- [ ] Design a website for FTSADC non-profit organization 
+- [x] Add a public facing page with introduction  
+- [x] Add a member introduction page for the organization
+- [ ] Add an FTSA activity page for users to edit FTSA activities
+- [ ] Add a TSA session that show all the TSA organization in our area
+- [ ] Add a contact page for anyone wait to contact us
+- [ ] Add a sponsor page that could show all the companies that had sponsored us
+- [ ] Add a handbook page that show information before travling
+- [ ] Add a page for every TSA could edit their own TSA information
+- [ ] Add an user login to the add poster in the website
+- [ ] Provide a welcome page after login 
+- [ ] Provide an dynamic dropdown navigation menu
+- [ ] Display current user and assigned role 
+- [ ] Provide a logout option 
+- [ ] Require users to login at least once per week
+- [ ] Provide a way to remove employee access asap if needed 
+- [ ] Poster could only be created by qualified users 
+- [ ] Poster have a ticket #, title, poster contain, created & updated dates with attaching a image poster
+- [ ] Poster are either marked as coming future or COMPLETED 
+- [ ] Users can be FTSAAdmins, FTSAMember, TSAAdmins, AllAdmins, NormalUsers 
+- [ ] Poster can only be deleted by Managers or Admins or by self
+- [ ] Anyone can create a poster (when customer checks-in) ######TBD
+- [ ] Employees can only view and edit their assigned poster  
+- [ ] Managers and Admins can view, edit, and delete all posters 
+- [ ] Only Managers and Admins can access User Settings 
+- [ ] Only Managers and Admins can create new users 
+- [x] Multi-language Support
+    - [x] Chinese
+    - [x] English
+- [x] Darkmode support
 
 See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
 
