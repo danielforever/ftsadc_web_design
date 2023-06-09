@@ -18,7 +18,6 @@ import Footer from './components/Footer/Footer';
 
 const App = () => {
 
-
   const [Open, setOpenFunc] = useState(false);
   
   const [darkMode, setDarkModeFunc] = useState(false);

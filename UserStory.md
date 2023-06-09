@@ -19,7 +19,7 @@
 15. [ ] Poster could only be created by qualified users 
 16. [ ] Poster have a ticket #, title, poster contain, created & updated dates with attaching a image poster
 17. [ ] Poster are either marked as coming future or COMPLETED 
-18. [ ] Users can be FTSAAdmins, FTSAMember, TSAAdmins, Managers, or Admins 
+18. [ ] Users can be FTSAAdmins, FTSAMember, TSAAdmins, AllAdmins, NormalUsers 
 19. [ ] Poster can only be deleted by Managers or Admins or by self
 20. [ ] Anyone can create a poster (when customer checks-in) ######TBD
 21. [ ] Employees can only view and edit their assigned poster  
