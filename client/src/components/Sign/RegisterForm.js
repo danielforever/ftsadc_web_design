@@ -7,6 +7,7 @@ import ButtonStyle from "./ButtonStyle";
 import axios from '../../api/axios';
 
 const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
+const EMAIL_REGEX = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.+-]+\.edu$/;
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
 const REGISTER_URL = '/register';
 
@@ -23,6 +24,10 @@ function RegisterForm() {
   const [user, setUser] = useState('');
   const [validName, setValidName] = useState(false);
   const [userFocus, setUserFocus] = useState(false);
+
+  const [email, setEmail] = useState('');
+  const [validEmail, setValidEmail] = useState(false);
+  const [emailFocus, setEmailFocus] = useState(false);
 
   const [pwd, setPwd] = useState('');
   const [validPwd, setValidPwd] = useState(false);
@@ -45,13 +50,17 @@ function RegisterForm() {
   }, [user])
 
   useEffect(() => {
+    setValidEmail(EMAIL_REGEX.test(email));
+  }, [email])
+
+  useEffect(() => {
     setValidPwd(PWD_REGEX.test(pwd));
     setValidMatch(pwd === matchPwd);
   }, [pwd, matchPwd])
 
   useEffect(() => {
     setErrMsg('');
-  }, [user, pwd, matchPwd])
+  }, [user, email, pwd, matchPwd])
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -59,14 +68,15 @@ function RegisterForm() {
     // checking the submit information is same as the filled form
     const v1 = USER_REGEX.test(user);
     const v2 = PWD_REGEX.test(pwd);
-    if (!v1 || !v2) {
+    const v3 = EMAIL_REGEX.text(email);
+    if (!v1 || !v2 || !v3) {
         setErrMsg("Invalid Entry");
         return;
     }
     try {
         const response = await axios.post(REGISTER_URL,
             //JSON.stringify({ user:username, pwd:password }),
-            JSON.stringify({ user, pwd }),
+            JSON.stringify({ user, email, pwd }),
             {
                 headers: { 'Content-Type': 'application/json' },
                 withCredentials: true
@@ -79,6 +89,7 @@ function RegisterForm() {
         //clear state and controlled inputs
         //need value attrib on inputs for this
         setUser('');
+        setEmail('');
         setPwd('');
         setMatchPwd('');
     } catch (err) {
@@ -119,6 +130,7 @@ function RegisterForm() {
               <FontAwesomeIcon icon={faCheck} className={validName ? "valid" : "hide"} />
               <FontAwesomeIcon icon={faTimes} className={validName || !user ? "hide" : "invalid"} />
           </label>
+          {/* check username */}
           <input
               type="text"
               id="username"
@@ -138,8 +150,32 @@ function RegisterForm() {
               Must begin with a letter.<br />
               Letters, numbers, underscores, hyphens allowed.
           </p>
+          {/* check email */}
+          <label htmlFor="email">
+              EDU Email:
+              <FontAwesomeIcon icon={faCheck} className={validEmail ? "valid" : "hide"} />
+              <FontAwesomeIcon icon={faTimes} className={validEmail || !email ? "hide" : "invalid"} />
+          </label>
+          <input
+              type="text"
+              id="email"
+/*               ref={userRef} */
+              autoComplete="off"
+              onChange={(e) => setEmail(e.target.value)}
+              value={email}
+              required
+              aria-invalid={validEmail ? "false" : "true"}
+              aria-describedby="uidnote"
+              onFocus={() => setEmailFocus(true)}
+              onBlur={() => setEmailFocus(false)}
+          />
+          <p id="uidnote" className={emailFocus && email && !validEmail ? "instructions" : "offscreen"}>
+              <FontAwesomeIcon icon={faInfoCircle} />
+              Email must be ending with.edu<br />
+              Email must be a valid format<br />
+          </p>
 
-
+          {/* check password */}
           <label htmlFor="password">
               Password:
               <FontAwesomeIcon icon={faCheck} className={validPwd ? "valid" : "hide"} />
@@ -163,7 +199,7 @@ function RegisterForm() {
               Allowed special characters: <span aria-label="exclamation mark">!</span> <span aria-label="at symbol">@</span> <span aria-label="hashtag">#</span> <span aria-label="dollar sign">$</span> <span aria-label="percent">%</span>
           </p>
 
-
+          {/* confirm password */}
           <label htmlFor="confirm_pwd">
               Confirm Password:
               <FontAwesomeIcon icon={faCheck} className={validMatch && matchPwd ? "valid" : "hide"} />

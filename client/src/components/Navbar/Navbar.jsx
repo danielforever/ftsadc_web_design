@@ -24,8 +24,8 @@ const Navbar = ({state}) => {
               </div>
               <ul>
                 <li className="p-3 xl:hidden">
-                  {!state.darkMode && <BsFillMoonStarsFill onClick={() => {state.setDarkMode(!state.darkMode)}} className=" cursor-pointer text-2xl"/>}
-                  {state.darkMode && <BsMoonStars onClick={() => {state.setDarkMode(!state.darkMode)}} className=" cursor-pointer text-2xl"/>}
+                  {!state.darkMode && <BsFillMoonStarsFill onClick={() => {state.setDarkMode(true)}} className=" cursor-pointer text-2xl"/>}
+                  {state.darkMode && <BsMoonStars onClick={() => {state.setDarkMode(false)}} className=" cursor-pointer text-2xl"/>}
                 </li>
               </ul>
               <div className="p-3 xl:hidden">
@@ -35,7 +35,7 @@ const Navbar = ({state}) => {
             </div>
             <ul className="xl:flex hidden uppercase text-sm items-center gap-6 font-[Poppins]">
               <li>
-                <Link to="/" className="py-7 px-3 inline-block text-center dark:text-white">
+                <Link to="/" className="py-7 px-3 inline-block text-center  dark:text-white">
                   <div className={state.langMode ? "hidden" : "shown"} >
                     Home Page
                   </div>
