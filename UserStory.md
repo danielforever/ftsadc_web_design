@@ -27,3 +27,4 @@
 25. [ ] Only Managers and Admins can access User Settings 
 26. [ ] Only Managers and Admins can create new users 
 27. [ ] Desktop mode is most important but should be available in mobile 
+28. [ ] Create a profile page that require all users to fill in after successfully create an account
