@@ -28,7 +28,6 @@
 
 
 <!-- PROJECT LOGO -->
-[![React][React.js]][React-url] [![Node][Node.js]][Node-url] [![Tailwind][Tailwind.js]][Tailwind-url] [![Express][Express.js]][Express-url]
 <br />
 
 <div align="center">
@@ -235,7 +234,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-aniel Huang - [@your_linkedin](https://www.linkedin.com/in/daniel-huang-2468a3155/) - danielhuang371@gmail.com
+Daniel Huang - [@your_linkedin](https://www.linkedin.com/in/daniel-huang-2468a3155/) - danielhuang371@gmail.com
 
 Project Link: [https://github.com/danielforever/ftsadc_web_design](https://github.com/danielforever/ftsadc_web_design)
 
