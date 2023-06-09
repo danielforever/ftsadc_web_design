@@ -1,22 +1,27 @@
 # User Stories for techNotes
 
-1. [ ] Replace current sticky note system
-2. [ ] Add a public facing page with basic contact info 
-3. [ ] Add an employee login to the notes app 
-4. [ ] Provide a welcome page after login 
-5. [ ] Provide easy navigation
-6. [ ] Display current user and assigned role 
-7. [ ] Provide a logout option 
-8. [ ] Require users to login at least once per week
-9. [ ] Provide a way to remove employee access asap if needed 
-10. [ ] Notes are assigned to specific employees 
-11. [ ] Notes have a ticket #, title, note body, created & updated dates
-12. [ ] Notes are either OPEN or COMPLETED 
-13. [ ] Users can be Employees, Managers, or Admins 
-14. [ ] Notes can only be deleted by Managers or Admins 
-15. [ ] Anyone can create a note (when customer checks-in)
-16. [ ] Employees can only view and edit their assigned notes  
-17. [ ] Managers and Admins can view, edit, and delete all notes 
-18. [ ] Only Managers and Admins can access User Settings 
-19. [ ] Only Managers and Admins can create new users 
-20. [ ] Desktop mode is most important but should be available in mobile 
+1. [ ] Design a website for FTSADC non-profit organization 
+2. [ ] Add a public facing page with introduction  
+3. [ ] Add a member introduction page for the organization
+4. [ ] Add a activity page for users to show their activities
+5. [ ] Add a TSA session that show all the TSA organization in our area
+6. [ ] Add a contact page for anyone wait to contact us
+7. [ ] Add a sponsor page that could show all the companies that had sponsored us
+8. [ ] Add an user login to the add poster in the website
+9. [ ] Provide a welcome page after login 
+10. [ ] Provide an dynamic dropdown navigation menu
+11. [ ] Display current user and assigned role 
+12. [ ] Provide a logout option 
+13. [ ] Require users to login at least once per week
+14. [ ] Provide a way to remove employee access asap if needed 
+15. [ ] Poster are assigned to specific employees 
+16. [ ] Poster have a ticket #, title, poster contain, created & updated dates with attaching a image poster
+17. [ ] Poster are either marked as coming future or COMPLETED 
+18. [ ] Users can be Employees, Managers, or Admins 
+19. [ ] Poster can only be deleted by Managers or Admins or by self
+20. [ ] Anyone can create a poster (when customer checks-in) ######TBD
+21. [ ] Employees can only view and edit their assigned poster  
+22. [ ] Managers and Admins can view, edit, and delete all posters 
+23. [ ] Only Managers and Admins can access User Settings 
+24. [ ] Only Managers and Admins can create new users 
+25. [ ] Desktop mode is most important but should be available in mobile 
