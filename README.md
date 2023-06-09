@@ -38,7 +38,7 @@
   <h3 align="center">FTSADC Webpage CodeBase</h3>
 
   <p align="center">
-    This is the code for FTSADC website. This codebase is using MERN stack design. 
+    This is the codebase for the FTSADC website. Please contact me if you're interested in helping us design or maintain this webpage. We welcome everyone who is interested.
     <br />
     <a href="https://github.com/danielforever/ftsadc_web_design/blob/main/UserStory.md"><strong>Explore the user story</strong></a>
     <br />
