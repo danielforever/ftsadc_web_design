@@ -38,16 +38,12 @@
   <h3 align="center">FTSADC Webpage CodeBase</h3>
 
   <p align="center">
-    An awesome README template to jumpstart your projects!
+    This is the code for FTSADC website. This codebase is using MERN stack design. 
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/danielforever/ftsadc_web_design/blob/main/UserStory.md"><strong>Explore the user story</strong></a>
     <br />
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
-    ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
+    <a href="https://github.com/danielforever/ftsadc_demo">View Demo last updated version: 5/15/2023</a>
   </p>
 </div>
 
