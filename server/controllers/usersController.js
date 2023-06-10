@@ -1,5 +1,5 @@
 const User = require('../models/User')
-const Note = require('../models/Note')
+const Poster = require('../models/Poster')
 const asyncHandler = require('express-async-handler') //keep sending try catch blocks to get the password passing from fromend
 const bcrypt = require('bcrypt')
 
@@ -159,10 +159,10 @@ const deleteUser = asyncHandler(async (req, res) => {
         return res.status(400).json({ message: 'User ID Required' })
     }
 
-    // Does the user still have assigned notes?
-    const note = await Note.findOne({ user: _id }).lean().exec()
-    if (note) {
-        return res.status(400).json({ message: 'User has assigned notes' })
+    // Does the user still have assigned posters?
+    const poster = await Poster.findOne({ user: _id }).lean().exec()
+    if (poster) {
+        return res.status(400).json({ message: 'User has assigned posters' })
     }
 
     // Does the user exist to delete?
