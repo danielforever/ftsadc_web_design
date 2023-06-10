@@ -32,7 +32,7 @@ const createNewPoster = asyncHandler(async (req, res) => {
     const { user, title, position, eventdate, association, text, img} = req.body
 
     // Confirm data
-    if (!user || !title || !text || !position || !association) {
+    if (!user || !title || !position || !text || !association) {
         return res.status(400).json({ message: 'Title, text, position and associaton are required!' })
     }
 
