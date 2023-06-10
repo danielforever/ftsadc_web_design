@@ -6,6 +6,8 @@ const bcrypt = require('bcrypt')
 
 
 const EMAIL_REGEX = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.+-]+\.edu$/
+const PHONE_REGEX = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im
+const FB_REGEX = /^(?:(?:http|https):\/\/)?(?:www.)?facebook.com\/?/
 
 // @desc Get all users
 // @route GET /users
@@ -72,14 +74,14 @@ const createNewUser = asyncHandler(async (req, res) => {
 })
 
 
-// TODO: add phone number (not require) | association | position
+// TODO: add phone number (not require) | association | position | fb url
 
 // @desc Update a user
 // @route PATCH /users
 // @access Private
 const updateUser = asyncHandler(async (req, res) => {
 /*     const { _id, username, roles, email, active, password } = req.body */
-    const { _id, username, roles, email, active, association, position, phone} = req.body
+    const { _id, username, roles, email, active, association, fburl, position, phone} = req.body
     // Confirm data 
     if (!_id || !username || !Array.isArray(roles) || !roles.length || typeof active !== 'boolean' || !email || !association || !position) {
         return res.status(400).json({ message: 'All fields except password are required' })
@@ -113,18 +115,28 @@ const updateUser = asyncHandler(async (req, res) => {
         return res.status(409).json({ message: 'This is not a valid edu email' })
     }
 
+    // ########################################################################### //
     // Check assoication is visible
 
     // Check position is not empty
 
     // Check is phone format is correct
+    if (!phone && !PHONE_REGEX.test(phone)) {
+        return res.status(409).json({ message: 'This is not a valid phone number' })
+    }
+    // Check fb url is valid
+    if (!fburl && !FB_REGEX.test(fburl)) {
+        return res.status(409).json({ message: 'This is not a valid facebook URL' })
+    }
 
+    // ########################################################################### //
     user.username = username
     user.email = email
     user.roles = roles
     user.active = active
     user.position = position
     user.association = association
+    user.fburl = fburl
     user.phone = phone 
 
 /*     if (password) {
