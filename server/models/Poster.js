@@ -29,7 +29,7 @@ const posterSchema = new mongoose.Schema(
             required: true     
         },
         img: {
-            type: image/png,
+            type: String,
             required: false     
         }
         },
@@ -41,7 +41,7 @@ const posterSchema = new mongoose.Schema(
 
 posterSchema.plugin(AutoIncrement, {
         inc_field: 'ticket',
-        id: 'ticketNums',
+        /* id: 'ticketNums', */
         start_seq: 500
     })
 

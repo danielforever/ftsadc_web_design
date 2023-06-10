@@ -58,15 +58,15 @@ const createNewPoster = asyncHandler(async (req, res) => {
 // @route PATCH /posters
 // @access Private
 const updatePost = asyncHandler(async (req, res) => {
-    const { _id, user, title, position, eventdate, association, text, img } = req.body
+    const { id, user, title, position, eventdate, association, text, img } = req.body
 
     // Confirm data
-    if (!_id || !user || !title || !text || !position || !association) {
+    if (!id || !user || !title || !text || !position || !association) {
         return res.status(400).json({ message: 'Title, text, position and associaton are required!' })
     }
 
     // Confirm poster exists to update
-    const poster = await Poster.findById(_id).exec()
+    const poster = await Poster.findById(id).exec()
 
     if (!poster) {
         return res.status(400).json({ message: 'Poster not found' })
@@ -76,7 +76,7 @@ const updatePost = asyncHandler(async (req, res) => {
     const duplicate = await Poster.findOne({ title }).lean().exec()
 
     // Allow renaming of the original poster 
-    if (duplicate && duplicate?._id.toString() !== _id) {
+    if (duplicate && duplicate?._id.toString() !== id) {
         return res.status(409).json({ message: 'Duplicate poster title' })
     }
 
@@ -97,15 +97,15 @@ const updatePost = asyncHandler(async (req, res) => {
 // @route DELETE /posters
 // @access Private
 const deletePoster = asyncHandler(async (req, res) => {
-    const { _id } = req.body
+    const { id } = req.body
 
     // Confirm data
-    if (!_id) {
+    if (!id) {
         return res.status(400).json({ message: 'Poster ID required' })
     }
 
     // Confirm note exists to delete 
-    const poster = await Poster.findById(_id).exec()
+    const poster = await Poster.findById(id).exec()
 
     if (!poster) {
         return res.status(400).json({ message: 'Poster not found' })
