@@ -3,7 +3,7 @@ const AutoIncrement = require('mongoose-sequence')(mongoose)
 
 const posterSchema = new mongoose.Schema(
     {
-        username: {
+        user: {
             type: mongoose.Schema.Types.ObjectId,
             required: true,  
             ref: 'User'     
@@ -12,7 +12,7 @@ const posterSchema = new mongoose.Schema(
             type: String,
             required: true        
         },
-        postion: {
+        position: {
             type: String,
             required: true                
         },
