@@ -115,10 +115,9 @@ const updateUser = asyncHandler(async (req, res) => {
 
     // Check assoication is visible
 
-    // position is not empty
+    // Check position is not empty
 
-    //Check is phone format is correct
-
+    // Check is phone format is correct
 
     user.username = username
     user.email = email
