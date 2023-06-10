@@ -132,13 +132,12 @@ const updateUser = asyncHandler(async (req, res) => {
     // ########################################################################### //
     user.username = username
     user.email = email
-    user.roles = roles
-    user.active = active
-    user.position = position
+    user.phone = phone 
     user.association = association
     user.fburl = fburl
-    user.phone = phone 
-
+    user.position = position
+    user.roles = roles
+    user.active = active
 /*     if (password) {
         // Hash password 
         user.password = await bcrypt.hash(password, 10) // salt rounds 
