@@ -1,11 +1,27 @@
 const User = require('../models/User')
 const Note = require('../models/Note')
-const asyncHandler = require('express-async-handler') //keep sending try catch blocks to get the password passing from fromend
+const asyncHandler = require('express-async-handler') //keep sending try catch blocks to get the password passing from frontend
 const bcrypt = require('bcrypt')
 
 
 
 const EMAIL_REGEX = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.+-]+\.edu$/
+
+// @desc Get a user by id
+// @route GET /users/id
+// @access Private
+
+const getUserByID = asyncHandler(async (req, res) => {
+    // Get all users from MongoDB
+    const users = await User.find().select('-password').lean() // select "-" never return the password back | lean() just return the json no extras
+
+    // If no users 
+    if (!users?.length) {
+        return res.status(400).json({ message: 'No users found' })
+    }
+
+    res.json(users)
+})
 
 // @desc Get all users
 // @route GET /users
