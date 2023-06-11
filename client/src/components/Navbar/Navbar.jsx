@@ -33,6 +33,7 @@ const Navbar = ({state}) => {
                 {!state.langMode && <RiEmphasisCn onClick={() => {state.setLanguage(!state.langMode)}} className=" cursor-pointer text-3xl "/>}
               </div>
             </div>
+            {/* computer Navbar */}
             <ul className="xl:flex hidden uppercase text-sm items-center gap-6 font-[Poppins]">
               <li>
                 <Link to="/" className="py-7 px-3 inline-block text-center  dark:text-white">
@@ -107,7 +108,7 @@ const Navbar = ({state}) => {
               <NavLinks state={state}/>
               <li>
                 <Link to="/" className="py-4 px-4 inline-block  dark:text-white">
-                <div className={state.langMode ? "hidden" : "shown"} onClick={() => state.setOpen(!state.open)}>
+                  <div className={state.langMode ? "hidden" : "shown"} onClick={() => state.setOpen(!state.open)}>
                     Sponsors
                   </div>
                   <div className={state.langMode ? "shown" : "hidden"} onClick={() => state.setOpen(!state.open)}>
