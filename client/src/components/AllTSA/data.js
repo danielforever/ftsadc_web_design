@@ -76,7 +76,7 @@ export const allstates = [
       src: require("./images/tn.jpg"),
       state: "Tennessee",
       ch_state: "田納西州",
-      description: "Tennessee is home to the iconic city of Nashville, known as the \Music City,\" and the Great Smoky Mountains National Park, the most visited national park in the country.",
+      description: "Tennessee is home to the iconic city of Nashville, known as the Music City, and the Great Smoky Mountains National Park, the most visited national park in the country.",
       tags: ["Mountains", "Aesthetic", "Pretty", "Scenic", "Rugged"],
     },
     {
