@@ -13,16 +13,38 @@ const FB_REGEX = /^(?:(?:http|https):\/\/)?(?:www.)?facebook.com\/?/
 // @route GET /users/id
 // @access Private
 
-const getUserByID = asyncHandler(async (req, res) => {
-    // Get all users from MongoDB
-    const users = await User.find().select('-password').lean() // select "-" never return the password back | lean() just return the json no extras
+const getUserById = asyncHandler(async (req, res) => {
+    const { _id} = req.body
+    // Get user by id
+    console.log("id:" + _id)
+    const user = await User.findById(_id).select('-password').exec()
+    console.log("user:" + user)
 
-    // If no users 
-    if (!users?.length) {
-        return res.status(400).json({ message: 'No users found' })
+    // If no user
+    if (!user) {
+        return res.status(400).json({ message: 'No user found' })
     }
 
-    res.json(users)
+    res.json(user)
+})
+
+// @desc Get a user by username
+// @route GET /users/username
+// @access Private
+const getUserByName = asyncHandler(async (req, res) => {
+    const {username} = req.body
+    // Get user by id
+    console.log("username:" + username)
+    //const user = await User.findById(_id).select('-password').exec()
+    const user = await User.findOne({ username: username }).select('-password').exec()
+    console.log("user:" + user)
+
+    // If no user
+    if (!user) {
+        return res.status(400).json({ message: 'No user found' })
+    }
+
+    res.json(user)
 })
 
 // @desc Get all users
@@ -30,8 +52,9 @@ const getUserByID = asyncHandler(async (req, res) => {
 // @access Private
 
 const getAllUsers = asyncHandler(async (req, res) => {
-    // Get all users from MongoDB
-    const users = await User.find().select('-password').lean() // select "-" never return the password back | lean() just return the json no extras
+    const { username, password, email, roles } = req.body
+
+    const users = await User.find().select('-password').lean() // "-password" password will not be returned | lean() just return the json no extras
 
     // If no users 
     if (!users?.length) {
@@ -197,6 +220,8 @@ const deleteUser = asyncHandler(async (req, res) => {
 
 module.exports = {
     getAllUsers,
+    getUserByName,
+    getUserById,
     createNewUser,
     updateUser,
     deleteUser
