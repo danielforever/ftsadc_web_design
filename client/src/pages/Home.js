@@ -15,7 +15,7 @@ function Home({state}) {
       </section>
       <div className='w-screen h-fit grid grid-rows-1 text-white text-4xl md:grid-cols-2'>
         <div class="hero container flex-shrink-0 max-w-screen-lg pt-10 md:pt0 mx-auto pb-20 flex justify-center pr-5">
-          <img src={dcimage} alt="image" className=' h-40 sm:h-60 lg:h-80 rounded-2xl'/>  
+          <img src={dcimage} alt="dcimage" className=' h-40 sm:h-60 lg:h-80 rounded-2xl'/>  
         </div>
           <div className='flex h-screen items-center w-full text-black centered md:h-screen pb-10 justify-center'>
             <div class="mx-auto pt-10">
@@ -89,4 +89,4 @@ function Home({state}) {
 
 export default Home;
 
-{/* <div class="image-block-outer-wrapper layout-caption-below design-layout-inline combination-animation-site-default individual-animation-site-default individual-text-animation-site-default animation-loaded" data-test="image-block-inline-outer-wrapper" id="yui_3_17_2_1_1682708359860_69">…</div> */}
+/*{ <div class="image-block-outer-wrapper layout-caption-below design-layout-inline combination-animation-site-default individual-animation-site-default individual-text-animation-site-default animation-loaded" data-test="image-block-inline-outer-wrapper" id="yui_3_17_2_1_1682708359860_69">…</div> }*/

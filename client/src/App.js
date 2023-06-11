@@ -65,7 +65,7 @@ const App = () => {
 
 export default App;
 
-{/* <Router>
+/* {<Router>
       {<Navbar />}
       <div className="App">
 {        <header>
@@ -102,4 +102,4 @@ export default App;
           </div>
         </div>
       </div>
-    </Router> */}
+    </Router> }*/
