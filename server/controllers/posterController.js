@@ -32,7 +32,14 @@ const createNewPoster = asyncHandler(async (req, res) => {
     const { user, title, position, eventdate, association, text, img} = req.body
 
     // Confirm data
-    if (!user || !title || !position || !text || !association) {
+
+    // check if position and association were filled in user profile 
+
+    if (!position || !association) {
+        return res.status(400).json({ message: 'Please finish your user profile to create a new poster!' })
+    }
+
+    if (!user || !title || !text ) {
         return res.status(400).json({ message: 'Title, text, position and associaton are required!' })
     }
 
@@ -42,6 +49,12 @@ const createNewPoster = asyncHandler(async (req, res) => {
     if (duplicate) {
         return res.status(409).json({ message: 'Duplicate note title' })
     }
+
+    // Check title words limited to 50
+
+    // Check text words 500 below
+
+    // Check if the user have the permition to post this poster
 
     // Create and store the new user 
     const post = await Poster.create({ user, title, position, eventdate, association, text, img})
