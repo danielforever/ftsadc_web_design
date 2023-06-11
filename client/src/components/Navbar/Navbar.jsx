@@ -145,7 +145,9 @@ const Navbar = ({state}) => {
 
 
 export default Navbar;
-
+/*
+Show/hide the menu bar when scrolling
+*/
 function useScrollDirection() {
   const [scrollDirection, setScrollDirection] = useState(null);
 
