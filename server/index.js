@@ -16,7 +16,7 @@ console.log(process.env.NODE_ENV);
 
 connectDB();
 
-// show logger commands in ./logs
+// show logger actions in ./logs/reqLog.log
 app.use(logger);
 
 // CORS for Nodejs and React to interact
