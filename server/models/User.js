@@ -22,6 +22,10 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true     
     },
+    fburl: {
+        type: String,
+        required: false             
+    },
     position: {
         type: String,
         required: false             

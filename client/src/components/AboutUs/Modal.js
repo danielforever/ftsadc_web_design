@@ -1,10 +1,11 @@
 import React from 'react';
 import { motion } from "framer-motion";
-import { useNavigate } from "react-router-dom";
 import { Link } from 'react-router-dom';
 import './Modal.css';
+import { FaLinkedin } from "react-icons/fa";
 
 export default function Modal( {selected, setSelected}) {
+    let iconStyles = { color: "#0077B5", fontSize: "1em" };
 
     if (!selected) {
         return <></>;
@@ -55,7 +56,7 @@ export default function Modal( {selected, setSelected}) {
                         target='_blank'
                         aria-label='LinkedIn'
                     >
-                        <i class='fab fa-linkedin' />
+                        <FaLinkedin style={iconStyles} />
                     </Link>
                     {/* <button className="btn btn-primary btn-block" onClick={() => window.open(`${selected.out}`, '_blank')}>{selected.out_name}</button> */}
                 </motion.div>
