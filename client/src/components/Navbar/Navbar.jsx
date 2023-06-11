@@ -36,7 +36,7 @@ const Navbar = ({state}) => {
             {/* computer Navbar */}
             <ul className="xl:flex hidden uppercase text-sm items-center gap-6 font-[Poppins]">
               <li>
-                <Link to="/" className="py-7 px-3 inline-block text-center  dark:text-white">
+                <Link to="/" className="py-7 px-3 inline-block text-center dark:text-white">
                   <div className={state.langMode ? "hidden" : "shown"} >
                     Home Page
                   </div>
