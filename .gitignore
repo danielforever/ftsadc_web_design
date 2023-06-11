@@ -27,3 +27,9 @@ yarn-debug.log*
 yarn-error.log*
 
 
+server/config/config.json
+server/models/index.js
+server/package-lock.json
+server/package.json
+client/package.json
+client/package-lock.json

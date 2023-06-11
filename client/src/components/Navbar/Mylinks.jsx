@@ -26,10 +26,10 @@ export const links = [
       {
         Head: "All Area Activities",
         ch_Head:"各地區活動",
-        link: "/",
+        link: "/areaactivities",
         sublink: [
-          { name: "Area Recent Activities", ch_name: "各地區活動", link: "/" },
-          { name: "All Activities", ch_name: "所有活動", link: "/" },
+          { name: "Area Recent Activities", ch_name: "各地區活動", link: "/areaactivities" },
+          { name: "All Activities", ch_name: "所有活動", link: "/areaactivities" },
         ],
       },
     ],
@@ -45,7 +45,7 @@ export const links = [
         ch_Head:"我們的故事",
         link: "/aboutus",
         sublink: [
-          { name: "Welcome", ch_name: "歡迎", link: "/" },
+          { name: "Welcome", ch_name: "歡迎", link: "/welcome" },
         
         ],
       },
@@ -83,14 +83,14 @@ export const links = [
       {
         Head: "Driver's License",
         ch_Head:"駕照",
-        link: "/",
+        link: "/license",
         sublink: [
         ],
       },
       {
         Head: "Recommend FB Group",
         ch_Head:"臉書社團",
-        link: "/",
+        link: "/group",
         sublink: [
         ],
       },
@@ -105,13 +105,13 @@ export const links = [
       {
         Head: "All Area",
         ch_Head:"各地區TSA",
-        link: "/",
+        link: "/TSA",
         sublink: [
-          { name: "DC", ch_name: "華府特區", link: "/" },
-          { name: "MD", ch_name: "馬里蘭", link: "/" },
-          { name: "VA", ch_name: "維吉尼亞", link: "/" },
-          { name: "NC", ch_name: "北卡羅來納", link: "/" },
-          { name: "SC", ch_name: "南卡羅來納", link: "/" },
+          { name: "DC", ch_name: "華府特區", link: "/DC" },
+          { name: "MD", ch_name: "馬里蘭", link: "/MD" },
+          { name: "VA", ch_name: "維吉尼亞", link: "/VA" },
+          { name: "NC", ch_name: "北卡羅來納", link: "/NC" },
+          { name: "SC", ch_name: "南卡羅來納", link: "/SC" },
           
         ],
       },
