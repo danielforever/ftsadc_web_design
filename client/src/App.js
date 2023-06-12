@@ -12,6 +12,7 @@ import Sponsors from './pages/Sponsors';
 import ContactUs from './pages/ContactUs';
 import SignIn from './pages/SignIn';
 import Register from './pages/Register';
+import Counter from './features/counter/Counter'; //remove when deployment
 
 import Navbar from "./components/Navbar/Navbar";
 import Footer from './components/Footer/Footer';
