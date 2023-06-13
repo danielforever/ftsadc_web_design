@@ -59,7 +59,7 @@ describe('POST /users', () => {
             ]
         }
           chai.request(app)
-          .post('/user')
+          .post('/users')
           .send(user)
           .end((err, res) => {
                 res.should.have.status(200);
