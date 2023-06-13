@@ -9,7 +9,7 @@ let cors = require('cors');
 const corsOptions = require('./config/corsOptions');
 const connectDB = require('./config/dbConn')
 let mongoose = require('mongoose');
-const PORT = process.env.PORT || 3500;
+const PORT = Number(process.env.PORT) || 3500;
 
 
 console.log(process.env.NODE_ENV);
@@ -64,3 +64,5 @@ mongoose.connection.on('error', err => {
   console.log(err)
   logEvents(`${err.no}: ${err.code}\t${err.syscall}\t${err.hostname}`, 'mongoErrLog.log')
 })
+
+module.exports = app;
