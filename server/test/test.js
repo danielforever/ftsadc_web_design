@@ -18,9 +18,10 @@ describe('GET /', function () {
 * Test the POST route
 */
 describe('POST /users', () => {
-    it('it should not POST a user without pages field', (done) => {
+    it('it should not POST a user without roles field', (done) => {
         let user = {
             username: "testuser",
+            password: "asdnoQW!!34",
             email: "testemail@abc.com",
         }
       chai.request(app)
@@ -30,6 +31,26 @@ describe('POST /users', () => {
                 res.should.have.status(400);
                 res.body.should.be.a('object');
                 res.body.should.have.property('message').eql('All fields are required');
+            done();
+          });
+    });
+
+    it('it should not POST a user without a valid edu email address', (done) => {
+        let user = {
+            username: "testuser",
+            password: "asdnoQW!!34",
+            email: "testemail@abc.com",
+            roles: [
+                "Employee"
+            ]
+        }
+      chai.request(app)
+          .post('/users')
+          .send(user)
+          .end((err, res) => {
+                res.should.have.status(409);
+                res.body.should.be.a('object');
+                res.body.should.have.property('message').eql('This is not a valid edu email address');
             done();
           });
     });
@@ -50,6 +71,46 @@ describe('POST /users', () => {
                 res.should.have.status(201);
                 res.body.should.be.a('object');
                 res.body.should.have.property('message').eql(`New user ${user.username} created`);
+            done();
+          });
+    });
+
+    it('it should not POST a user with a duplicate username', (done) => {
+        let user = {
+            username: "testuser1",
+            password: "asdnoQW!!34",
+            email: "23123test25@umd.edu",
+            roles: [
+                "Employee"
+            ]
+        }
+      chai.request(app)
+          .post('/users')
+          .send(user)
+          .end((err, res) => {
+                res.should.have.status(409);
+                res.body.should.be.a('object');
+                res.body.should.have.property('message').eql('Duplicate username');
+            done();
+          });
+    });
+
+    it('it should not POST a user with a duplicate email', (done) => {
+        let user = {
+            username: "testuser2",
+            password: "asdnoQW!!34",
+            email: "23123test24@umd.edu",
+            roles: [
+                "Employee"
+            ]
+        }
+      chai.request(app)
+          .post('/users')
+          .send(user)
+          .end((err, res) => {
+                res.should.have.status(409);
+                res.body.should.be.a('object');
+                res.body.should.have.property('message').eql('Duplicate email');
             done();
           });
     });
@@ -78,7 +139,7 @@ describe('GET /users/username & GET /users/id', function () {
         _id: "",
         username: "testuser1",
     }
-    it('it should GET a user by username', function (done) {
+    it('it should GET testuser1 by username', function (done) {
         this.timeout(15000);
         chai.request(app)
             .get('/users/username')
@@ -92,7 +153,7 @@ describe('GET /users/username & GET /users/id', function () {
             });
     });
 
-    it('it should GET a user by id', function (done) {
+    it('it should GET testuser1 by id', function (done) {
         this.timeout(15000);
         chai.request(app)
             .get('/users/id')

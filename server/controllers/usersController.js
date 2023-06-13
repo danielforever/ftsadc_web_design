@@ -94,7 +94,7 @@ const createNewUser = asyncHandler(async (req, res) => {
 
     // Check edu email
     if (!EMAIL_REGEX.test(email)) {
-        return res.status(409).json({ message: 'This is not a valid edu email' })
+        return res.status(409).json({ message: 'This is not a valid edu email address' })
     }
 
     // Hash password 
