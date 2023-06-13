@@ -190,7 +190,7 @@ const updateUser = asyncHandler(async (req, res) => {
 // @desc Delete a user
 // @route DELETE /users
 // @access Private
-/* const deleteUser = asyncHandler(async (req, res) => {
+const deleteUserById = asyncHandler(async (req, res) => {
     const { _id } = req.body
 
     // Confirm data
@@ -216,7 +216,7 @@ const updateUser = asyncHandler(async (req, res) => {
     const reply = `Username ${result.username} with ID ${result._id} deleted`
 
     res.json(reply)
-}) */
+})
 
 // @desc Delete a user
 // @route DELETE /users
@@ -244,7 +244,7 @@ const deleteUser = asyncHandler(async (req, res) => {
     console.log("check")
     const result = await user.deleteOne()
 
-    const reply = `Username: ${result.username} with ID ${result._id} deleted`
+    const reply = { message: `Username: ${result.username} deleted`}
 
     res.json(reply)
 })
@@ -255,7 +255,8 @@ module.exports = {
     getUserById,
     createNewUser,
     updateUser,
-    deleteUser
+    deleteUser,
+    deleteUserById
 }
 
 

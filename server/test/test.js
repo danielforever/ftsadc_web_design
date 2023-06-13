@@ -83,7 +83,7 @@ describe('DELETE /users', () => {
           .end((err, res) => {
             res.should.have.status(200);
             res.body.should.be.a('object');
-            res.body.should.have.property('message').eql(`User ${user.username} was deleted.`);
+            res.body.should.have.property('message').eql(`Username: ${user.username} deleted`);
             done();
           });
     });
