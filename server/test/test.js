@@ -51,8 +51,12 @@ describe('POST /users', () => {
 
     it('it should POST a user ', (done) => {
         let user = {
-            username: "testuser",
-            email: "testemail@abc.com",
+            username: "testuser1",
+            password: "asdnoQW!!34",
+            email: "23123test24@umd.edu",
+            roles: [
+                "Employee"
+            ]
         }
           chai.request(app)
           .post('/user')
