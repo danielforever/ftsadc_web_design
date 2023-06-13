@@ -221,7 +221,7 @@ const deleteUserById = asyncHandler(async (req, res) => {
 // @desc Delete a user
 // @route DELETE /users
 // @access Private
-const deleteUser = asyncHandler(async (req, res) => {
+const deleteUserByName = asyncHandler(async (req, res) => {
     const { username } = req.body
 
     // Confirm data
@@ -255,7 +255,7 @@ module.exports = {
     getUserById,
     createNewUser,
     updateUser,
-    deleteUser,
+    deleteUserByName,
     deleteUserById
 }
 

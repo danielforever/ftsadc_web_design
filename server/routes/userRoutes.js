@@ -6,6 +6,6 @@ router.route('/')
     .get(usersController.getAllUsers)
     .post(usersController.createNewUser)
     .patch(usersController.updateUser)
-    .delete(usersController.deleteUser)
+    .delete(usersController.deleteUserByName)
 
-module.exports = router
+module.exports = router 
