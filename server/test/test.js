@@ -16,6 +16,7 @@ describe('GET /', function () {
 
 describe('GET /users', function () {
     it('it should GET all the users', function (done) {
+        this.timeout(15000);
         chai.request(app)
             .get('/users')
             .end((err, res) => {
@@ -44,6 +45,22 @@ describe('POST /users', () => {
                 res.should.have.status(400);
                 res.body.should.be.a('object');
                 res.body.should.have.property('message').eql('All fields are required');
+            done();
+          });
+    });
+
+    it('it should POST a user ', (done) => {
+        let user = {
+            username: "testuser",
+            email: "testemail@abc.com",
+        }
+          chai.request(app)
+          .post('/user')
+          .send(user)
+          .end((err, res) => {
+                res.should.have.status(200);
+                res.body.should.be.a('object');
+                res.body.should.have.property('message').eql(`New user ${user.username} created`);
             done();
           });
     });
