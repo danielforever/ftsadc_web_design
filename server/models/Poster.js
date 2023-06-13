@@ -1,12 +1,15 @@
 const mongoose = require('mongoose')
 const AutoIncrement = require('mongoose-sequence')(mongoose)
 
-const posterSchema = new mongoose.Schema(
-    {
+const posterSchema = new mongoose.Schema({
         user: {
             type: mongoose.Schema.Types.ObjectId,
             required: true,  
             ref: 'User'     
+        },
+        username: {
+            type: String,
+            required: true        
         },
         title: {
             type: String,
@@ -32,17 +35,18 @@ const posterSchema = new mongoose.Schema(
             type: String,
             required: false     
         }
-        },
-        {
-            timestamps: true
-        }
+    },
+    {
+        timestamps: true
+    }
         
     )
 
 posterSchema.plugin(AutoIncrement, {
+        id: 'ticketNums',
         inc_field: 'ticket',
-        /* id: 'ticketNums', */
-        start_seq: 500
+        start_seq: 500, 
+        disable_hooks: true
     })
 
 module.exports = mongoose.model('Poster', posterSchema)

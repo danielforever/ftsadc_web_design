@@ -20,7 +20,7 @@ const userSchema = new mongoose.Schema({
     },
     association: {
         type: String,
-        required: true     
+        required: false     
     },
     fburl: {
         type: String,

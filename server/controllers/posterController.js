@@ -29,17 +29,17 @@ const getAllPosters = asyncHandler(async (req, res) => {
 // @route POST /posters
 // @access Private
 const createNewPoster = asyncHandler(async (req, res) => {
-    const { user, title, position, eventdate, association, text, img} = req.body
+    const { user, username, title, position, eventdate, association, text, img} = req.body
 
     // Confirm data
-
+    console.log(position,association)
     // check if position and association were filled in user profile 
 
     if (!position || !association) {
         return res.status(400).json({ message: 'Please finish your user profile to create a new poster!' })
     }
 
-    if (!user || !title || !text ) {
+    if (!username || !title || !text ) {
         return res.status(400).json({ message: 'Title, text, position and associaton are required!' })
     }
 
@@ -57,7 +57,8 @@ const createNewPoster = asyncHandler(async (req, res) => {
     // Check if the user have the permition to post this poster
 
     // Create and store the new user 
-    const post = await Poster.create({ user, title, position, eventdate, association, text, img})
+    console.log("check")
+    const post = await Poster.create({ user, username, title, position, eventdate, association, text, img})
 
     if (post) { // Created 
         return res.status(201).json({ message: 'New post created' })
@@ -71,15 +72,15 @@ const createNewPoster = asyncHandler(async (req, res) => {
 // @route PATCH /posters
 // @access Private
 const updatePost = asyncHandler(async (req, res) => {
-    const { id, user, title, position, eventdate, association, text, img } = req.body
+    const { _id, user, username, title, position, eventdate, association, text, img } = req.body
 
     // Confirm data
-    if (!id || !user || !title || !text || !position || !association) {
+    if (!user || !title || !text || !position || !association) {
         return res.status(400).json({ message: 'Title, text, position and associaton are required!' })
     }
 
     // Confirm poster exists to update
-    const poster = await Poster.findById(id).exec()
+    const poster = await Poster.findById(_id).exec()
 
     if (!poster) {
         return res.status(400).json({ message: 'Poster not found' })
@@ -89,11 +90,12 @@ const updatePost = asyncHandler(async (req, res) => {
     const duplicate = await Poster.findOne({ title }).lean().exec()
 
     // Allow renaming of the original poster 
-    if (duplicate && duplicate?._id.toString() !== id) {
+    if (duplicate && duplicate?._id.toString() !== _id) {
         return res.status(409).json({ message: 'Duplicate poster title' })
     }
 
     poster.user = user
+    poster.username = username
     poster.title = title
     poster.position = position
     poster.eventdate = eventdate
@@ -103,7 +105,7 @@ const updatePost = asyncHandler(async (req, res) => {
 
     const updatedPoster = await poster.save()
 
-    res.json(`'${updatedPoster.title}' updated`)
+    res.json(`'${updatedPoster.title}' poster was updated!`)
 })
 
 // @desc Delete a poster
@@ -137,3 +139,13 @@ module.exports = {
     updatePost,
     deletePoster
 }
+
+/* {
+    "user": "64839693858be93f046ddbe5",
+    "username": "Daniel",
+    "title": "This is Testing",
+    "position": "TSAAdmin",
+    "eventdate": "<2022-01-13>",
+    "association": "TSA",
+    "text": "This is the paragraph about testing"
+} */
