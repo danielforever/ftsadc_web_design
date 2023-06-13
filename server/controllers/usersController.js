@@ -190,7 +190,7 @@ const updateUser = asyncHandler(async (req, res) => {
 // @desc Delete a user
 // @route DELETE /users
 // @access Private
-const deleteUser = asyncHandler(async (req, res) => {
+/* const deleteUser = asyncHandler(async (req, res) => {
     const { _id } = req.body
 
     // Confirm data
@@ -214,6 +214,37 @@ const deleteUser = asyncHandler(async (req, res) => {
     const result = await user.deleteOne()
 
     const reply = `Username ${result.username} with ID ${result._id} deleted`
+
+    res.json(reply)
+}) */
+
+// @desc Delete a user
+// @route DELETE /users
+// @access Private
+const deleteUser = asyncHandler(async (req, res) => {
+    const { username } = req.body
+
+    // Confirm data
+    if (!username) {
+        return res.status(400).json({ message: 'Username Required' })
+    }
+
+    // Does the user still have assigned posters?
+    const poster = await Poster.findOne({ username: username }).lean().exec()
+    if (poster) {
+        return res.status(400).json({ message: 'User has assigned posters' })
+    }
+
+    // Does the user exist to delete?
+    const user = await User.findOne({ username: username }).exec()
+
+    if (!user) {
+        return res.status(400).json({ message: 'User not found' })
+    }
+    console.log("check")
+    const result = await user.deleteOne()
+
+    const reply = `Username: ${result.username} with ID ${result._id} deleted`
 
     res.json(reply)
 })

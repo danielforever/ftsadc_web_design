@@ -62,9 +62,28 @@ describe('POST /users', () => {
           .post('/users')
           .send(user)
           .end((err, res) => {
-                res.should.have.status(200);
+                res.should.have.status(201);
                 res.body.should.be.a('object');
                 res.body.should.have.property('message').eql(`New user ${user.username} created`);
+            done();
+          });
+    });
+
+});
+
+
+describe('DELETE /users', () => {
+    it('it should delete the "testuser1" user', (done) => {
+        let user = {
+            username: "testuser1",
+        }
+      chai.request(app)
+          .delete('/users')
+          .send(user)
+          .end((err, res) => {
+            res.should.have.status(200);
+            res.body.should.be.a('object');
+            res.body.should.have.property('message').eql(`User ${user.username} was deleted.`);
             done();
           });
     });
