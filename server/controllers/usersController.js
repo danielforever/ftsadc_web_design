@@ -33,7 +33,7 @@ const getUserById = asyncHandler(async (req, res) => {
 // @access Private
 const getUserByName = asyncHandler(async (req, res) => {
     const {username} = req.body
-    // Get user by id
+    // Get user by name
     console.log("username:" + username)
     //const user = await User.findById(_id).select('-password').exec()
     const user = await User.findOne({ username: username }).select('-password').exec()

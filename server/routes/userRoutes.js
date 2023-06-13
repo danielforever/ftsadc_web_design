@@ -8,4 +8,10 @@ router.route('/')
     .patch(usersController.updateUser)
     .delete(usersController.deleteUserByName)
 
+router.route('/username')
+    .get(usersController.getUserByName)
+
+router.route('/id')
+    .get(usersController.getUserById)
+
 module.exports = router 

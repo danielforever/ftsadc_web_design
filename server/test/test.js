@@ -14,23 +14,8 @@ describe('GET /', function () {
     });
 });
 
-describe('GET /users', function () {
-    it('it should GET all the users', function (done) {
-        this.timeout(15000);
-        chai.request(app)
-            .get('/users')
-            .end((err, res) => {
-                res.should.have.status(200); // Response code
-                res.body.should.be.a('array'); // Data type
-                res.body.length.should.be.eql(3); // The number of users
-                done();
-            });
-    });
-});
-
-
 /*
-* Test the /POST route
+* Test the POST route
 */
 describe('POST /users', () => {
     it('it should not POST a user without pages field', (done) => {
@@ -71,7 +56,60 @@ describe('POST /users', () => {
 
 });
 
+/*
+* Test the GET route
+*/
+describe('GET /users', function () {
+    it('it should GET all the users', function (done) {
+        this.timeout(15000);
+        chai.request(app)
+            .get('/users')
+            .end((err, res) => {
+                res.should.have.status(200); // Response code
+                res.body.should.be.a('array'); // Data type
+                res.body.length.should.be.eql(4); // The number of users
+                done();
+            });
+    });
+});
 
+describe('GET /users/username & GET /users/id', function () {
+    let user = {
+        _id: "",
+        username: "testuser1",
+    }
+    it('it should GET a user by username', function (done) {
+        this.timeout(15000);
+        chai.request(app)
+            .get('/users/username')
+            .send(user)
+            .end((err, res) => {
+                user._id = res.body._id;
+                res.should.have.status(200); // Response code
+                res.body.should.be.a('object'); // Data type
+                res.body.username.should.be.eql('testuser1'); // Verify user name
+                done();
+            });
+    });
+
+    it('it should GET a user by id', function (done) {
+        this.timeout(15000);
+        chai.request(app)
+            .get('/users/id')
+            .send(user)
+            .end((err, res) => {
+                user._id = res.body._id;
+                res.should.have.status(200); // Response code
+                res.body.should.be.a('object'); // Data type
+                res.body.username.should.be.eql('testuser1'); // Verify user name
+                done();
+            });
+    });
+});
+
+/*
+* Test the DELETE route
+*/
 describe('DELETE /users', () => {
     it('it should delete the "testuser1" user', (done) => {
         let user = {

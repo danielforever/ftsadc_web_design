@@ -36,8 +36,6 @@ app.use('/users', require('./routes/userRoutes'))
 
 app.use('/posters', require('./routes/posterRoutes'))
 
-app.use('/users/id', require('./routes/userIdRoutes'))
-
 // Check if the webpage exists
 app.all('*', (req, res) => {
   res.status(404)
