@@ -40,12 +40,49 @@ export const postersApiSlice = apiSlice.injectEndpoints({
                 } else return [{ type: 'Poster', id: 'LIST' }]    // If false Only return the Poster and id
             }
         }),
+        addNewPoster: builder.mutation({
+            query: initialPoster => ({
+                url: '/posters',
+                method: 'POST',
+                body: {
+                    ...initialPoster,
+                }
+            }),
+            invalidatesTags: [
+                { type: 'Poster', id: "LIST" }
+            ]
+        }),
+        updatePoster: builder.mutation({
+            query: initialPoster => ({
+                url: '/posters',
+                method: 'PATCH',
+                body: {
+                    ...initialPoster,
+                }
+            }),
+            invalidatesTags: (result, error, arg) => [
+                { type: 'Poster', id: arg.id }
+            ]
+        }),
+        deletePoster: builder.mutation({
+            query: ({ id }) => ({
+                url: `/posters`,
+                method: 'DELETE',
+                body: { id }
+            }),
+            invalidatesTags: (result, error, arg) => [
+                { type: 'Poster', id: arg.id }
+            ]
+        }),
     }),
 })
 
 // Export the hook
 export const {
     useGetPostersQuery,
+    useAddNewPosterMutation,
+    useUpdatePosterMutation,
+    useDeletePosterMutation,
 } = postersApiSlice
 
 // returns the query result object
