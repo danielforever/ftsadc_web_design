@@ -6,7 +6,9 @@ import { apiSlice } from "../../app/api/apiSlice"
 
 // This is rtk query
 
-const postersAdapter = createEntityAdapter({})    // This adapter iterate data has ids and entities
+const postersAdapter = createEntityAdapter({
+    sortComparer: (a, b) => (a.completed === b.completed) ? 0 : a.completed ? 1 : -1
+})    // This adapter iterate data has ids and entities
 
 const initialState = postersAdapter.getInitialState()
 
