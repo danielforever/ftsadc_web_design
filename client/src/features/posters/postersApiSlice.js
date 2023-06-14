@@ -7,7 +7,7 @@ import { apiSlice } from "../../app/api/apiSlice"
 // This is rtk query
 
 const postersAdapter = createEntityAdapter({
-    sortComparer: (a, b) => (a.completed === b.completed) ? 0 : a.completed ? 1 : -1
+    sortComparer: (a, b) => (a.eventdate === b.eventdate) ? 0 : a.eventdate ? 1 : -1
 })    // This adapter iterate data has ids and entities
 
 const initialState = postersAdapter.getInitialState()
@@ -31,6 +31,9 @@ export const postersApiSlice = apiSlice.injectEndpoints({
             providesTags: (result, error, arg) => {
                 if (result?.ids) {
                     return [
+                        // Add condition to filter the wanted poster
+
+
                         { type: 'Poster', id: 'LIST' },
                         ...result.ids.map(id => ({ type: 'Poster', id })) // If true return the id that mapped with Poster 
                     ]

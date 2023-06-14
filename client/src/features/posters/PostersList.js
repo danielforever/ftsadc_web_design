@@ -30,7 +30,7 @@ const PostersList = () => {
             <table className="table table--posters">
                 <thead className="table__thead">
                     <tr>
-                        <th scope="col" className="table__th poster__status">Username</th>
+                        <th scope="col" className="table__th poster__status">Finished</th>
                         <th scope="col" className="table__th poster__created">Created</th>
                         <th scope="col" className="table__th poster__updated">Updated</th>
                         <th scope="col" className="table__th poster__title">Title</th>
