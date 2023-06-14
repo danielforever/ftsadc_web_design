@@ -49,3 +49,39 @@ tr {
 .table__cell--inactive {
   background-color: var(--INACTIVE);
 }
+
+/* ||  POSTER */
+
+.poster__created,
+.poster__updated,
+.poster__username {
+  display: none;
+}
+
+.poster__status {
+  font-weight: bold;
+}
+
+.poster__status--open {
+  color: var(--STATUS-OPEN);
+}
+
+.poster__status--completed {
+  color: var(--STATUS-COMPLETE);
+}
+
+
+.table {
+    font-size: 1.5rem;
+  }
+
+  .table--posters {
+    grid-template-columns: repeat(3, 1fr) 2fr repeat(2, 1fr);
+  }
+
+
+  .poster__created,
+  .poster__updated,
+  .poster__username {
+    display: block
+  }

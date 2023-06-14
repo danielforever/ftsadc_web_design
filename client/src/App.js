@@ -14,9 +14,11 @@ import SignIn from './pages/SignIn';
 import Register from './pages/Register';
 import DashLayout from './components/DashBoard/DashLayout'
 import UsersList from './features/users/UsersList'
+import PostersList from './features/posters/PostersList'
 
 import Navbar from "./components/Navbar/Navbar";
 import Footer from './components/Footer/Footer';
+
 
 const App = () => {
 
@@ -57,6 +59,9 @@ const App = () => {
             <Route path="/signin" element={<SignIn state={state} />} />
             <Route path="/Register" element={<Register state={state} />} />
             <Route path="dash" element={<DashLayout />}>
+              <Route path="posters">
+                <Route index element={<PostersList />} />
+              </Route>
               <Route path="users">
                 <Route index element={<UsersList />} />
               </Route>
