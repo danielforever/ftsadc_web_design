@@ -12,7 +12,8 @@ import Sponsors from './pages/Sponsors';
 import ContactUs from './pages/ContactUs';
 import SignIn from './pages/SignIn';
 import Register from './pages/Register';
-import Counter from './features/counter/Counter'; //remove when deployment
+import DashLayout from './components/DashBoard/DashLayout'
+import UsersList from './features/users/UsersList'
 
 import Navbar from "./components/Navbar/Navbar";
 import Footer from './components/Footer/Footer';
@@ -55,6 +56,11 @@ const App = () => {
             <Route path="/contactus" element={<ContactUs state={state} />} />
             <Route path="/signin" element={<SignIn state={state} />} />
             <Route path="/Register" element={<Register state={state} />} />
+            <Route path="dash" element={<DashLayout />}>
+              <Route path="users">
+                <Route index element={<UsersList />} />
+              </Route>
+            </Route>
           </Routes>
         <Footer state={state}/>
         </Router> 

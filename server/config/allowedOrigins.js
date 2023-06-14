@@ -1,7 +1,7 @@
 const allowedOrigins = [
     'http://localhost:3000',
-    'https://www.dandrepairshop.com',
-    'https://dandrepairshop.com'
+/*     'https://www.dandrepairshop.com',
+    'https://dandrepairshop.com' */ //replace to ftsadc.com
 ]
 
 module.exports = allowedOrigins
