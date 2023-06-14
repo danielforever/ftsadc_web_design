@@ -31,7 +31,7 @@ const Poster = ({ posterId }) => {
                 <td className="table__cell note__created">{created}</td>
                 <td className="table__cell note__updated">{updated}</td>
                 <td className="table__cell note__title">{poster.title}</td>
-                <td className="table__cell note__username">{poster.username}</td>
+                <td className="table__cell note__username">{poster.position}</td>
 
                 <td className="table__cell">
                     <button
