@@ -7,6 +7,7 @@ import { ROLES } from "../../config/roles"
 
 const USER_REGEX = /^[A-z]{3,20}$/
 const PWD_REGEX = /^[A-z0-9!@#$%]{4,12}$/
+const EMAIL_REGEX = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.+-]+\.edu$/
 
 const NewUserForm = () => {
 
@@ -21,6 +22,10 @@ const NewUserForm = () => {
 
     const [username, setUsername] = useState('')
     const [validUsername, setValidUsername] = useState(false)
+
+    const [email, setEmail] = useState('')
+    const [validEmail, setValidEmail] = useState(false)
+
     const [password, setPassword] = useState('')
     const [validPassword, setValidPassword] = useState(false)
     const [roles, setRoles] = useState(["Employee"])
@@ -43,6 +48,7 @@ const NewUserForm = () => {
     }, [isSuccess, navigate])
 
     const onUsernameChanged = e => setUsername(e.target.value)
+    const onEmailChanged = e => setEmail(e.target.value)
     const onPasswordChanged = e => setPassword(e.target.value)
 
     //This approach is because we are allowing more than one option to be selected
@@ -55,7 +61,7 @@ const NewUserForm = () => {
         setRoles(values)
     }
 
-    const canSave = [roles.length, validUsername, validPassword].every(Boolean) && !isLoading
+    const canSave = [roles.length, validUsername, validPassword, validEmail].every(Boolean) && !isLoading
 
     const onSaveUserClicked = async (e) => {
         e.preventDefault()
@@ -76,6 +82,7 @@ const NewUserForm = () => {
 
     const errClass = isError ? "errmsg" : "offscreen"
     const validUserClass = !validUsername ? 'form__input--incomplete' : ''
+    const validEmailClass = !validEmail ? 'form__input--incomplete' : ''
     const validPwdClass = !validPassword ? 'form__input--incomplete' : ''
     const validRolesClass = !Boolean(roles.length) ? 'form__input--incomplete' : ''
 
@@ -108,6 +115,17 @@ const NewUserForm = () => {
                     onChange={onUsernameChanged}
                 />
 
+                <label className="form__label" htmlFor="username">
+                                    Email: <span className="nowrap">[must be an edu email]</span></label>
+                <input
+                    className={`form__input ${validEmailClass}`}
+                    id="email"
+                    name="email"
+                    type="text"
+                    autoComplete="off"
+                    value={email}
+                    onChange={onEmailChanged}
+          />
                 <label className="form__label" htmlFor="password">
                     Password: <span className="nowrap">[4-12 chars incl. !@#$%]</span></label>
                 <input
