@@ -1,31 +1,36 @@
-import React, { useState, useEffect } from 'react';
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import Home from "./pages/Home";
-import Activities from './pages/Activities';
-import FTSAActivities from './pages/FTSAActivities';
-import SchoolActivities from './pages/SchoolActivities';
-import AboutUs from './pages/AboutUs';
-import HandBook from './pages/HandBook';
-import AllTSA from './pages/AllTSA';
-import Sponsors from './pages/Sponsors';
-import ContactUs from './pages/ContactUs';
-import SignIn from './pages/SignIn';
-import Register from './pages/Register';
+import React, { useState, useEffect } from 'react'
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
+import Home from "./pages/Home"
+import Activities from './pages/Activities'
+import FTSAActivities from './pages/FTSAActivities'
+import SchoolActivities from './pages/SchoolActivities'
+import AboutUs from './pages/AboutUs'
+import HandBook from './pages/HandBook'
+import AllTSA from './pages/AllTSA'
+import Sponsors from './pages/Sponsors'
+import ContactUs from './pages/ContactUs'
+import SignIn from './pages/SignIn'
+import Register from './pages/Register'
 import DashLayout from './components/DashBoard/DashLayout'
 import UsersList from './features/users/UsersList'
 import PostersList from './features/posters/PostersList'
+import EditUser from './features/users/EditUser'
+import NewUserForm from './features/users/NewUserForm'
+import EditPoster from './features/posters/EditPoster'
+import NewPoster from './features/posters/NewPoster'
 
-import Navbar from "./components/Navbar/Navbar";
-import Footer from './components/Footer/Footer';
+
+import Navbar from "./components/Navbar/Navbar"
+import Footer from './components/Footer/Footer'
 
 
 const App = () => {
 
-  const [Open, setOpenFunc] = useState(false);
+  const [Open, setOpenFunc] = useState(false)
   
-  const [darkMode, setDarkModeFunc] = useState(false);
-  const [langMode,setLanguageFunc] = useState(false);
+  const [darkMode, setDarkModeFunc] = useState(false)
+  const [langMode,setLanguageFunc] = useState(false)
 
   const state = {
     setDarkMode: setDarkModeFunc, 
@@ -61,9 +66,13 @@ const App = () => {
             <Route path="dash" element={<DashLayout />}>
               <Route path="posters">
                 <Route index element={<PostersList />} />
+                <Route path=":id" element={<EditPoster />} />
+                <Route path="new" element={<NewPoster />} />
               </Route>
               <Route path="users">
                 <Route index element={<UsersList />} />
+                <Route path=":id" element={<EditUser />} />
+                <Route path="new" element={<NewUserForm />} />
               </Route>
             </Route>
           </Routes>
