@@ -3,3 +3,4 @@ export const ROLES = {
     Manager: 'Manager',
     Admin: 'Admin'
 }
+// This is a look up table for roles
