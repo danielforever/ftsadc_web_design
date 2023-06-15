@@ -11,6 +11,7 @@ const Prefetch = () => {
         const posters = store.dispatch(postersApiSlice.endpoints.getNotes.initiate())
         const users = store.dispatch(usersApiSlice.endpoints.getUsers.initiate())
 
+        // It will unsubscribe when it leave the protected page in 60 seconds
         return () => {
             console.log('unsubscribing')
             posters.unsubscribe()
