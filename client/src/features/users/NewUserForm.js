@@ -28,11 +28,16 @@ const NewUserForm = () => {
 
     const [password, setPassword] = useState('')
     const [validPassword, setValidPassword] = useState(false)
+
     const [roles, setRoles] = useState(["Employee"])
 
     useEffect(() => {
         setValidUsername(USER_REGEX.test(username))
     }, [username])
+
+    useEffect(() => {
+        setValidEmail(EMAIL_REGEX.test(email))
+    }, [email])
 
     useEffect(() => {
         setValidPassword(PWD_REGEX.test(password))
@@ -41,6 +46,7 @@ const NewUserForm = () => {
     useEffect(() => {
         if (isSuccess) {
             setUsername('')
+            setEmail('')
             setPassword('')
             setRoles([])
             navigate('/dash/users') //If no navigate react will return a warning
@@ -61,12 +67,12 @@ const NewUserForm = () => {
         setRoles(values)
     }
 
-    const canSave = [roles.length, validUsername, validPassword, validEmail].every(Boolean) && !isLoading
+    const canSave = [roles.length, validUsername, validEmail, validPassword ].every(Boolean) && !isLoading
 
     const onSaveUserClicked = async (e) => {
         e.preventDefault()
         if (canSave) {
-            await addNewUser({ username, password, roles })
+            await addNewUser({ username, password, email, roles })
         }
     }
 
@@ -75,7 +81,6 @@ const NewUserForm = () => {
             <option
                 key={role}
                 value={role}
-
             > {role}</option >
         )
     })
