@@ -11,6 +11,7 @@ const EditUser = () => {
 
     const content = user ? <EditUserForm user={user} /> : <p>Loading...</p>
 
+    /* console.log("This is user:",user) */
     return content
 }
 

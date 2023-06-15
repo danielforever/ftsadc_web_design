@@ -34,6 +34,7 @@ const EditUserForm = ({ user }) => {
 
     useEffect(() => {
         setValidUsername(USER_REGEX.test(username))
+        
     }, [username])
 
     useEffect(() => {
@@ -72,7 +73,8 @@ const EditUserForm = ({ user }) => {
     }
 
     const onDeleteUserClicked = async () => {
-        await deleteUser({ id: user.id })
+        console.log(user.id)
+        await deleteUser({ id: user.id})
     }
 
     const options = Object.values(ROLES).map(role => {
@@ -91,7 +93,8 @@ const EditUserForm = ({ user }) => {
     } else {
         canSave = [roles.length, validUsername].every(Boolean) && !isLoading
     }
-
+    console.log("isError:",isError)
+    console.log("isDelError:",isDelError)
     const errClass = (isError || isDelError) ? "errmsg" : "offscreen"
     const validUserClass = !validUsername ? 'form__input--incomplete' : ''
     const validPwdClass = password && !validPassword ? 'form__input--incomplete' : ''

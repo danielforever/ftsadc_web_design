@@ -70,15 +70,15 @@ const App = () => {
             <Route element={<Prefetch />}>
               <Route path="dash" element={<DashLayout />}>
                 <Route index element={<Welcome />} />
-                <Route path="posters">
-                  <Route index element={<PostersList />} />
-                  <Route path=":id" element={<EditPoster />} />
-                  <Route path="new" element={<NewPoster />} />
-                </Route>
                 <Route path="users">
                   <Route index element={<UsersList />} />
                   <Route path=":id" element={<EditUser />} />
                   <Route path="new" element={<NewUserForm />} />
+                </Route>
+                <Route path="posters">
+                  <Route index element={<PostersList />} />
+                  <Route path=":id" element={<EditPoster />} />
+                  <Route path="new" element={<NewPoster />} />
                 </Route>
               </Route>
             </Route>

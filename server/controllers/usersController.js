@@ -191,8 +191,9 @@ const updateUser = asyncHandler(async (req, res) => {
 // @route DELETE /users
 // @access Private
 const deleteUserById = asyncHandler(async (req, res) => {
-    const { _id } = req.body
-
+    console.log("id:req.body:",req.body.id)
+    const { _id } = {_id: req.body.id}
+    console.log("_id:" ,_id)
     // Confirm data
     if (!_id) {
         return res.status(400).json({ message: 'User ID Required' })
@@ -222,8 +223,9 @@ const deleteUserById = asyncHandler(async (req, res) => {
 // @route DELETE /users
 // @access Private
 const deleteUserByName = asyncHandler(async (req, res) => {
+    console.log("name:req.body:",req.body)
     const { username } = req.body
-
+    
     // Confirm data
     if (!username) {
         return res.status(400).json({ message: 'Username Required' })

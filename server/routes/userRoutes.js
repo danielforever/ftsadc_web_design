@@ -6,7 +6,7 @@ router.route('/')
     .get(usersController.getAllUsers)
     .post(usersController.createNewUser)
     .patch(usersController.updateUser)
-    .delete(usersController.deleteUserByName)
+    .delete(usersController.deleteUserById)
 
 router.route('/username')
     .get(usersController.getUserByName)

@@ -112,15 +112,15 @@ const updatePost = asyncHandler(async (req, res) => {
 // @route DELETE /posters
 // @access Private
 const deletePoster = asyncHandler(async (req, res) => {
-    const { id } = req.body
+    const { _id } = {_id: req.body.id}
 
     // Confirm data
-    if (!id) {
+    if (!_id) {
         return res.status(400).json({ message: 'Poster ID required' })
     }
 
     // Confirm note exists to delete 
-    const poster = await Poster.findById(id).exec()
+    const poster = await Poster.findById(_id_id).exec()
 
     if (!poster) {
         return res.status(400).json({ message: 'Poster not found' })

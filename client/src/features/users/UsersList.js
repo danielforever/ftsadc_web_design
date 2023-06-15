@@ -17,6 +17,7 @@ const UsersList = () => {
     if (isLoading) content = <p>Loading...</p>
 
     if (isError) {
+/*         console.log(users) */
         content = <p className="errmsg">{error?.data?.message}</p>
     }
 

@@ -122,6 +122,7 @@ tr {
 }
 
 .form__input--text {
+  color: aliceblue;
   min-height: 150px;
 }
 
