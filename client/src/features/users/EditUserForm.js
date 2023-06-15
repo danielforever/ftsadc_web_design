@@ -74,7 +74,7 @@ const EditUserForm = ({ user }) => {
 
     const onDeleteUserClicked = async () => {
         console.log(user.id)
-        await deleteUser({ id: user.id})
+        await deleteUser({ _id: user.id})
     }
 
     const options = Object.values(ROLES).map(role => {
@@ -82,7 +82,6 @@ const EditUserForm = ({ user }) => {
             <option
                 key={role}
                 value={role}
-
             > {role}</option >
         )
     })

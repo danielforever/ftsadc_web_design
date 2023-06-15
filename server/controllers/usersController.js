@@ -191,8 +191,8 @@ const updateUser = asyncHandler(async (req, res) => {
 // @route DELETE /users
 // @access Private
 const deleteUserById = asyncHandler(async (req, res) => {
-    console.log("id:req.body:",req.body.id)
-    const { _id } = {_id: req.body.id}
+    console.log("id:req.body:", req.body.id)
+    const { _id } = req.body
     console.log("_id:" ,_id)
     // Confirm data
     if (!_id) {
@@ -214,7 +214,7 @@ const deleteUserById = asyncHandler(async (req, res) => {
 
     const result = await user.deleteOne()
 
-    const reply = `Username ${result.username} with ID ${result._id} deleted`
+    const reply = { message: `Username ${result.username} with ID ${result._id} deleted` }
 
     res.json(reply)
 })
@@ -246,7 +246,7 @@ const deleteUserByName = asyncHandler(async (req, res) => {
     console.log("check")
     const result = await user.deleteOne()
 
-    const reply = { message: `Username: ${result.username} deleted`}
+    const reply = { message: `Username ${result.username} with ID ${result._id} deleted` }
 
     res.json(reply)
 })

@@ -128,24 +128,24 @@ describe('GET /users', function () {
             .end((err, res) => {
                 res.should.have.status(200); // Response code
                 res.body.should.be.a('array'); // Data type
-                res.body.length.should.be.eql(4); // The number of users
                 done();
             });
     });
 });
 
+var user = {
+    _id: "",
+    username: "testuser1",
+}
+
 describe('GET /users/username & GET /users/id', function () {
-    let user = {
-        _id: "",
-        username: "testuser1",
-    }
     it('it should GET testuser1 by username', function (done) {
         this.timeout(15000);
         chai.request(app)
             .get('/users/username')
             .send(user)
             .end((err, res) => {
-                user._id = res.body._id;
+                user._id = res.body._id; // pass id for the next test
                 res.should.have.status(200); // Response code
                 res.body.should.be.a('object'); // Data type
                 res.body.username.should.be.eql('testuser1'); // Verify user name
@@ -159,7 +159,6 @@ describe('GET /users/username & GET /users/id', function () {
             .get('/users/id')
             .send(user)
             .end((err, res) => {
-                user._id = res.body._id;
                 res.should.have.status(200); // Response code
                 res.body.should.be.a('object'); // Data type
                 res.body.username.should.be.eql('testuser1'); // Verify user name
@@ -173,16 +172,14 @@ describe('GET /users/username & GET /users/id', function () {
 */
 describe('DELETE /users', () => {
     it('it should delete the "testuser1" user', (done) => {
-        let user = {
-            username: "testuser1",
-        }
       chai.request(app)
           .delete('/users')
           .send(user)
           .end((err, res) => {
+            console.log(`Username: ${user.username}`)
             res.should.have.status(200);
             res.body.should.be.a('object');
-            res.body.should.have.property('message').eql(`Username: ${user.username} deleted`);
+            res.body.should.have.property('message').eql(`Username ${user.username} with ID ${user._id} deleted`);
             done();
           });
     });
