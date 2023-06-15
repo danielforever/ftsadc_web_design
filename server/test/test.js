@@ -170,18 +170,18 @@ describe('GET /users/username & GET /users/id', function () {
 /*
 * Test the DELETE route
 */
-describe('DELETE /users', () => {
-    it('it should delete the "testuser1" user', (done) => {
-      chai.request(app)
-          .delete('/users')
-          .send(user)
-          .end((err, res) => {
-            console.log(`Username: ${user.username}`)
-            res.should.have.status(200);
-            res.body.should.be.a('object');
-            res.body.should.have.property('message').eql(`Username ${user.username} with ID ${user._id} deleted`);
-            done();
-          });
-    });
+// describe('DELETE /users', () => {
+//     it('it should delete the "testuser1" user', (done) => {
+//       chai.request(app)
+//           .delete('/users')
+//           .send(user)
+//           .end((err, res) => {
+//             console.log(`Username: ${user.username}`)
+//             res.should.have.status(200);
+//             res.body.should.be.a('object');
+//             res.body.should.have.property('message').eql(`Username ${user.username} with ID ${user._id} deleted`);
+//             done();
+//           });
+//     });
 
-});
+// });

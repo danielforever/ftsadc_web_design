@@ -191,7 +191,7 @@ const updateUser = asyncHandler(async (req, res) => {
 // @route DELETE /users
 // @access Private
 const deleteUserById = asyncHandler(async (req, res) => {
-    console.log("id:req.body:", req.body.id)
+    console.log("id:req.body:", req.body._id)
     const { _id } = req.body
     console.log("_id:" ,_id)
     // Confirm data
