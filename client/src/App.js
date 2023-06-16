@@ -21,6 +21,7 @@ import NewUserForm from './features/users/NewUserForm'
 import EditPoster from './features/posters/EditPoster'
 import NewPoster from './features/posters/NewPoster'
 import Prefetch from './features/auth/Prefetch'
+import Login from './features/auth/Login'
 
 
 import Navbar from "./components/Navbar/Navbar"
@@ -65,8 +66,9 @@ const App = () => {
             <Route path="/contactus" element={<ContactUs state={state} />} />
             <Route path="/signin" element={<SignIn state={state} />} />
             <Route path="/Register" element={<Register state={state} />} />
-
+            <Route path="login" element={<Login />} />
             {/* Prefetch the data for posters and users for this whole area*/}
+            
             <Route element={<Prefetch />}>
               <Route path="dash" element={<DashLayout />}>
                 <Route index element={<Welcome />} />

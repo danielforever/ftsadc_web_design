@@ -5,7 +5,9 @@ import NewPosterForm from './NewPosterForm'
 const NewPoster = () => {
     const users = useSelector(selectAllUsers)
 
-    const content = users ? <NewPosterForm users={users} /> : <p>Loading...</p>
+    if (!users?.length) return <p>Not Currently Available</p>
+
+    const content = <NewPosterForm users={users} />
 
     return content
 }
