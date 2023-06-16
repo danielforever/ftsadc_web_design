@@ -117,18 +117,27 @@ tr {
 
 .form__input,
 .form__submit-button {
+  background-color: aliceblue;
+  color: black;
   padding: 0.5em;
   border-radius: 15px;
+  border: 2px solid black;
+  border-radius: 5px;
 }
 
 .form__input--text {
-  color: aliceblue;
+  background-color: aliceblue;
+  color: rgb(0, 0, 0);
   min-height: 150px;
 }
 
 .form__input--incomplete {
+  color: rgb(255, 0, 0);
+  background-color: aliceblue;
   border: 1px solid var(--INPUT-INVALID);
   outline: 1px solid var(--INPUT-INVALID);
+  border: 2px solid black;
+  border-radius: 5px;
 }
 
 .form__checkbox {
