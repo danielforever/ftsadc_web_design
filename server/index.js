@@ -32,8 +32,8 @@ app.use('/', express.static(path.join(__dirname, 'public')))
 
 // Add routes 
 app.use('/', require('./routes/root'))
+app.use('/auth', require('./routes/authRoutes'))
 app.use('/users', require('./routes/userRoutes'))
-
 app.use('/posters', require('./routes/posterRoutes'))
 
 // Check if the webpage exists
