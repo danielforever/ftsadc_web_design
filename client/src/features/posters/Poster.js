@@ -18,7 +18,7 @@ const Poster = ({ posterId }) => {
 
         const updated = new Date(poster.updatedAt).toLocaleString('en-US', { day: 'numeric', month: 'long' })
 
-        const handleEdit = () => navigate(`/dash/notes/${posterId}`)
+        const handleEdit = () => navigate(`/dash/posters/${posterId}`)
 
         return (
             <tr className="table__row">

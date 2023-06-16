@@ -91,7 +91,15 @@ const NewPosterForm = ({users}) => {
                     value={text}
                     onChange={onTextChanged}
                 />
-
+                <label className="form__label" htmlFor="text">
+                    Eventdate:</label>
+                <textarea
+                    className={`form__input form__input--text ${validTextClass}`}
+                    id="text"
+                    name="text"
+                    value={text}
+                    onChange={onTextChanged}
+                />
                 <label className="form__label form__checkbox-container" htmlFor="username">
                     ASSIGNED TO:</label>
                 <select
