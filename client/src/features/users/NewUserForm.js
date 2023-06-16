@@ -90,6 +90,9 @@ const NewUserForm = () => {
     const validEmailClass = !validEmail ? 'form__input--incomplete' : ''
     const validPwdClass = !validPassword ? 'form__input--incomplete' : ''
     const validRolesClass = !Boolean(roles.length) ? 'form__input--incomplete' : ''
+    const validUserErrClass = !validUsername ? '' : 'form_error'
+    const validEmailErrClass = !validEmail ? '' : 'form_error'
+    const validPwdErrClass = !validPassword ? '' : 'form_error'
 
     const content = (
         <>
@@ -109,7 +112,7 @@ const NewUserForm = () => {
                     </div>
                 </div>
                 <label className="form__label" htmlFor="username">
-                    Username: <span className="nowrap">[3-20 letters]</span></label>
+                    Username: <span className={`nowrap ${validUserErrClass}`}>[3-20 letters]</span></label>
                 <input
                     className={`form__input ${validUserClass}`}
                     id="username"
@@ -120,8 +123,8 @@ const NewUserForm = () => {
                     onChange={onUsernameChanged}
                 />
 
-                <label className="form__label" htmlFor="username">
-                                    Email: <span className="nowrap">[must be an edu email]</span></label>
+                <label className="form__label" htmlFor="email">
+                                    Email: <span className={`nowrap ${validEmailErrClass}`}>[must be an edu email]</span></label>
                 <input
                     className={`form__input ${validEmailClass}`}
                     id="email"
@@ -132,7 +135,7 @@ const NewUserForm = () => {
                     onChange={onEmailChanged}
           />
                 <label className="form__label" htmlFor="password">
-                    Password: <span className="nowrap">[4-12 chars incl. !@#$%]</span></label>
+                    Password: <span className={`nowrap ${validPwdErrClass}`}>[4-12 chars incl. !@#$%]</span></label>
                 <input
                     className={`form__input ${validPwdClass}`}
                     id="password"
