@@ -117,18 +117,27 @@ tr {
 
 .form__input,
 .form__submit-button {
+  background-color: aliceblue;
+  color: black;
   padding: 0.5em;
   border-radius: 15px;
+  border: 2px solid black;
+  border-radius: 5px;
 }
 
 .form__input--text {
-  color: aliceblue;
+  background-color: aliceblue;
+  color: rgb(0, 0, 0);
   min-height: 150px;
 }
 
 .form__input--incomplete {
-  border: 1px solid var(--INPUT-INVALID);
-  outline: 1px solid var(--INPUT-INVALID);
+  color: rgb(255, 0, 0);
+  background-color: aliceblue;
+  border: 1px solid black;
+  outline: 1px solid black;
+  border: 1px solid black;
+  border-radius: 5px;
 }
 
 .form__checkbox {
@@ -137,6 +146,11 @@ tr {
 }
 
 .form__select {
+  color: black;
+  background-color: aliceblue;
+  border: 1px solid black;
+  border-radius: 5px;
+  outline: 1px solid black;
   width: fit-content;
   padding: 0.25em;
 }
@@ -160,6 +174,10 @@ tr {
   display: flex;
   flex-flow: column nowrap;
   gap: 0.5em;
+}
+
+.form_error {
+  display: none;
 }
 
 @media screen and (min-width: 768px) {
