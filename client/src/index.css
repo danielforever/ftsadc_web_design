@@ -134,9 +134,9 @@ tr {
 .form__input--incomplete {
   color: rgb(255, 0, 0);
   background-color: aliceblue;
-  border: 1px solid var(--INPUT-INVALID);
-  outline: 1px solid var(--INPUT-INVALID);
-  border: 2px solid black;
+  border: 1px solid black;
+  outline: 1px solid black;
+  border: 1px solid black;
   border-radius: 5px;
 }
 
@@ -146,6 +146,11 @@ tr {
 }
 
 .form__select {
+  color: black;
+  background-color: aliceblue;
+  border: 1px solid black;
+  border-radius: 5px;
+  outline: 1px solid black;
   width: fit-content;
   padding: 0.25em;
 }
