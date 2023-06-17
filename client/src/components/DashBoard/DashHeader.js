@@ -6,8 +6,10 @@ import { useNavigate, Link, useLocation } from 'react-router-dom'
 import { useSendLogoutMutation } from '../features/auth/authApiSlice'
 
 const DASH_REGEX = /^\/dash(\/)?$/
-const POSTERS_REGEX = /^\/dash\/posters(\/)?$/
+const POSTER_REGEX = /^\/dash\/posters(\/)?$/
 const USERS_REGEX = /^\/dash\/users(\/)?$/
+
+import React from 'react'
 
 const DashHeader = () => {
 
@@ -22,15 +24,15 @@ const DashHeader = () => {
     }] = useSendLogoutMutation()
 
     useEffect(() => {
-        if (isSuccess) navigate('/') // Navigate to the root also prevent from having alert  
+        if (isSuccess) navigate('/')
     }, [isSuccess, navigate])
 
     if (isLoading) return <p>Logging Out...</p>
 
     if (isError) return <p>Error: {error.data?.message}</p>
 
-    let dashClass = null // Make sure we are not on any poster list or user list
-    if (!DASH_REGEX.test(pathname) && !POSTERS_REGEX.test(pathname) && !USERS_REGEX.test(pathname)) {
+    let dashClass = null
+    if (!DASH_REGEX.test(pathname) && !POSTER_REGEX.test(pathname) && !USERS_REGEX.test(pathname)) {
         dashClass = "dash-header__container--small"
     }
 
@@ -48,7 +50,7 @@ const DashHeader = () => {
         <header className="dash-header">
             <div className={`dash-header__container ${dashClass}`}>
                 <Link to="/dash">
-                    <h1 className="dash-header__title">FTSADC</h1>
+                    <h1 className="dash-header__title">techNotes</h1>
                 </Link>
                 <nav className="dash-header__nav">
                     {/* add more buttons later */}
@@ -57,7 +59,7 @@ const DashHeader = () => {
             </div>
         </header>
     )
-
-    return content
+  return content
 }
+
 export default DashHeader
