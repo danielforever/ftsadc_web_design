@@ -24,7 +24,7 @@ export const authApiSlice = apiSlice.injectEndpoints({
                     //
                     setTimeout(() => {
                         dispatch(apiSlice.util.resetApiState())
-                    }, 1000)
+                    }, 1000)// need 1 second delay to get rid of the subscribtion
                     
                 } catch (err) {
                     console.log(err)
