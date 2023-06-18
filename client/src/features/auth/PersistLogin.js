@@ -37,6 +37,8 @@ const PersistLogin = () => {
                     //const response = 
                     await refresh()
                     //const { accessToken } = response.data
+                    // Set it here to give credential time to be set and then be used 
+                    // when the request is sent
                     setTrueSuccess(true)
                 }
                 catch (err) {
@@ -49,7 +51,7 @@ const PersistLogin = () => {
 
         return () => effectRan.current = true
 
-        // eslint-disable-next-line
+        //eslint-disable-next-line  
     }, [])
 
 
@@ -62,6 +64,7 @@ const PersistLogin = () => {
         content = <p>Loading...</p>
     } else if (isError) { //persist: yes, token: no
         console.log('error')
+        // It could be the refresh token was expired
         content = (
             <p className='errmsg'>
                 {error.data?.message}

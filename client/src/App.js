@@ -22,6 +22,7 @@ import EditPoster from './features/posters/EditPoster'
 import NewPoster from './features/posters/NewPoster'
 import Prefetch from './features/auth/Prefetch'
 import Login from './features/auth/Login'
+import PersistLogin from './features/auth/PersistLogin'
 
 
 import Navbar from "./components/Navbar/Navbar"
@@ -69,6 +70,7 @@ const App = () => {
             <Route path="login" element={<Login />} />
             {/* Prefetch the data for posters and users for this whole area*/}
             
+            <Route element={<PersistLogin />}>
             <Route element={<Prefetch />}>
               <Route path="dash" element={<DashLayout />}>
                 <Route index element={<Welcome />} />
@@ -83,6 +85,7 @@ const App = () => {
                   <Route path="new" element={<NewPoster />} />
                 </Route>
               </Route>
+            </Route>
             </Route>
           </Routes>
         <Footer state={state}/>
