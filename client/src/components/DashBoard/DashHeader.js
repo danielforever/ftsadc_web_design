@@ -30,7 +30,7 @@ const DashHeader = () => {
 
     if (isLoading) return <p>Logging Out...</p>
 
-    if (isError) return <p>Error: {error.data?.message}</p>
+    if (isError) return <p>Error: {error?.data?.message}</p>
 
     let dashClass = null
     if (!DASH_REGEX.test(pathname) && !POSTER_REGEX.test(pathname) && !USERS_REGEX.test(pathname)) {
@@ -48,17 +48,20 @@ const DashHeader = () => {
     )
 
     const content = (
-        <header className="dash-header">
-            <div className={`dash-header__container ${dashClass}`}>
-                <Link to="/dash">
-                    <h1 className="dash-header__title">techNotes</h1>
-                </Link>
-                <nav className="dash-header__nav">
-                    {/* add more buttons later */}
-                    {logoutButton}
-                </nav>
-            </div>
-        </header>
+        <>
+            {/* <p className={errClasee}>{error</p> */}
+            <header className="dash-header">
+                <div className={`dash-header__container ${dashClass}`}>
+                    <Link to="/dash">
+                        <h1 className="dash-header__title">techNotes</h1>
+                    </Link>
+                    <nav className="dash-header__nav">
+                        {/* add more buttons later */}
+                        {logoutButton}
+                    </nav>
+                </div>
+            </header>
+        </>
     )
   return content
 }

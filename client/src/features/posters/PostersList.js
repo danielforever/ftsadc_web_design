@@ -1,7 +1,11 @@
 import { useGetPostersQuery } from "./postersApiSlice"
 import Poster from "./Poster"
+import useAuth from "../../hooks/useAuth"
 
 const PostersList = () => {
+
+    const { username, isManager, isAdmin } = useAuth()
+
     const {
         data: posters,
         isLoading,
@@ -24,11 +28,18 @@ const PostersList = () => {
 
     if (isSuccess) {
 
-        const { ids } = posters
+        const { ids, entities } = posters
+
+        // Change login in future may filtered my association
+        let filteredIds
+        if (isManager || isAdmin) {
+            filteredIds = [...ids]
+        } else {
+            filteredIds = ids.filter(posterId => entities[posterId].username === username)
+        }
 
         const tableContent = ids?.length
-            ? ids.map(posterId => <Poster key={posterId} posterId={posterId} />)
-            : null
+            && filteredIds.map(posterId => <Poster key={posterId} posterId={posterId} />)
 
         content = (
             <table className="table table--posters">

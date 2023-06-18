@@ -67,7 +67,7 @@ const PersistLogin = () => {
         // It could be the refresh token was expired
         content = (
             <p className='errmsg'>
-                {error.data?.message}
+                {error?.data?.message}
                 <Link to="/login">Please login again</Link>.
             </p>
         )
