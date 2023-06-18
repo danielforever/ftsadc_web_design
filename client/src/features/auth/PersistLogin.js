@@ -27,8 +27,8 @@ const PersistLogin = () => {
     useEffect(() => {
         // 1. React 18 Strict Mode (useEffect will run twice), thus we can check the condition 
         //      if "effectRan.current === true" to true which we have changed in return statement
-        // 2. For second condition react Strict Mode only happens in 'development'
-        // 3. Ustually, this is not a problem, but it will when we are handling refresh token
+        // 2. For second condition React Strict Mode only happens in 'development'
+        // 3. Ustually, useEffect run twice is not a problem, but it will when we are handling refresh token
         if (effectRan.current === true || process.env.NODE_ENV !== 'development') { 
 
             const verifyRefreshToken = async () => {
