@@ -3,13 +3,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faRightFromBracket } from "@fortawesome/free-solid-svg-icons"
 import { useNavigate, Link, useLocation } from 'react-router-dom'
 
-import { useSendLogoutMutation } from '../features/auth/authApiSlice'
+import { useSendLogoutMutation } from '../../features/auth/authApiSlice'
+import React from 'react'
 
 const DASH_REGEX = /^\/dash(\/)?$/
 const POSTER_REGEX = /^\/dash\/posters(\/)?$/
 const USERS_REGEX = /^\/dash\/users(\/)?$/
 
-import React from 'react'
+
 
 const DashHeader = () => {
 

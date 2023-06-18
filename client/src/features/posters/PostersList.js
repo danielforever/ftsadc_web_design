@@ -8,7 +8,7 @@ const PostersList = () => {
         isSuccess,
         isError,
         error
-    } = useGetPostersQuery(undefined,  {
+    } = useGetPostersQuery('postersList',  {
         pollingInterval: 60000,
         refetchOnFocus: true,
         refetchOnMountOrArgChange: true
