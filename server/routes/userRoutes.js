@@ -7,7 +7,6 @@ router.use(verifyJWT)
 
 router.route('/')
     .get(usersController.getAllUsers)
-    .post(usersController.createNewUser)
     .patch(usersController.updateUser)
     .delete(usersController.deleteUserById)
 
@@ -17,4 +16,4 @@ router.route('/username')
 router.route('/id')
     .get(usersController.getUserById)
 
-module.exports = router 
+module.exports = router
