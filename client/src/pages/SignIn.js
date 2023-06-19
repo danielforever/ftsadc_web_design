@@ -3,7 +3,7 @@ import Sign from "../components/Sign/Sign";
 
 function SignIn({state}) {
   return (
-    <div class="flex">
+    <div className="flex">
 {/*       {!state.open && (<section className="py-10 hidden md:block">
         < Sign/>
       </section>)} */}

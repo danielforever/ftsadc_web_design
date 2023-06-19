@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import * as SignUpAnima from "./SignUpAnima";
-import {Formik, Form, Field, ErrorMessage } from "formik";
+/* import {Formik, Form, Field, ErrorMessage } from "formik"; */
 import axios from "axios";
 import './Sign.css';
 
@@ -25,7 +25,7 @@ function Sign() {
     })
  };
   return (
-    <div /* class="z-5" */>
+    <div /* className="z-5" */>
     <SignUpAnima.Container>
       <SignUpAnima.SignUpContainer signingIn={signIn}>
         <SignUpAnima.Form>

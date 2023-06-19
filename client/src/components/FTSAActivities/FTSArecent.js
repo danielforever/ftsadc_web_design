@@ -15,10 +15,10 @@ function FTSArecent({state}) {
     </div>
     <div className="grid grid-cols-1 gap-6 xl:grid-cols-2 pb-20">
       <a href="https://ustwhack.super.site/" target="_blank" rel="noreferrer">
-        <img src={chipPower} alt="2023 “USTW System Upgrade” Hackathon" class="mt-10 max-w-sm md:max-w-xl md:max-h-xl mx-auto zoom-box shadow-lg"/>  
+        <img src={chipPower} alt="2023 “USTW System Upgrade” Hackathon" className="mt-10 max-w-sm md:max-w-xl md:max-h-xl mx-auto zoom-box shadow-lg"/>  
       </a>
-      <div class="mb-3 p-10 md:pr-20 md:pl-10 text-gray-500 dark:text-gray-400">
-        <div class="mx-auto pt-10">
+      <div className="mb-3 p-10 md:pr-20 md:pl-10 text-gray-500 dark:text-gray-400">
+        <div className="mx-auto pt-10">
         <a href="https://ustwhack.super.site/" target="_blank" rel="noreferrer">
           <p className={`hover:text-primary mb-8 font-normal text-center text-gray-500 text-3xl sm:px-16 xl:pl-5 dark:text-gray-400 `}>2023 “USTW System Upgrade” Hackathon</p>
         </a>

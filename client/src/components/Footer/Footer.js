@@ -29,17 +29,17 @@ function Footer() {
           </form>
         </div> */}
       </section>
-      <section class='social-media'>
-        <div class='social-media-wrap'>
-          <div class='footer-logo'>
+      <section className='social-media'>
+        <div className='social-media-wrap'>
+          <div className='footer-logo inline-block align-top'>
             <Link to='/' className='social-logo'>
-              <img src={Logo} className="tb-10 xl:cursor-pointer h-12" />
+              <img src={Logo} alt='FTSADC_logo' className="h-12" />
             </Link>
           </div>
-          <small class='website-rights'>FTSADC © 2023</small>
-          <div class='social-icons'>
+          <small className='website-rights'>FTSADC © 2023</small>
+          <div className='social-icons'>
             <Link
-              class='social-icon-link facebook'
+              className='social-icon-link facebook'
               to='https://www.facebook.com/ftsadc2022'
               target='_blank'
               aria-label='Facebook'
@@ -47,7 +47,7 @@ function Footer() {
               <FaFacebookF />
             </Link>
             <Link
-              class='social-icon-link instagram'
+              className='social-icon-link instagram'
               to='https://www.instagram.com/ftsadc/'
               target='_blank'
               aria-label='Instagram'
@@ -55,7 +55,7 @@ function Footer() {
               <FaInstagram />
             </Link>
             <Link
-              class='social-icon-link linkedin'
+              className='social-icon-link linkedin'
               to='https://www.linkedin.com/company/ftsadc/'
               target='_blank'
               aria-label='LinkedIn'

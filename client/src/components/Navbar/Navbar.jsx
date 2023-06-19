@@ -18,7 +18,7 @@ const Navbar = ({state}) => {
       <nav className="pt-3 pb-3 duration-500">
           <div className="px-3 w-full inline-flex items-center font-medium shadow-lg rounded-2xl bg-slate-300 dark:bg-dark_primary duration-500">
             <div className="z-50 p-3 flex flex-shrink-0 justify-between">
-              <img src={Logo} className="xl:cursor-pointer h-12" />  
+              <img src={Logo} alt='logo' className="xl:cursor-pointer h-12" />  
               <div className="p-3 text-3xl xl:hidden" onClick={() => state.setOpen(!state.open)}>
                 <ion-icon name={`${state.open ? "close" : "menu"}`}></ion-icon>
               </div>

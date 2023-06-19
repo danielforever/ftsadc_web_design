@@ -27,7 +27,7 @@ export default function Modal( {selected, setSelected}) {
                 <div className="text-right text-4xl" onClick={()=> setSelected(null)} >
                     <ion-icon name="close"></ion-icon>
                 </div>
-                <img src={selected.url} />
+                <img src={selected.url} alt='member_image' />
 
                 </div>
                     
@@ -51,7 +51,7 @@ export default function Modal( {selected, setSelected}) {
                     <p className="my-4">{selected.song}</p>
                     <p className="my-4" style={{"white-space": "break-spaces"}}>{selected.description}</p>
                     <Link
-                        class='personal-social-icon-link linkedin'
+                        className='personal-social-icon-link linkedin'
                         to={selected.out}
                         target='_blank'
                         aria-label='LinkedIn'

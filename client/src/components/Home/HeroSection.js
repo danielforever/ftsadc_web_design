@@ -2,7 +2,7 @@ import React from 'react';
 import '../../App.css';
 import './HeroSection.css';
 import { Button } from './Button';
-import videodc from "../../assets/videos/dc.mp4";
+/* import videodc from "../../assets/videos/dc.mp4"; */
 
 const HeroSection = ({state}) => {
   return (

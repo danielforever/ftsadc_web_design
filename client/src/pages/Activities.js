@@ -21,7 +21,7 @@ function Activities({state}) {
 {/*     <div className='grid grid-rows-1 text-white text-4xl md:grid-cols-2'>
       <img src={sample_activity2} alt="image" className=' w-10/12 mx-auto object-cover items-center rounded-2xl'/>  
       <div className='flex h-screen items-center w-full text-black centered md:h-screen pb-10 justify-center'>
-        <div class="mx-auto pt-10">
+        <div className="mx-auto pt-10">
           <p className={`mb-8 font-normal text-center text-gray-500 text-3xl px-12 sm:px-16 xl:pl-5 dark:text-gray-400 `}>AANHPI EVENT</p>
           <p className={`mb-8 text-lg font-normal text-left text-gray-500 lg:text-xl px-10 sm:px-16 xl:pl-10 dark:text-gray-400`}>Hey guys! Our GMU TSA is participating in the AANHPI event on 5/6, and we have prepared some Taiwanese snacks and drinks for you all!
 Take the guessing quiz in our stories to take a sneak peek at what we have on that day!</p>
