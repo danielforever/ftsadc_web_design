@@ -13,8 +13,8 @@ function Home({state}) {
       <section className="pt-10">
         <HeroSection state={state}/>
       </section>
-      <div className='w-screen h-fit grid grid-rows-1 text-white text-4xl md:grid-cols-2'>
-        <div class="hero container flex-shrink-0 max-w-screen-lg pt-10 md:pt0 mx-auto pb-20 flex justify-center pr-5">
+      <div className='w-full h-full grid grid-rows-1 text-white text-4xl md:grid-cols-2'>
+        <div class="hero container flex-shrink-0 max-w-full-lg pt-10 md:pt0 mx-auto pb-20 justify-center pr-5">
           <img src={dcimage} alt="dcimage" className=' h-40 sm:h-60 lg:h-80 rounded-2xl'/>  
         </div>
           <div className='flex h-screen items-center w-full text-black centered md:h-screen pb-10 justify-center'>
