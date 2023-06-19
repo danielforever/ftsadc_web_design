@@ -1,7 +1,7 @@
 # User Stories for FTSADC
 
 1. [ ] Design a website for FTSADC non-profit organization 
-2. [ ] Add a public facing page with introduction  
+2. [x] Add a public facing page with introduction  
 3. [ ] Add a member introduction page for the organization
 4. [ ] Add an FTSA activity page for users to edit FTSA activities
 5. [ ] Add a TSA session that show all the TSA organization in our area
@@ -28,3 +28,13 @@
 26. [ ] Only Managers and Admins can create new users 
 27. [ ] Desktop mode is most important but should be available in mobile 
 28. [ ] Create a profile page that require all users to fill in after successfully create an account
+29. [ ] Move register page to public route
+30. [ ] Validate edu email by sending verification code
+31. [ ] List out all duty in 20. 
+32. [ ] Add Association user interface 
+33. [ ] Add Association backend routing
+34. [ ] Add Association controller 
+35. [ ] Create poster user interface
+36. [ ] User update interface 
+37. [ ] Add image upload function
+38. [ ] 
