@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState} from 'react'
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import Home from "./pages/Home"
 import Activities from './pages/Activities'
 import FTSAActivities from './pages/FTSAActivities'
@@ -44,10 +44,10 @@ const App = () => {
     setOpen: setOpenFunc,
     open: Open
   }
-  const stateRead = {
+/*   const stateRead = {
     darkMode: darkMode,
     langMode: langMode
-  };
+  }; */
 
 
   return (
