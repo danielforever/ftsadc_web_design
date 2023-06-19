@@ -28,10 +28,10 @@ const UsersList = () => {
     if (isSuccess) {
 
         const { ids } = users
-
+        
+        // Might need to change the logic to Associaton
         const tableContent = ids?.length
-            ? ids.map(userId => <User key={userId} userId={userId} />)
-            : null
+            && ids.map(userId => <User key={userId} userId={userId} />)
 
         content = (
             <table className="table table--users">
