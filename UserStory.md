@@ -37,4 +37,3 @@
 35. [ ] Create poster user interface
 36. [ ] User update interface 
 37. [ ] Add image upload function
-38. [ ] 
