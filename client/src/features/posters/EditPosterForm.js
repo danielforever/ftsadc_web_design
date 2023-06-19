@@ -3,8 +3,12 @@ import { useUpdatePosterMutation, useDeletePosterMutation } from "./postersApiSl
 import { useNavigate } from "react-router-dom"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSave, faTrashCan } from "@fortawesome/free-solid-svg-icons"
+import useAuth from "../../hooks/useAuth"
 
 const EditPosterForm = ({ poster, users }) => {
+
+    const { isManager, isAdmin } = useAuth()
+
     const [updatePoster, {
         isLoading,
         isSuccess,
@@ -72,6 +76,19 @@ const EditPosterForm = ({ poster, users }) => {
 
     const errContent = (error?.data?.message || delerror?.data?.message) ?? ''
 
+    let deleteButton = null
+    if (isManager || isAdmin) {
+        deleteButton = (
+            <button
+                className="icon-button"
+                title="Delete"
+                onClick={onDeletePosterClicked}
+            >
+                <FontAwesomeIcon icon={faTrashCan} />
+            </button>
+        )
+    }
+
     const content = (
         <>
             <p className={errClass}>{errContent}</p>
@@ -88,13 +105,7 @@ const EditPosterForm = ({ poster, users }) => {
                         >
                             <FontAwesomeIcon icon={faSave} />
                         </button>
-                        <button
-                            className="icon-button"
-                            title="Delete"
-                            onClick={onDeletePosterClicked}
-                        >
-                            <FontAwesomeIcon icon={faTrashCan} />
-                        </button>
+                        {deleteButton}          
                     </div>
                 </div>
                 <label className="form__label" htmlFor="poster-title">

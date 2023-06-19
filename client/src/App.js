@@ -23,7 +23,8 @@ import NewPoster from './features/posters/NewPoster'
 import Prefetch from './features/auth/Prefetch'
 import Login from './features/auth/Login'
 import PersistLogin from './features/auth/PersistLogin'
-
+import RequireAuth from './features/auth/RequireAuth'
+import { ROLES } from './config/roles'
 
 import Navbar from "./components/Navbar/Navbar"
 import Footer from './components/Footer/Footer'
@@ -56,6 +57,7 @@ const App = () => {
         <Router>
           <Navbar state={state}/>
           <Routes>
+            {/* Public Routes */}
             <Route path="/" element={<Home state={state} />} />
             <Route path="/activities" element={<Activities state={state} />} />
             <Route path="/ftsaactivities" element={<FTSAActivities state={state} />} />
@@ -68,24 +70,29 @@ const App = () => {
             <Route path="/signin" element={<SignIn state={state} />} />
             <Route path="/Register" element={<Register state={state} />} />
             <Route path="login" element={<Login />} />
+
             {/* Prefetch the data for posters and users for this whole area*/}
-            
+            {/* Protected Routes */}
             <Route element={<PersistLogin />}>
-            <Route element={<Prefetch />}>
-              <Route path="dash" element={<DashLayout />}>
-                <Route index element={<Welcome />} />
-                <Route path="users">
-                  <Route index element={<UsersList />} />
-                  <Route path=":id" element={<EditUser />} />
-                  <Route path="new" element={<NewUserForm />} />
-                </Route>
-                <Route path="posters">
-                  <Route index element={<PostersList />} />
-                  <Route path=":id" element={<EditPoster />} />
-                  <Route path="new" element={<NewPoster />} />
+              <Route element={<RequireAuth allowedRoles={[...Object.values(ROLES)]} />}>
+                <Route element={<Prefetch />}>
+                  <Route path="dash" element={<DashLayout />}>
+                    <Route index element={<Welcome />} />
+                    <Route element={<RequireAuth allowedRoles={[ROLES.Manager, ROLES.Admin]} />}>
+                      <Route path="users">
+                        <Route index element={<UsersList />} />
+                        <Route path=":id" element={<EditUser />} />
+                        <Route path="new" element={<NewUserForm />} />
+                      </Route>
+                    </Route>
+                    <Route path="posters">
+                      <Route index element={<PostersList />} />
+                      <Route path=":id" element={<EditPoster />} />
+                      <Route path="new" element={<NewPoster />} />
+                    </Route>
+                  </Route>
                 </Route>
               </Route>
-            </Route>
             </Route>
           </Routes>
         <Footer state={state}/>
@@ -97,42 +104,3 @@ const App = () => {
 };
 
 export default App;
-
-/* {<Router>
-      {<Navbar />}
-      <div className="App">
-{        <header>
-          <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
-            <a className="navbar-brand">React Axios Tutorial</a>
-            <div
-              className="collapse navbar-collapse"
-              id="navbarSupportedContent"
-            >
-              <ul className="navbar-nav ml-auto">
-                <li className="nav-item active">
-                  <Link className="nav-link" to={'/create-user'}>
-                    Create User
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to={'/users'}>
-                    Users List
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </nav>
-        </header>}
-        <div className="container">
-          <div className="row">
-            <div className="col-md-12">
-              <Routes>
-                <Route exact path="/" element={<CreateUser />} />
-                <Route path="/create-user" element={<CreateUser />} />
-                <Route path="/users" element={<Users />} />
-              </Routes>
-            </div>
-          </div>
-        </div>
-      </div>
-    </Router> }*/
