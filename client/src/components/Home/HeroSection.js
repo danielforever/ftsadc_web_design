@@ -18,17 +18,3 @@ const HeroSection = ({state}) => {
   )
 }
 export default HeroSection;
-
-{/* <section>
-<div className='w-screen h-screen grid grid-rows-2 text-white text-4xl md:grid-cols-2'>
-    <div className=' w-full h-full bg-neutral-100 content-center md:h-screen'>
-        <p className='pt-5 text-center'>Page 1</p>
-    </div>
-    <div className='w-full h-full bg-neutral-100 content-center md:h-screen'>
-        <p className='pt-10 text-center'>
-          <h1 className="text-black">FTSADC</h1>
-          <h2 className="text-black">大華府地區臺灣同學會聯合會</h2>
-          </p>
-    </div>
-</div>
-</section> */}

@@ -1,10 +1,10 @@
 import React, { useState, useEffect} from "react";
 import { Link } from "react-router-dom";
 import Logo from "../../assets/images/cropftsadclogo.png";
-import ButtonStyle from "./ButtonStyle";
+/* import ButtonStyle from "./ButtonStyle"; */
 import NavLinks from "./NavLinks";
 import {BsFillMoonStarsFill, BsMoonStars} from 'react-icons/bs';
-import { FaLanguage  } from "react-icons/fa";
+/* import { FaLanguage  } from "react-icons/fa"; */
 import {RiEnglishInput, RiEmphasisCn} from "react-icons/ri";
 import 'react-awesome-button/dist/styles.css';
 import './Navbar.css';
@@ -16,7 +16,7 @@ const Navbar = ({state}) => {
   return (
     <div className={`... sticky ${ scrollDirection === "down" ? "-top-40" : "top-0"} transition-all duration-900 z-40`}>
       <nav className="pt-3 pb-3 duration-500">
-          <div className="px-3 w-1280 inline-flex items-center font-medium shadow-lg rounded-2xl bg-slate-300 dark:bg-dark_primary duration-500">
+          <div className="px-3 w-full inline-flex items-center font-medium shadow-lg rounded-2xl bg-slate-300 dark:bg-dark_primary duration-500">
             <div className="z-50 p-3 flex flex-shrink-0 justify-between">
               <img src={Logo} className="xl:cursor-pointer h-12" />  
               <div className="p-3 text-3xl xl:hidden" onClick={() => state.setOpen(!state.open)}>
@@ -68,14 +68,14 @@ const Navbar = ({state}) => {
               </li>
             </ul>
             <div className="xl:block hidden">
-              <ButtonStyle className='btns_tailer' buttonStyle='btn--primary' buttonSize='btn--large' onClick={console.log('hey')}>
+{/*               <ButtonStyle className='btns_tailer' buttonStyle='btn--primary' buttonSize='btn--large' onClick={console.log('hey')}>
                 <div className={state.langMode ? "hidden" : "shown"}>
                   SIGN IN
                 </div>
                 <div className={state.langMode ? "shown" : "hidden"} >
                   登入
                 </div>    
-              </ButtonStyle>
+              </ButtonStyle> */}
             </div>
             <ul>
             <li className="p-3 hidden xl:block" >
@@ -127,14 +127,14 @@ const Navbar = ({state}) => {
                 </Link>
               </li>
               <div className="pl-5 pt-10">
-              <ButtonStyle className='btns_tailer' buttonStyle='btn--primary' buttonSize='btn--large' onClick={console.log('hey')}>
+{/*               <ButtonStyle className='btns_tailer' buttonStyle='btn--primary' buttonSize='btn--large' onClick={console.log('hey')}>
                 <div className={state.langMode ? "hidden" : "shown"} onClick={() => state.setOpen(!state.open)}> 
                   SIGN IN
                 </div>
                 <div className={state.langMode ? "shown" : "hidden"} onClick={() => state.setOpen(!state.open)}>
                   登入
                 </div>  
-              </ButtonStyle>
+              </ButtonStyle> */}
               </div>
             </ul>
           </div>
