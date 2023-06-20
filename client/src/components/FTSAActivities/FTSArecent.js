@@ -14,9 +14,11 @@ function FTSArecent({state}) {
       <p className={`mb-15 font-normal text-center text-gray-500 text-4xl sm:px-16  dark:text-gray-400 ${state.langMode ? "shown" : "hidden"}`}>FTSADC 近期活動!</p>
     </div>
     <div className="grid grid-cols-1 gap-6 xl:grid-cols-2 pb-20">
-      <a href="https://ustwhack.super.site/" target="_blank" rel="noreferrer">
-        <img src={chipPower} alt="2023 “USTW System Upgrade” Hackathon" className="mt-10 max-w-sm md:max-w-xl md:max-h-xl mx-auto zoom-box shadow-lg"/>  
-      </a>
+      <p>
+        <a href="https://ustwhack.super.site/" target="_blank" rel="noreferrer">
+          <img src={chipPower} alt="2023 “USTW System Upgrade” Hackathon" className="mt-10 max-w-sm md:max-w-xl md:max-h-xl mx-auto zoom-box shadow-lg"/>  
+        </a>
+      </p>
       <div className="mb-3 p-10 md:pr-20 md:pl-10 text-gray-500 dark:text-gray-400">
         <div className="mx-auto pt-10">
         <a href="https://ustwhack.super.site/" target="_blank" rel="noreferrer">
