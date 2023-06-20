@@ -11,7 +11,7 @@ import AllTSA from './pages/AllTSA'
 import Sponsors from './pages/Sponsors'
 import ContactUs from './pages/ContactUs'
 import SignIn from './pages/SignIn'
-import Register from './pages/Register'
+/* import Register from './pages/Register' */
 import DashLayout from './components/DashBoard/DashLayout'
 import Welcome from './features/auth/Welcome'
 import UsersList from './features/users/UsersList'
@@ -68,7 +68,7 @@ const App = () => {
             <Route path="/sponsors" element={<Sponsors state={state} />} />
             <Route path="/contactus" element={<ContactUs state={state} />} />
             <Route path="/signin" element={<SignIn state={state} />} />
-            <Route path="/Register" element={<Register state={state} />} />
+{/*             <Route path="/register" element={<Register state={state} />} /> */}
             <Route path="login" element={<Login />} />
 
             {/* Prefetch the data for posters and users for this whole area*/}
