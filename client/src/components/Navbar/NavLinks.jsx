@@ -105,7 +105,7 @@ const NavLinks = ({state}) => {
                       className="w-4 h-4 left-6 absolute mt-2 bg-slate-300 dark:bg-dark_third rotate-45"
                     ></div>
                   </div>
-                  <div className="bg-slate-300 dark:bg-dark_third p-4 grid grid-cols-2 gap-5 rounded-xl" key="{link}">
+                  <div className="bg-slate-300 dark:bg-dark_third p-4 grid grid-cols-2 gap-5 rounded-xl" >
                     {link.sublinks.map((mysublinks) => (
                       <div>
                         <h1 className="text-lg font-semibold dark:text-white">

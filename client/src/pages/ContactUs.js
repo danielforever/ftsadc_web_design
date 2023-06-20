@@ -12,7 +12,7 @@ function ContactUs() {
         id="exampleInput7"
         placeholder="Name" />
       <label
-        for="exampleInput7"
+        htmlFor="exampleInput7"
         className="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
         >Name
       </label>
@@ -25,7 +25,7 @@ function ContactUs() {
         id="exampleInput8"
         placeholder="Email address" />
       <label
-        for="exampleInput8"
+        htmlFor="exampleInput8"
         className="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary">Email address
       </label>
     </div>
@@ -36,7 +36,7 @@ function ContactUs() {
         rows="3"
         placeholder="Message"></textarea>
       <label
-        for="exampleFormControlTextarea13"
+        htmlFor="exampleFormControlTextarea13"
         className="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
         >Message
       </label>
@@ -51,7 +51,7 @@ function ContactUs() {
         id="exampleCheck10" />
       <label
         className="inline-block pl-[0.15rem] hover:cursor-pointer"
-        for="exampleCheck10">
+        htmlFor="exampleCheck10">
         Send me a copy of this message
       </label>
     </div>
