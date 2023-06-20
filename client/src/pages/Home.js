@@ -14,10 +14,10 @@ function Home({state}) {
         <HeroSection state={state}/>
       </section>
       <div className='w-full h-full grid grid-rows-1 text-white text-4xl md:grid-cols-2'>
-        <div className="hero container flex-shrink-0 max-w-full-lg pt-10 md:pt0 mx-auto pb-20 justify-center pr-5">
+        <div className="hero container flex-shrink-0 max-w-full-lg pt-10 md:pt0 mx-auto pb-10 justify-center pr-5">
           <img src={ftsadc2023} alt="dcimage" className=' h-40 sm:h-60 lg:h-80 rounded-2xl'/>  
         </div>
-          <div className='flex h-screen items-center w-full text-black centered md:h-screen pb-10 justify-center'>
+          <div className='flex h-screen items-top md:items-center w-full text-black centered md:h-screen pb-10 justify-center'>
             <div className="mx-auto pt-10">
               <p className={`mb-8 font-normal text-center text-gray-500 text-3xl px-12 sm:px-16 xl:pl-5 dark:text-gray-200 ${state.langMode ? "hidden" : "shown"}`}>FTSADC</p>
               <p className={`mb-8 font-normal text-center text-gray-500 text-3xl px-12 sm:px-16 xl:pl-5 dark:text-gray-200 ${state.langMode ? "shown" : "hidden"}`}>大華府地區臺灣同學會聯合會</p>
