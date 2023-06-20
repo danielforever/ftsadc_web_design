@@ -1,7 +1,7 @@
 import React from "react";
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import {  Link } from 'react-router-dom';
-import dcimage from "../assets/images/dcimage.jpg";
+import ftsadc2023 from "../assets/images/Home/FTSADC.jpg";
 import HeroSection from '../components/Home/HeroSection';
 
 function Home({state}) {
@@ -15,7 +15,7 @@ function Home({state}) {
       </section>
       <div className='w-full h-full grid grid-rows-1 text-white text-4xl md:grid-cols-2'>
         <div className="hero container flex-shrink-0 max-w-full-lg pt-10 md:pt0 mx-auto pb-20 justify-center pr-5">
-          <img src={dcimage} alt="dcimage" className=' h-40 sm:h-60 lg:h-80 rounded-2xl'/>  
+          <img src={ftsadc2023} alt="dcimage" className=' h-40 sm:h-60 lg:h-80 rounded-2xl'/>  
         </div>
           <div className='flex h-screen items-center w-full text-black centered md:h-screen pb-10 justify-center'>
             <div className="mx-auto pt-10">
