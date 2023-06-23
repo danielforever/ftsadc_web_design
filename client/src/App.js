@@ -11,6 +11,9 @@ import AllTSA from './pages/AllTSA'
 import Sponsors from './pages/Sponsors'
 import ContactUs from './pages/ContactUs'
 import SignIn from './pages/SignIn'
+import Phone from './pages/Phone'
+import Bank from './pages/Bank'
+import Driver from './pages/Driver'
 /* import Register from './pages/Register' */
 import DashLayout from './components/DashBoard/DashLayout'
 import Welcome from './features/auth/Welcome'
@@ -25,6 +28,7 @@ import Login from './features/auth/Login'
 import PersistLogin from './features/auth/PersistLogin'
 import RequireAuth from './features/auth/RequireAuth'
 import { ROLES } from './config/roles'
+
 
 import Navbar from "./components/Navbar/Navbar"
 import Footer from './components/Footer/Footer'
@@ -68,8 +72,11 @@ const App = () => {
             <Route path="/sponsors" element={<Sponsors state={state} />} />
             <Route path="/contactus" element={<ContactUs state={state} />} />
             <Route path="/signin" element={<SignIn state={state} />} />
+            <Route path="/phone" element={<Phone state={state} />} />
+            <Route path="/bank" element={<Bank state={state} />} />
+            <Route path="/driver" element={<Driver state={state} />} />
 {/*             <Route path="/register" element={<Register state={state} />} /> */}
-            <Route path="login" element={<Login />} />
+            {/* <Route path="login" element={<Login />} /> */}
 
             {/* Prefetch the data for posters and users for this whole area*/}
             {/* Protected Routes */}
