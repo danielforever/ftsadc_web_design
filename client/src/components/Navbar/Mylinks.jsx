@@ -76,15 +76,9 @@ export const links = [
         ch_Head:"行前注意",
         link: "/handbook",
         sublink: [
-          { name: "Bank", ch_name: "銀行", link: "/handbook" },
-          { name: "Mobile", ch_name: "手機門號", link: "/handbook" },
-        ],
-      },
-      {
-        Head: "Driver's License",
-        ch_Head:"駕照",
-        link: "/license",
-        sublink: [
+          { name: "Bank", ch_name: "銀行", link: "/bank" },
+          { name: "Mobile", ch_name: "手機門號", link: "/Phone" },
+          { name: "Driver's License", ch_name: "駕照", link: "/Driver" },
         ],
       },
       {

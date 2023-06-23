@@ -141,21 +141,6 @@ const Phone = () => {
           大部分的台灣留學生選擇的電信公司應該都是AT&T以及T-Mobile
         </p>
 
-        <p class="mb-6">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus,
-          libero repellat molestiae aperiam laborum aliquid atque magni nostrum,
-          inventore perspiciatis possimus quia incidunt maiores molestias eaque
-          nam commodi! Magnam, labore.
-        </p>
-
-
-
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed,
-          temporibus nulla voluptatibus accusantium sapiente doloremque.
-          Doloribus ratione laboriosam culpa. Ab officiis quidem, debitis
-          nostrum in accusantium dolore veritatis eius est?
-        </p>
       </section>
     </div>
   )
