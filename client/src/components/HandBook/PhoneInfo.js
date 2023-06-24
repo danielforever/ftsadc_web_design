@@ -1,6 +1,6 @@
 import React from 'react'
-import telecoms from "./images/telecoms.jpg";
-import {  Link } from 'react-router-dom';
+import telecoms from "./images/telecom.png"
+import { Link } from 'react-router-dom'
 
 const Phone = () => {
   return (

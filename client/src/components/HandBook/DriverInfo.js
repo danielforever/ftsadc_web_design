@@ -1,6 +1,7 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-const BankInfo = () => {
+const DriverInfo = () => {
   return (
 <div class="container my-24 mx-auto md:px-6">
   <section class="mb-32">
@@ -33,9 +34,25 @@ const BankInfo = () => {
       similique eum vero in est velit quasi pariatur blanditiis incidunt
       quam.
     </p>
+    <p class="mb-6">
+        </p>
+    <p class="mb-6">
+        <strong>查看各州換照資訊參考：</strong>
+    </p>
+    <p>
+    <Link
+              className='text-orange-600'
+              to='https://www.taiwanembassy.org/us/cat/29.html'
+              target='_blank'
+              aria-label='Verizon'
+            >
+            https://www.taiwanembassy.org/us/cat/29.html
+            </Link>
+    </p>
+    
   </section>
 </div>
   )
 }
 
-export default BankInfo
+export default DriverInfo
