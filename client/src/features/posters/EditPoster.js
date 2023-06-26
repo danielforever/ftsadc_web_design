@@ -4,6 +4,8 @@ import { selectPosterById } from './postersApiSlice'
 import { selectAllUsers } from '../users/usersApiSlice'
 import EditPosterForm from './EditPosterForm'
 
+import { useGetUsersQuery } from '../users/usersApiSlice'
+
 const EditPoster = () => {
     const { id } = useParams()
 

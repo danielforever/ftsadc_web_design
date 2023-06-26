@@ -1,15 +1,18 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPenToSquare } from "@fortawesome/free-solid-svg-icons"
 import { useNavigate } from 'react-router-dom'
-
-import { useSelector } from 'react-redux'
-import { selectPosterById } from './postersApiSlice'
+import { useGetPostersQuery } from './postersApiSlice'
+import { memo } from 'react'
 
 import React from 'react'
 
 const Poster = ({ posterId }) => {
 
-    const poster = useSelector(state => selectPosterById(state, posterId))
+    const { poster } = useGetPostersQuery("postersList", {
+        selectFromResult: ({ data }) => ({
+            poster: data?.entities[posterId]
+        }),
+    })
 
     const navigate = useNavigate()
 
@@ -46,5 +49,7 @@ const Poster = ({ posterId }) => {
 
     } else return null
 }
+//This way the component will only re-render if there are changes in the data
+const memoizedPoster = memo(Poster)
 
-export default Poster
+export default memoizedPoster

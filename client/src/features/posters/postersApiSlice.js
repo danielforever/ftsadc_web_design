@@ -15,10 +15,12 @@ const initialState = postersAdapter.getInitialState()
 export const postersApiSlice = apiSlice.injectEndpoints({
     endpoints: builder => ({
         getPosters: builder.query({
-            query: () => '/posters',
-            validateStatus: (response, result) => {
-                return response.status === 200 && !result.isError   // Check if it is 200 status also checking if there is an error
-            },
+            query: () => ({
+                    url: '/posters',
+                    validateStatus: (response, result) => {
+                        return response.status === 200 && !result.isError // Check if it is 200 status also checking if there is an error
+                    },
+            }),
             /* keepUnusedDataFor: 5,  */  
             // 5 sec is just for development, after developing the app it is best to delete this which make this back to default 60 seconds
             transformResponse: responseData => {    // Getting response back from query
