@@ -13,10 +13,12 @@ const initialState = usersAdapter.getInitialState()
 export const usersApiSlice = apiSlice.injectEndpoints({
     endpoints: builder => ({
         getUsers: builder.query({
-            query: () => '/users',
-            validateStatus: (response, result) => {
-                return response.status === 200 && !result.isError   // Check if it is 200 status also checking if there is an error
-            },
+            query: () => ({
+                url: '/users',
+                validateStatus: (response, result) => {
+                    return response.status === 200 && !result.isError
+                },
+            }),
             /* keepUnusedDataFor: 5, */    
             // 5 sec is just for development, after developing the app it is best to delete this which make this back to default 60 seconds
             transformResponse: responseData => {    // Getting response back from query

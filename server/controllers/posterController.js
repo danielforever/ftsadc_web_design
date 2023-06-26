@@ -44,7 +44,7 @@ const createNewPoster = asyncHandler(async (req, res) => {
     }
 
     // Check for duplicate title
-    const duplicate = await Poster.findOne({ title }).lean().exec()
+    const duplicate = await Poster.findOne({ title }).collation({ locale: 'en', strength: 2 }).lean().exec()
 
     if (duplicate) {
         return res.status(409).json({ message: 'Duplicate note title' })
@@ -87,7 +87,7 @@ const updatePost = asyncHandler(async (req, res) => {
     }
 
     // Check for duplicate title
-    const duplicate = await Poster.findOne({ title }).lean().exec()
+    const duplicate = await Poster.findOne({ title }).collation({ locale: 'en', strength: 2 }).lean().exec()
 
     // Allow renaming of the original poster 
     if (duplicate && duplicate?._id.toString() !== _id) {

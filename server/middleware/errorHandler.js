@@ -8,7 +8,8 @@ const errorHandler = (err, req, res, next) => {
 
     res.status(status)
 
-    res.json({ message: err.message })
+    // Validate the status back in our api slices in the front end
+    res.json({ message: err.message, isError: true })
 }
 
 module.exports = errorHandler 
