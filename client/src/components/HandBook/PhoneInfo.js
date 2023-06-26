@@ -5,6 +5,11 @@ import { Link } from 'react-router-dom'
 const Phone = () => {
   return (
     <div class="container my-24 mx-auto md:px-6">
+      <div class="mb-6 flex items-center">
+        <div>
+          <span> Updated dated: <u>24.July.2023</u> </span>
+        </div>
+      </div>
       <section class="mb-32">
         <h1 class="mb-4 text-3xl font-bold">
           美國手機門號、eSIM、美國收台灣簡訊之新手入門

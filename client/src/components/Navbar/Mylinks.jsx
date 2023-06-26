@@ -14,7 +14,7 @@ export const links = [
           { name: "All Activities", ch_name: "所有活動", link: "/ftsaactivities" },
         ],
       },
-      {
+/*       {
         Head: "All School Activities",
         ch_Head:"各校活動",
         link: "/schoolactivities",
@@ -22,8 +22,8 @@ export const links = [
           { name: "School Recent Activities", ch_name: "最近各校活動", link: "/schoolactivities" },
           { name: "All Activities", ch_name: "所有活動", link: "/schoolactivities" },
         ],
-      },
-      {
+      }, */
+/*       {
         Head: "All Area Activities",
         ch_Head:"各地區活動",
         link: "/areaactivities",
@@ -31,7 +31,7 @@ export const links = [
           { name: "Area Recent Activities", ch_name: "各地區活動", link: "/areaactivities" },
           { name: "All Activities", ch_name: "所有活動", link: "/areaactivities" },
         ],
-      },
+      }, */
     ],
   },
   {
@@ -72,8 +72,16 @@ export const links = [
     link: "/handbook",
     sublinks: [
       {
-        Head: "Before Traveling",
+        Head: "Before Arriving",
         ch_Head:"行前注意",
+        link: "/handbook",
+        sublink: [
+          { name: "Pre-departure documents", ch_name: "行前證件", link: "/" },
+        ],
+      },
+      {
+        Head: "After Arriving",
+        ch_Head:"到達須知",
         link: "/handbook",
         sublink: [
           { name: "Bank", ch_name: "銀行", link: "/bank" },
