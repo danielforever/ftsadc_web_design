@@ -42,7 +42,7 @@ const posterSchema = new mongoose.Schema({
         
     )
 
-posterSchema.plugin(AutoIncrement, {
+    posterSchema.plugin(AutoIncrement, {
         id: 'ticketNums',
         inc_field: 'ticket',
         start_seq: 500,
