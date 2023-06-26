@@ -1,8 +1,8 @@
 import { useLocation, Navigate, Outlet } from "react-router-dom"
 import useAuth from "../../hooks/useAuth"
 
-// To avoid anyone who bypass the athourized step by knowing the url
-const RequireAuth = ({ allowedRoles }) => {
+// To avoid anyone who bypass the authorized step by knowing the url
+const RequireAuthRoute = ({ allowedRoles }) => {
     const location = useLocation()
     const { roles } = useAuth()
 
@@ -14,4 +14,4 @@ const RequireAuth = ({ allowedRoles }) => {
 
     return content
 }
-export default RequireAuth
+export default RequireAuthRoute

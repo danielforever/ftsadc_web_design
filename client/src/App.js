@@ -26,7 +26,7 @@ import NewPoster from './features/posters/NewPoster'
 import Prefetch from './features/auth/Prefetch'
 import Login from './features/auth/Login'
 import PersistLogin from './features/auth/PersistLogin'
-import RequireAuth from './features/auth/RequireAuth'
+import RequireAuth from './features/auth/RequireAuthRoute'
 import { ROLES } from './config/roles'
 
 
@@ -76,7 +76,7 @@ const App = () => {
             <Route path="/bank" element={<Bank state={state} />} />
             <Route path="/driver" element={<Driver state={state} />} />
 {/*             <Route path="/register" element={<Register state={state} />} /> */}
-            {/* <Route path="login" element={<Login />} /> */}
+            <Route path="login" element={<Login />} />
 
             {/* Prefetch the data for posters and users for this whole area*/}
             {/* Protected Routes */}
