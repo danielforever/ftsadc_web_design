@@ -13,12 +13,12 @@
 }
 
 .login-textbox{
-    @apply border-0 px-5 py-4 rounded-xl w-3/4 shadow-sm text-lg;
+    @apply border-0 bg-slate-400 px-5 py-3 rounded-xl w-3/4 shadow-sm text-lg;
     @apply focus:outline-none;
 }
 
 .login-btn{
-    @apply border bg-indigo-500 w-3/4 py-4 rounded-lg text-gray-50 text-xl shadow-sm text-center;
+    @apply border bg-indigo-500 w-3/4 py-4 rounded-lg text-gray-50 text-lg shadow-sm text-center;
 }
 
 .login-btn:hover{
