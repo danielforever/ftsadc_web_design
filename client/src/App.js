@@ -26,7 +26,7 @@ import NewPoster from './features/posters/NewPoster'
 import Prefetch from './features/auth/Prefetch'
 import Login from './features/auth/Login'
 import PersistLogin from './features/auth/PersistLogin'
-import RequireAuth from './features/auth/RequireAuth'
+import RequireAuth from './features/auth/RequireAuthRoute'
 import { ROLES } from './config/roles'
 
 
