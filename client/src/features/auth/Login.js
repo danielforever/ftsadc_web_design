@@ -80,7 +80,7 @@ const Login = () => {
                         <p ref={errRef} className={errClass} aria-live="assertive">{errMsg}</p>
 
                         <form className="py-1" onSubmit={handleSubmit}>
-                            <div className='profile flex justify-center py-4'>
+                            <div className='profile flex justify-center py-1'>
                                 <img src={avatar} className="login-profile_img" alt="avatar" />
                             </div>
 
