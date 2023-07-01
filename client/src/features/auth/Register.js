@@ -48,6 +48,8 @@ const Register = () => {
     const [errMsg, setErrMsg] = useState('');
     const [success, setSuccess] = useState(false);
 
+    const [roles, setRoles] = useState(["Employee"])
+
     useEffect(() => {
         userRef.current.focus();
     }, [])
@@ -89,15 +91,22 @@ const Register = () => {
     const onPasswordChanged = e => setPassword(e.target.value)
     const onSetPasswordChanged = e => setMatchPwd(e.target.value)
 
-    const canSave = [validName, validEmail, validPwd, validMatch ].every(Boolean) && !isLoading
+    const canSave = [roles, validName, validEmail, validPwd, validMatch ].every(Boolean) && !isLoading
 
-    const handleSubmit = async (e) => {
+    const onSaveUserClicked = async (e) => {
         e.preventDefault();
         // if button enabled with JS hack
         if (canSave) {
-            await addNewUser({ username, password, email})
+            await addNewUser({ username, password, email, roles})
+            
+            setSuccess(true);
+            setUsername('');
+            setEmail('');
+            setPassword('');
+            setMatchPwd('');
         }
-        const v1 = USER_REGEX.test(username);
+
+/*         const v1 = USER_REGEX.test(username);
         const v2 = PWD_REGEX.test(password);
         if (!v1 || !v2) {
             setErrMsg("Invalid Entry");
@@ -118,6 +127,7 @@ const Register = () => {
             //clear state and controlled inputs
             //need value attrib on inputs for this
             setUsername('');
+            setEmail('');
             setPassword('');
             setMatchPwd('');
         } catch (err) {
@@ -129,7 +139,7 @@ const Register = () => {
                 setErrMsg('Registration Failed')
             }
             errRef.current.focus();
-        }
+        } */
     }
 
     return (
@@ -155,7 +165,7 @@ const Register = () => {
                                         Happy to join you!
                                     </span>
                                 </div>
-                            <form className='py-1' onSubmit={handleSubmit}>
+                            <form className='py-1' onSubmit={onSaveUserClicked}>
                                 <div className='profile flex justify-center py-4'>
                                     <label htmlFor="profile">
                                     <img src={file || avatar} className='login-profile_img' alt="avatar" />
@@ -259,7 +269,7 @@ const Register = () => {
                                         Must match the first <br />password input field.
                                     </p>
 
-                                    <button disabled={!validName || !validEmail || !validPwd || !validMatch || !isLoading ? true : false}>Sign Up</button>
+                                    <button disabled={!validName || !validEmail || !validPwd || !validMatch ? true : false}>Sign Up</button>
                                 </div>
                             </form>
                             <p>

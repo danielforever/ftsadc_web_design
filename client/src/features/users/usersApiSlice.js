@@ -39,7 +39,7 @@ export const usersApiSlice = apiSlice.injectEndpoints({
         }),
         addNewUser: builder.mutation({
             query: initialUserData => ({
-                url: '/users',
+                url: '/createusers',
                 method: 'POST',
                 body: {
                     ...initialUserData,

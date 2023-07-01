@@ -69,7 +69,7 @@ const getAllUsers = asyncHandler(async (req, res) => {
 // @access Private
 const createNewUser = asyncHandler(async (req, res) => {
     const { username, password, email, roles } = req.body
-
+    console.log("check")
     
     console.log(username, password, email, roles)
     // Confirm data
@@ -79,7 +79,7 @@ const createNewUser = asyncHandler(async (req, res) => {
     }
 
     // Check for duplicate username also eleminate case sensitive
-    const duplicate = await User.findOne({ username }).collation({ locale: 'en', strength: 2 }).lean().exec()
+    const duplicateUsername = await User.findOne({ username }).collation({ locale: 'en', strength: 2 }).lean().exec()
 
     if (duplicateUsername) {
         return res.status(409).json({ message: 'Duplicate username' })

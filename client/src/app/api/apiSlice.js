@@ -19,8 +19,10 @@ const baseQueryWithReauth = async (args, api, extraOptions) => {
     // console.log(api) // signal, dispatch, getState()
     // console.log(extraOptions) //custom like {shout: true}
 
+    // When create an account there will be this error 
+    // "GET /auth/refresh not authorized"
     let result = await baseQuery(args, api, extraOptions)
-
+    console.log("check here")
     // If you want, handle other status codes, access token is expired
     if (result?.error?.status === 403) {
         console.log('sending refresh token')
