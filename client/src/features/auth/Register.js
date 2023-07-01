@@ -82,10 +82,10 @@ const Register = () => {
             setEmail('')
             setPassword('')
             setMatchPwd('')
-            navigate('/dash/users') //If no navigate react will return a warning
         }
     }, [isSuccess, navigate])
 
+    const errClass = isError ? "errmsg" : "offscreen"
     const onUsernameChanged = e => setUsername(e.target.value)
     const onEmailChanged = e => setEmail(e.target.value)
     const onPasswordChanged = e => setPassword(e.target.value)
@@ -147,12 +147,14 @@ const Register = () => {
             {success ? (
                 <section>
                     <h1>Success!</h1>
+                    <p className={errClass}>{error?.data?.message}</p>
                     <p>
                         <a href="#">Sign In</a>
                     </p>
                 </section>
             ) : (
                 <div>
+                    
                     <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
                     <div className="container mx-auto">
                         <Toaster position='top-center' reverseOrder={false}></Toaster>

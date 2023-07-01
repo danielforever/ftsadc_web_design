@@ -13,7 +13,7 @@ const baseQuery = fetchBaseQuery({
         return headers
     }
 })
-
+// TODO: Exclude add Newuser function from checking token "Register"
 const baseQueryWithReauth = async (args, api, extraOptions) => {
     // console.log(args) // request url, method, body
     // console.log(api) // signal, dispatch, getState()
