@@ -8,6 +8,8 @@ import {BsFillMoonStarsFill, BsMoonStars} from 'react-icons/bs';
 import {RiEnglishInput, RiEmphasisCn} from "react-icons/ri";
 import 'react-awesome-button/dist/styles.css';
 import './Navbar.css';
+import AccountMenu from "./AccountMenu";
+
 
 const Navbar = ({state}) => {
 
@@ -67,6 +69,7 @@ const Navbar = ({state}) => {
                 </Link>
               </li>
             </ul>
+            <AccountMenu state={state}/>
             <div className="xl:block hidden">
 {/*               <ButtonStyle className='btns_tailer' buttonStyle='btn--primary' buttonSize='btn--large' onClick={console.log('hey')}>
                 <div className={state.langMode ? "hidden" : "shown"}>
