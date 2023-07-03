@@ -13,6 +13,7 @@ import PersonAdd from '@mui/icons-material/PersonAdd';
 import Settings from '@mui/icons-material/Settings';
 import Logout from '@mui/icons-material/Logout';
 import Login from '@mui/icons-material/Login';
+import Dashboard from '@mui/icons-material/SpaceDashboard';
 import useAuth from '../../hooks/useAuth'
 import { useNavigate, Link, useLocation } from 'react-router-dom'
 import { useSendLogoutMutation } from '../../features/auth/authApiSlice'
@@ -26,17 +27,21 @@ export default function AccountMenu() {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const { username, isManager, isAdmin } = useAuth()
   const open = Boolean(anchorEl);
+
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
+
   const handleClose = () => {
     setAnchorEl(null);
   };
+
   let navigate = useNavigate(); 
   const routeChange = () =>{ 
     let path = `./login`; 
     navigate(path);
   }
+
   const { pathname } = useLocation()
 
   const [sendLogout, {
@@ -134,6 +139,15 @@ export default function AccountMenu() {
               <PersonAdd fontSize="small" />
             </ListItemIcon>
             Add another account
+          </MenuItem>
+        }
+        {
+          (username) &&
+          <MenuItem onClick={navigate('/dash')}>
+            <ListItemIcon>
+              <Dashboard fontSize="small" />
+            </ListItemIcon>
+            Dashboard
           </MenuItem>
         }
         {
