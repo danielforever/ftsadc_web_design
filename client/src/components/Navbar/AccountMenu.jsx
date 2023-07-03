@@ -83,9 +83,12 @@ export default function AccountMenu() {
         transformOrigin={{ horizontal: 'right', vertical: 'top' }}
         anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
       >
+        {
+          !(username) &&
         <MenuItem onClick={handleClose}>
           <Avatar /> Profile
         </MenuItem>
+}
         {
           (username) &&
           <MenuItem onClick={handleClose}>
@@ -123,12 +126,15 @@ export default function AccountMenu() {
             Logout
           </MenuItem>
         }
+        {
+          !(username) &&
         <MenuItem onClick={routeChange}>
           <ListItemIcon>
             <Login fontSize="small" />
           </ListItemIcon>
           Login
         </MenuItem>
+}
       </Menu>
     </React.Fragment>
   );
