@@ -123,7 +123,7 @@ export default function AccountMenu() {
       >
         {
           !(username) &&
-        <MenuItem onClick={handleClose}>
+        <MenuItem onClick={routeLogin}>
           <Avatar /> Profile
         </MenuItem>
 }
