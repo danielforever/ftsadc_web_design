@@ -37,8 +37,13 @@ export default function AccountMenu() {
   };
 
   let navigate = useNavigate(); 
-  const routeChange = () =>{ 
+  const routeLogin = () =>{ 
     let path = `./login`; 
+    navigate(path);
+  }
+
+  const routeDash = () =>{ 
+    let path = `./dash`; 
     navigate(path);
   }
 
@@ -143,7 +148,7 @@ export default function AccountMenu() {
         }
         {
           (username) &&
-          <MenuItem onClick={navigate('/dash')}>
+          <MenuItem onClick={routeDash}>
             <ListItemIcon>
               <Dashboard fontSize="small" />
             </ListItemIcon>
@@ -170,7 +175,7 @@ export default function AccountMenu() {
         }
         {
           !(username) &&
-        <MenuItem onClick={routeChange}>
+        <MenuItem onClick={routeLogin}>
           <ListItemIcon>
             <Login fontSize="small" />
           </ListItemIcon>
