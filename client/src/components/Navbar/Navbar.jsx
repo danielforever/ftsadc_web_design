@@ -8,6 +8,8 @@ import {BsFillMoonStarsFill, BsMoonStars} from 'react-icons/bs';
 import {RiEnglishInput, RiEmphasisCn} from "react-icons/ri";
 import 'react-awesome-button/dist/styles.css';
 import './Navbar.css';
+import AccountMenu from "./AccountMenu";
+
 
 const Navbar = ({state}) => {
 
@@ -18,7 +20,9 @@ const Navbar = ({state}) => {
       <nav className="pt-3 pb-3 duration-500">
           <div className="px-3 w-full inline-flex items-center font-medium shadow-lg rounded-2xl bg-slate-300 dark:bg-dark_primary duration-500">
             <div className="z-50 p-3 flex flex-shrink-0 justify-between">
-              <img src={Logo} alt='logo' className="xl:cursor-pointer h-12" />  
+              <Link to="/">
+                <img src={Logo} alt='logo' className="xl:cursor-pointer h-12" />
+              </Link>
               <div className="p-3 text-3xl xl:hidden" onClick={() => state.setOpen(!state.open)}>
                 <ion-icon name={`${state.open ? "close" : "menu"}`}></ion-icon>
               </div>
@@ -35,7 +39,7 @@ const Navbar = ({state}) => {
             </div>
             {/* computer Navbar */}
             <ul className="xl:flex hidden uppercase text-sm items-center gap-6 font-[Poppins]">
-              <li>
+              {/* <li>
                 <Link to="/" className="py-7 px-3 inline-block text-center dark:text-white">
                   <div className={state.langMode ? "hidden" : "shown"} >
                     Home Page
@@ -44,7 +48,7 @@ const Navbar = ({state}) => {
                     首頁
                   </div>
                 </Link>
-              </li>
+              </li> */}
               <NavLinks state={state}/>
               <li>
                 <Link to="/sponsors" className="py-7 px-3 inline-block text-center dark:text-white">
@@ -67,6 +71,7 @@ const Navbar = ({state}) => {
                 </Link>
               </li>
             </ul>
+            <AccountMenu state={state}/>
             <div className="xl:block hidden">
 {/*               <ButtonStyle className='btns_tailer' buttonStyle='btn--primary' buttonSize='btn--large' onClick={console.log('hey')}>
                 <div className={state.langMode ? "hidden" : "shown"}>
