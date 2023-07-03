@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useEffect } from 'react'
 import Box from '@mui/material/Box';
 import Avatar from '@mui/material/Avatar';
 import Menu from '@mui/material/Menu';
@@ -13,7 +14,13 @@ import Settings from '@mui/icons-material/Settings';
 import Logout from '@mui/icons-material/Logout';
 import Login from '@mui/icons-material/Login';
 import useAuth from '../../hooks/useAuth'
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link, useLocation } from 'react-router-dom'
+import { useSendLogoutMutation } from '../../features/auth/authApiSlice'
+
+const DASH_REGEX = /^\/dash(\/)?$/
+const POSTER_REGEX = /^\/dash\/posters(\/)?$/
+const USERS_REGEX = /^\/dash\/users(\/)?$/
+
 
 export default function AccountMenu() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -29,6 +36,27 @@ export default function AccountMenu() {
   const routeChange = () =>{ 
     let path = `./login`; 
     navigate(path);
+  }
+  const { pathname } = useLocation()
+
+  const [sendLogout, {
+      isLoading,
+      isSuccess,
+      isError,
+      error
+  }] = useSendLogoutMutation()
+
+  useEffect(() => {
+      if (isSuccess) navigate('/')
+  }, [isSuccess, navigate])
+
+  if (isLoading) return <p>Logging Out...</p>
+
+  if (isError) return <p>Error: {error?.data?.message}</p>
+
+  let dashClass = null
+  if (!DASH_REGEX.test(pathname) && !POSTER_REGEX.test(pathname) && !USERS_REGEX.test(pathname)) {
+      dashClass = "dash-header__container--small"
   }
   return (
     <React.Fragment>
@@ -119,7 +147,7 @@ export default function AccountMenu() {
         }
         {
           (username) &&
-          <MenuItem onClick={handleClose}>
+          <MenuItem onClick={sendLogout}>
             <ListItemIcon>
               <Logout fontSize="small" />
             </ListItemIcon>
