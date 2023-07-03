@@ -78,6 +78,7 @@ const Register = () => {
 
     useEffect(() => {
         if (isSuccess) {
+            setSuccess(true);
             setUsername('')
             setEmail('')
             setPassword('')
@@ -98,12 +99,6 @@ const Register = () => {
         // if button enabled with JS hack
         if (canSave) {
             await addNewUser({ username, password, email, roles})
-            
-            setSuccess(true);
-            setUsername('');
-            setEmail('');
-            setPassword('');
-            setMatchPwd('');
         }
 
 /*         const v1 = USER_REGEX.test(username);
@@ -147,9 +142,9 @@ const Register = () => {
             {success ? (
                 <section>
                     <h1>Success!</h1>
-                    <p className={errClass}>{error?.data?.message}</p>
+                    
                     <p>
-                        <a href="#">Sign In</a>
+                        <a href="/login">Sign In</a>
                     </p>
                 </section>
             ) : (
@@ -175,7 +170,9 @@ const Register = () => {
                   
                                     <input onChange={onUpload} type="file" id='profile' name='profile' />
                                 </div>
+                                
                                 <div className="textbox flex flex-col items-center gap-6">
+                                    <p className={errClass}>{error?.data?.message}</p>
                                     <label htmlFor="username">
                                         Username:
                                         <FontAwesomeIcon icon={faCheck} className={validName ? "valid" : "hidden"} />
