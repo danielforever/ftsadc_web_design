@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom"
 import axios from '../../api/axios';
 import avatar from '../../assets/images/profile/profile.png';
 import convertToBase64 from '../helper/convert';
+import background from '../../assets/images/register-bg.jpg';
 
 const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
@@ -139,6 +140,7 @@ const Register = () => {
 
     return (
         <>
+        <div style={{ backgroundImage: `url(${background})` }}></div>
             {success ? (
                 <section>
                     <h1>Success!</h1>
@@ -149,11 +151,9 @@ const Register = () => {
                 </section>
             ) : (
                 <div>
-                    
                     <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
                     <div className="container mx-auto">
                         <Toaster position='top-center' reverseOrder={false}></Toaster>
-
                         <div className='flex justify-center items-center h-screen'>
                             <div className='login-glass' style={{ width: "45%", paddingTop: '3em'}}>
                                 <div className="title flex flex-col items-center">
