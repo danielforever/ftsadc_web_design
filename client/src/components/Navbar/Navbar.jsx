@@ -70,8 +70,9 @@ const Navbar = ({state}) => {
                 </div>    
                 </Link>
               </li>
+              
             </ul>
-            <AccountMenu state={state}/>
+            
             <div className="xl:block hidden">
 {/*               <ButtonStyle className='btns_tailer' buttonStyle='btn--primary' buttonSize='btn--large' onClick={console.log('hey')}>
                 <div className={state.langMode ? "hidden" : "shown"}>
@@ -93,6 +94,7 @@ const Navbar = ({state}) => {
               {state.langMode && <RiEnglishInput onClick={() => {state.setLanguage(!state.langMode)}} className=" cursor-pointer text-3xl "/>}
               {!state.langMode && <RiEmphasisCn onClick={() => {state.setLanguage(!state.langMode)}} className=" cursor-pointer text-3xl "/>}
             </div>
+            <AccountMenu state={state}/>
             {/* Mobile nav */}
             <ul
               className={`

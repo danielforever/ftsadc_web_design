@@ -75,9 +75,10 @@ const Login = () => {
                         <span className='py-4 text-xl w-2/3 text-center text-gray-500'>
                         Explore More by connecting with us.
                         </span>
+                        <p ref={errRef} className={errClass} aria-live="assertive">{errMsg}</p>
                     </div>
 {/*                     <main className="login"> */}
-                        <p ref={errRef} className={errClass} aria-live="assertive">{errMsg}</p>
+                        
 
                         <form className="py-1" onSubmit={handleSubmit}>
                             <div className='profile flex justify-center py-1'>
