@@ -84,6 +84,7 @@ const Register = () => {
             setEmail('')
             setPassword('')
             setMatchPwd('')
+            navigate('/otp')
         }
     }, [isSuccess, navigate])
 
@@ -100,42 +101,8 @@ const Register = () => {
         // if button enabled with JS hack
         if (canSave) {
             await addNewUser({ username, password, email, roles})
+            // TODO: add send otp verification (Need to open a model)
         }
-
-/*         const v1 = USER_REGEX.test(username);
-        const v2 = PWD_REGEX.test(password);
-        if (!v1 || !v2) {
-            setErrMsg("Invalid Entry");
-            return;
-        }
-        try {
-            const response = await axios.post(REGISTER_URL,
-                JSON.stringify({ username, password }),
-                {
-                    headers: { 'Content-Type': 'application/json' },
-                    withCredentials: true
-                }
-            );
-            console.log(response?.data);
-            console.log(response?.accessToken);
-            console.log(JSON.stringify(response))
-            setSuccess(true);
-            //clear state and controlled inputs
-            //need value attrib on inputs for this
-            setUsername('');
-            setEmail('');
-            setPassword('');
-            setMatchPwd('');
-        } catch (err) {
-            if (!err?.response) {
-                setErrMsg('No Server Response');
-            } else if (err.response?.status === 409) {
-                setErrMsg('Username Taken');
-            } else {
-                setErrMsg('Registration Failed')
-            }
-            errRef.current.focus();
-        } */
     }
 
     return (

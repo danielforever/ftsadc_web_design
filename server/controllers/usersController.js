@@ -66,7 +66,7 @@ const getAllUsers = asyncHandler(async (req, res) => {
 
 // @desc Create new user
 // @route POST /users
-// @access Private
+// @access Public
 const createNewUser = asyncHandler(async (req, res) => {
     const { username, password, email, roles } = req.body
     console.log("check")
@@ -110,6 +110,7 @@ const createNewUser = asyncHandler(async (req, res) => {
     } else {
         res.status(400).json({ message: 'Invalid user data received' })
     }
+    
 })
 
 

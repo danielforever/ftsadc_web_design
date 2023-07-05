@@ -43,5 +43,7 @@ const verifyOTP = asyncHandler(async (req, res) => {
 
 
 module.exports = {
-    generateOTP
+    generateOTP,
+    verifyOTP,
+    verifyUser
 }
