@@ -85,6 +85,27 @@ tr {
     display: block
   }
 
+/* ||INPUT */
+
+input {
+  background-color: rgba(245, 245, 245, 0.55);;
+  color: black;
+  padding: 0.5em;
+  border-radius: 15px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+input:focus-visible {
+  outline-offset: 0px;
+}
+
+.input--text {
+  background-color: aliceblue;
+  color: rgb(0, 0, 0);
+  min-height: 150px;
+}
+
 /* || FORM - GENERAL */
 
 .form {
