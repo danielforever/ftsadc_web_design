@@ -22,6 +22,9 @@ app.use(logger);
 // CORS for Nodejs and React to interact
 app.use(cors(corsOptions));
 
+// less hackers know about our stack
+app.disable('x-powered-by');
+
 // For ExpressJS to read json file
 app.use(express.json())
 
@@ -36,6 +39,7 @@ app.use('/auth', require('./routes/authRoutes'))
 app.use('/users', require('./routes/userRoutes'))
 app.use('/createusers', require('./routes/userNoTokenRoutes'))
 app.use('/posters', require('./routes/posterRoutes'))
+app.use('/otp', require('./routes/otpRoutes'))
 
 // Check if the webpage exists
 app.all('*', (req, res) => {
