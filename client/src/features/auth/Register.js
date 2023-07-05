@@ -84,6 +84,7 @@ const Register = () => {
             setEmail('')
             setPassword('')
             setMatchPwd('')
+            
             navigate('/otp')
         }
     }, [isSuccess, navigate])
@@ -101,8 +102,14 @@ const Register = () => {
         // if button enabled with JS hack
         if (canSave) {
             await addNewUser({ username, password, email, roles})
+
+            
+            //check if addNewUser is 201 then we do this step
             // TODO: add send otp verification (Need to open a model)
         }
+/*         if(isSuccess) {
+            console.log("This will send otp verifi")
+        } */
     }
 
     return (

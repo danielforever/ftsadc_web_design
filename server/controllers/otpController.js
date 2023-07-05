@@ -24,6 +24,7 @@ const verifyUser = asyncHandler(async (req, res, next) => {
 // @route GET /otp
 // @access Public
 const generateOTP = asyncHandler(async (req, res) => {
+    //TODO: Generate otp verification email
     req.app.locals.OTP = await otpGenerator.generate(6, {lowerCaseAlphabets: false, upperCaseAlphabets: false, specialChars: false})
     res.status(201).send({code: req.app.locals.OTP})
 })
