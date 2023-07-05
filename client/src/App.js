@@ -41,7 +41,7 @@ const App = () => {
   const [Open, setOpenFunc] = useState(false)
   
   const [darkMode, setDarkModeFunc] = useState(false)
-  const [langMode,setLanguageFunc] = useState(false)
+  const [langMode, setLanguageFunc] = useState(false)
 
   const state = {
     setDarkMode: setDarkModeFunc, 
