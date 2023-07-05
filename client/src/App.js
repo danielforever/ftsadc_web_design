@@ -14,6 +14,7 @@ import SignIn from './pages/SignIn'
 import Phone from './pages/Phone'
 import Bank from './pages/Bank'
 import Driver from './pages/Driver'
+import Otp from './pages/Otp'
 /* import Register from './pages/Register' */
 import DashLayout from './components/DashBoard/DashLayout'
 import Welcome from './features/auth/Welcome'
@@ -50,7 +51,7 @@ const App = () => {
     setOpen: setOpenFunc,
     open: Open
   }
-/*   const stateRead = {
+/*   const stateEmail = {
     darkMode: darkMode,
     langMode: langMode
   }; */
@@ -77,8 +78,10 @@ const App = () => {
             <Route path="/bank" element={<Bank state={state} />} />
             <Route path="/driver" element={<Driver state={state} />} />
 {/*             <Route path="/register" element={<Register state={state} />} /> */}
+            {/* TODO: add a state that passdown the otp verification email */}
             <Route path="login" element={<Login />} />
             <Route path="register" element={<Register />} />
+            <Route path="otp" element={<Otp />} />
 
             {/* Prefetch the data for posters and users for this whole area*/}
             {/* Protected Routes */}
