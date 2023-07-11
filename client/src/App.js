@@ -32,7 +32,7 @@ import RequireAuth from './features/auth/RequireAuthRoute'
 import { ROLES } from './config/roles'; */
 
 
-/* import Navbar from "./components/Navbar/Navbar" */
+import Navbar from "./components/Navbar/Navbar"
 import Footer from './components/Footer/Footer'
 
 
@@ -61,7 +61,7 @@ const App = () => {
     <div className={darkMode ? "dark": ""} >
       <div className="App bg-neutral-100 dark:bg-dark_third duration-500"> 
         <Router>
-          {/* <Navbar state={state}/> */}
+          <Navbar state={state}/>
           <Routes>
             {/* Public Routes */}
             <Route path="/" element={<Home state={state} />} />
