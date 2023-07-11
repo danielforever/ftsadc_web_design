@@ -5,7 +5,9 @@ import "./index.css";
 import reportWebVitals from './reportWebVitals';
 import { store } from './app/store'
 import { Provider } from "react-redux";
+/* import { disableReactDevTools } from '@fvilers/disable-react-devtools'; */
 
+/* if (process.env.NODE_ENV === 'production') disableReactDevTools() */
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 //provide the global store state to the app(redux)
