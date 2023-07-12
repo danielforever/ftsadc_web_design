@@ -33,3 +33,5 @@ server/package-lock.json
 server/package.json
 client/package.json
 client/package-lock.json
+client/.cert/cert.pem
+client/.cert/key.pem
