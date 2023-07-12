@@ -10,6 +10,7 @@ const corsOptions = require('./config/corsOptions');
 const connectDB = require('./config/dbConn')
 let mongoose = require('mongoose');
 const PORT = Number(process.env.PORT) || 3500;
+const helmet = require('helmet')
 
 
 console.log(process.env.NODE_ENV);
@@ -33,6 +34,9 @@ app.use(cookieParser())
 
 app.use('/', express.static(path.join(__dirname, 'public')))
 
+// Set HTTP headers automatically and appropriately
+app.use(helmet())
+
 // Add routes 
 app.use('/', require('./routes/root'))
 app.use('/auth', require('./routes/authRoutes'))
@@ -55,6 +59,9 @@ app.all('*', (req, res) => {
 
 // Return error to ./logs/errorLog.log
 app.use(errorHandler)
+
+// Reduce Fingerprinting
+app.disable('x-powered-by')
 
 // Connect server with mongoDB
 mongoose.connection.once('open', () => {
