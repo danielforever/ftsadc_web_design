@@ -2,7 +2,7 @@ import React, { useState} from 'react'
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import Home from "./pages/Home"
-/* import Activities from './pages/Activities'
+import Activities from './pages/Activities'
 import FTSAActivities from './pages/FTSAActivities'
 import SchoolActivities from './pages/SchoolActivities'
 import AboutUs from './pages/AboutUs'
@@ -15,7 +15,6 @@ import Phone from './pages/Phone'
 import Bank from './pages/Bank'
 import Driver from './pages/Driver'
 import Otp from './pages/Otp'
-/* import Register from './pages/Register'
 import DashLayout from './components/DashBoard/DashLayout'
 import Welcome from './features/auth/Welcome'
 import UsersList from './features/users/UsersList'
@@ -29,7 +28,7 @@ import Login from './features/auth/Login'
 import Register from './features/auth/Register'
 import PersistLogin from './features/auth/PersistLogin'
 import RequireAuth from './features/auth/RequireAuthRoute'
-import { ROLES } from './config/roles'; */
+import { ROLES } from './config/roles';
 
 
 import Navbar from "./components/Navbar/Navbar"
@@ -65,7 +64,7 @@ const App = () => {
           <Routes>
             {/* Public Routes */}
             <Route path="/" element={<Home state={state} />} />
-{/*             <Route path="/activities" element={<Activities state={state} />} />
+            <Route path="/activities" element={<Activities state={state} />} />
             <Route path="/ftsaactivities" element={<FTSAActivities state={state} />} />
             <Route path="/schoolactivities" element={<SchoolActivities state={state} />} />
             <Route path="/aboutus" element={<AboutUs state={state} />} />
@@ -77,7 +76,7 @@ const App = () => {
             <Route path="/phone" element={<Phone state={state} />} />
             <Route path="/bank" element={<Bank state={state} />} />
             <Route path="/driver" element={<Driver state={state} />} />
-{/*             <Route path="/register" element={<Register state={state} />} />
+            <Route path="/register" element={<Register state={state} />} />
             <Route path="login" element={<Login />} />
             <Route path="register" element={<Register />} />
             <Route path="otp" element={<Otp />} />
@@ -102,7 +101,7 @@ const App = () => {
                   </Route>
                 </Route>
               </Route>
-            </Route> */}
+            </Route>
           </Routes>
         <Footer state={state}/>
         </Router> 

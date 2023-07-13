@@ -1,4 +1,6 @@
 require('dotenv').config()
+const https = require("https");
+const fs = require("fs");
 const express = require('express');
 const app = express();
 const path = require('path');
@@ -41,6 +43,13 @@ app.use('/createusers', require('./routes/userNoTokenRoutes'))
 app.use('/posters', require('./routes/posterRoutes'))
 app.use('/otp', require('./routes/otpRoutes'))
 
+/* https.createServer({
+      key: fs.readFileSync("key.pem"),
+      cert: fs.readFileSync("cert.pem"),
+    }, app).listen(3500, () => {
+    console.log("server is runing at port 3500");
+  }); */
+
 // Check if the webpage exists
 app.all('*', (req, res) => {
   res.status(404)
@@ -59,7 +68,13 @@ app.use(errorHandler)
 // Connect server with mongoDB
 mongoose.connection.once('open', () => {
   console.log('Connected to MongoDB')
-  app.listen(PORT, () => console.log(`Server running on port ${PORT}`))
+  https.createServer({
+    key: fs.readFileSync("key.pem"),
+    cert: fs.readFileSync("cert.pem"),
+  }, app).listen(3500, () => {
+  console.log("server is runing at port 3500");
+});
+  /* app.listen(PORT, () => console.log(`Server running on port ${PORT}`)) */
 })
 
 // Return error to ./logs/mongoErrLog.log

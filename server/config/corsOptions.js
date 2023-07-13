@@ -12,4 +12,4 @@ const corsOptions = { // thrid party middleware
     optionsSuccessStatus: 200  // original to be 204, but some device have problems with it so change to 200
 }
 
-module.exports = corsOptions 
+module.exports = corsOptions
