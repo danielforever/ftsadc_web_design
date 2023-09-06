@@ -2,7 +2,7 @@ const User = require('../models/User')
 const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
 const asyncHandler = require('express-async-handler')
-
+//test
 // @desc Login
 // @route POST /auth
 // @access Public
