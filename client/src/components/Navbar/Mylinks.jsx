@@ -50,10 +50,13 @@ export const links = [
         ],
       },
       {
-        Head: "All Members",
+        Head: "Members",
         ch_Head:"學聯會成員",
         link: "/aboutus/#ourMember",
         sublink: [
+          { name: "Current Members", ch_name: "現任成員", link: "/aboutus/#ourMember" },
+          { name: "Alumni", ch_name: "過往成員", link: "/alumni" },
+
 /*           { name: "President & Vice-President", ch_name: "正副會長", link: "/" },
           { name: "Secretary", ch_name: "秘書組", link: "/" },
           { name: "Treasury", ch_name: "財務組", link: "/" },
@@ -63,6 +66,7 @@ export const links = [
           { name: "Tech & Web Engineer", ch_name: "行銷資訊組", link: "/" }, */
         ],
       },
+      
     ],
   },
   {

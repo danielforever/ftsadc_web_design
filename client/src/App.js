@@ -6,6 +6,7 @@ import Activities from './pages/Activities'
 import FTSAActivities from './pages/FTSAActivities'
 import SchoolActivities from './pages/SchoolActivities'
 import AboutUs from './pages/AboutUs'
+import Alumni from './pages/Alumni'
 import HandBook from './pages/HandBook'
 import AllTSA from './pages/AllTSA'
 import Sponsors from './pages/Sponsors'
@@ -69,6 +70,8 @@ const App = () => {
             <Route path="/ftsaactivities" element={<FTSAActivities state={state} />} />
             <Route path="/schoolactivities" element={<SchoolActivities state={state} />} />
             <Route path="/aboutus" element={<AboutUs state={state} />} />
+            <Route path="/alumni" element={<Alumni state={state} />} />
+
             <Route path="/handbook" element={<HandBook state={state} />} />
             <Route path="/alltsa" element={<AllTSA state={state} />} />
             <Route path="/sponsors" element={<Sponsors state={state} />} />

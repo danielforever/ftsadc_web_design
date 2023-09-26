@@ -1,20 +1,20 @@
 export const items = [
     {
       id: 1,
-      url: require("../../assets/images/crop2.png"),
-      school: "School:  American University",
-      major: "Major: Public Policy",
-      song: "Favorite Song:   張懸<玫瑰色的你>",
-      description: "平常喜歡摸摸人家的貓狗、宅在家裡和朋友吃鍋，也喜歡和 (ㄙㄨㄥˇㄩㄥˇ) 大家一起參加/舉辦有意思的活動XD 然後最近被很多人提醒要運動，歡迎大家揪我養成好習慣 很開心能有這個難得的機會，與廣佈12州區的大家重建學聯～對學聯的未來期許是帶給台灣學子們溫暖和能量並延續下去❤️",
+      url: require("../../assets/images/Olie.png"),
+      school: "School:  University of Maryland, College Park",
+      major: "Major: Chemistry",
+      song: "Favorite Song:   林志炫<浮誇>",
+      description: "嗨嗨～我是 Olie/歐莉，很高興認識大家～我平常喜歡跑步登山和拍照或賴在家裡睡午覺，目前下一階段想培養的興趣是挑戰高空彈跳，歡迎大家把我/被我拖出去玩XD",
       tags: ["Mountains", "Aesthetic", "Pretty", "Scenic", "Rugged"],
     },
     {
       id: 2,
       url: require("../../assets/images/crop4.png"),
-      school: "School:  George Washington University",
-      major: "Major: Public Health Nutrition",
-      song: "Favorite Song:   李宗盛<鬼迷心竅>",
-      description: "哈囉！！我是台中人，很喜歡打排球跟爬山～學聯對我來說是個意義非凡的組織，不僅是一個學生與其他校外團體的橋樑，同時也是學校與學校間連結的管道，很榮幸能參與構築學聯的過程，期待這裡成為一個資源共享的平台，讓出國在外的我們更加團結！",
+      school: "School:  The Catholic University of America",
+      major: "Major: Computer Science",
+      song: "Favorite Song:   蔡依林<第三人稱>",
+      description: "希望能在學聯與大家一起創造美好的回憶😊",
       tags: ["Mountains", "Aesthetic", "Pretty", "Scenic", "Rugged"],
     },
     {
@@ -37,7 +37,7 @@ export const items = [
     },
     {
       id: 5,
-      url: require("../../assets/images/crop10.png"),
+      url: require("../../assets/images/olie2.png"),
       school: "School:  Duke University",
       major: "Major: Master of Management in Clinical Informatics",
       song: "Favorite Song:   張懸<無狀態>",
