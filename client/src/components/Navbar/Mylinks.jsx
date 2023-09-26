@@ -10,7 +10,7 @@ export const links = [
         ch_Head:"FTSA活動",
         link: "/ftsaactivities",
         sublink: [
-          { name: "Recent Coming", ch_name: "最近活動", link: "/ftsaactivities" },
+          // { name: "Recent Coming", ch_name: "最近活動", link: "/ftsaactivities" },
           { name: "All Activities", ch_name: "所有活動", link: "/ftsaactivities" },
         ],
       },
@@ -45,7 +45,7 @@ export const links = [
         ch_Head:"我們的故事",
         link: "/aboutus",
         sublink: [
-          { name: "Welcome", ch_name: "歡迎", link: "/welcome" },
+          // { name: "Welcome", ch_name: "歡迎", link: "/welcome" },
         
         ],
       },
@@ -76,7 +76,7 @@ export const links = [
         ch_Head:"行前注意",
         link: "/handbook",
         sublink: [
-          { name: "Pre-departure documents", ch_name: "行前證件", link: "/" },
+          { name: "Pre-departure documents", ch_name: "行前證件", link: "/handbook" },
         ],
       },
       {
@@ -89,13 +89,13 @@ export const links = [
           { name: "Driver's License", ch_name: "駕照", link: "/Driver" },
         ],
       },
-      {
-        Head: "Recommend FB Group",
-        ch_Head:"臉書社團",
-        link: "/group",
-        sublink: [
-        ],
-      },
+      // {
+      //   Head: "Recommend FB Group",
+      //   ch_Head:"臉書社團",
+      //   link: "https://www.facebook.com/ftsadc2022",
+      //   sublink: [
+      //   ],
+      // },
     ],
   },
   {

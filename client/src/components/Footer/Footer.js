@@ -36,7 +36,7 @@ function Footer() {
               <img src={Logo} alt='FTSADC_logo' className="h-12" />
             </Link>
           </div>
-          <small className='website-rights'>FTSADC © 2023</small>
+          <small className='website-rights'>FTSADC All rights reserved © 2023</small>
           <div className='social-icons'>
             <Link
               className='social-icon-link facebook'
