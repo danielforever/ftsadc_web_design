@@ -32,7 +32,7 @@ function Alumni({state}) {
     
     <section id="ourMember">    
     <p className={`text-center p-20 text-4xl text-gray-500 dark:text-gray-400 ${state.langMode ? "shown" : "hidden"} `}>過往成員介紹</p>
-    <p className={`text-center p-20 text-4xl text-gray-500 dark:text-gray-400 ${state.langMode ? "hidden" : "shown"} `}>MEET OUR TEAM MEMBERS</p>
+    <p className={`text-center p-20 text-4xl text-gray-500 dark:text-gray-400 ${state.langMode ? "hidden" : "shown"} `}>MEET OUR ALUMNI</p>
 
     <div style ={{width: "100%"}} >
         <Introduction setSelected={setSelected}/>
