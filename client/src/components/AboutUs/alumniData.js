@@ -79,8 +79,8 @@ export const alumniitems = [
     song: "Favorite Song:   林宥嘉<說謊>",
     description: "大家好～我叫Daniel，我是馬里蘭碩二ECE學生，我的興趣是拉大提琴，出去玩～有空大家可以多約一起出去走走",
     tags: ["Mountains", "Aesthetic", "Pretty", "Scenic", "Rugged"],
-    out: "https://www.linkedin.com/in/daniel-huang-2468a3155/",
-    out_name: "linkIn"
+    // out: "https://www.linkedin.com/in/daniel-huang-2468a3155/",
+    // out_name: "linkIn"
   },
   {
     id: 10,

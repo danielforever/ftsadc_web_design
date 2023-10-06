@@ -2,10 +2,12 @@ import React from 'react';
 import { motion } from "framer-motion";
 import { Link } from 'react-router-dom';
 import './Modal.css';
-import { FaLinkedin } from "react-icons/fa";
+import { FaLinkedin, FaInstagram } from "react-icons/fa";
+import { HiOutlineMail } from "react-icons/hi";
+
 
 export default function Modal( {selected, setSelected}) {
-    let iconStyles = { color: "#0077B5", fontSize: "1em" };
+    let iconStyles = { color: "#c3d1d9", fontSize: "1em", marginRight: '30px' };
 
     if (!selected) {
         return <></>;
@@ -50,14 +52,40 @@ export default function Modal( {selected, setSelected}) {
                     <h3 className='text-2xl font-bold mb-2'>{selected.major}</h3>
                     <p className="my-4">{selected.song}</p>
                     <p className="my-4" style={{"white-space": "break-spaces"}}>{selected.description}</p>
-                    <Link
-                        className='personal-social-icon-link linkedin'
-                        to={selected.out}
-                        target='_blank'
-                        aria-label='LinkedIn'
-                    >
-                        <FaLinkedin style={iconStyles} />
-                    </Link>
+                    <div style={{ display: 'flex', alignItems: 'center' }}>
+                        {selected.linkedin && (
+                            <Link
+                                className='personal-social-icon-link linkedin'
+                                to={selected.linkedin}
+                                target='_blank'
+                                aria-label='LinkedIn'
+                            >
+                                <FaLinkedin style={iconStyles}  />
+                            </Link>
+                        )}
+                        {selected.instagram && (
+                            <Link
+                                className='personal-social-icon-link linkedin'
+                                to={selected.instagram}
+                                target='_blank'
+                                aria-label='Instagram'
+                            >
+                                <FaInstagram style={iconStyles} />
+                            </Link>
+                        )}
+                        {selected.email && (
+                            <Link
+                                className='personal-social-icon-link linkedin'
+                                to={`mailto:${selected.email}`}
+                                target='_blank'
+                                aria-label='Email'
+                            >
+                                <HiOutlineMail style={iconStyles} />
+                            </Link>
+                        )}
+                    </div>
+
+
                     {/* <button className="btn btn-primary btn-block" onClick={() => window.open(`${selected.out}`, '_blank')}>{selected.out_name}</button> */}
                 </motion.div>
             </div>

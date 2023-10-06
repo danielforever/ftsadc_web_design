@@ -36,7 +36,7 @@ const Card = ({item}) => {
 function StateCardTSA() {
   return (
     <div className='p-4'>
-      <div className='px-20 grid grid-cols-1 gap-6 md:grid-cols-3 lg:grid-cols-4 xl:columns-4 2xl:grid-cols-5'>
+      <div className='px-20 grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-4 xl:grid-columns-4 2xl:grid-cols-5'>
         {allstates.map((item) => (
           <Card key={item.id} item={item} />
         ))}

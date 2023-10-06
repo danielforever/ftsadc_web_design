@@ -30,7 +30,8 @@ const Card = ({setSelected, item}) => {
 export default function Introduction( {setSelected} ) {
   return (
     <div className='p-4'>
-      <div className='columns-2 sm:columns-2 md:columns-3 lg:columns-3 xl:columns-4 2xl:columns-5 gap-5'>
+      {/* <div className='columns-2 sm:columns-2 md:columns-3 lg:columns-3 xl:columns-4 2xl:columns-4 gap-5'> */}
+      <div className='px-20 grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-4'>
         {items.map((item) => (
           <Card key={item.id} setSelected={setSelected} item={item} />
         ))}

@@ -7,6 +7,9 @@ export const items = [
       song: "Favorite Song:   林志炫<浮誇>",
       description: "嗨嗨～我是 Olie/歐莉，很高興認識大家～我平常喜歡跑步登山和拍照或賴在家裡睡午覺，目前下一階段想培養的興趣是挑戰高空彈跳，歡迎大家把我/被我拖出去玩XD",
       tags: ["Mountains", "Aesthetic", "Pretty", "Scenic", "Rugged"],
+      linkedin: "",
+      instagram: "https://www.instagram.com/joutseno",
+      email:"joutseno@umd.edu"
     },
     {
       id: 2,
@@ -16,6 +19,9 @@ export const items = [
       song: "Favorite Song:   蔡依林<第三人稱>",
       description: "希望能在學聯與大家一起創造美好的回憶😊",
       tags: ["Mountains", "Aesthetic", "Pretty", "Scenic", "Rugged"],
+      linkedin: "",
+      instagram: "https://www.instagram.com/wueliza_",
+      email:"wuc@cua.edu"
     },
     {
       id: 3,
@@ -25,6 +31,9 @@ export const items = [
       song: "Favorite Song:   Easy<Peasy>",
       description: "哈囉~!! 我是台南人，吃吃喝喝的行程是我的日常，但是生活除了美食，還有豐富自己的生活，所以加入學聯不僅能夠增進留學生的感情，還能為各位服務，讓學生能有一個資源共享的平台。",
       tags: ["Mountains", "Aesthetic", "Pretty", "Scenic", "Rugged"],
+      linkedin: "",
+      instagram: "https://www.instagram.com/mushroom_zuo/",
+      email:"feb87217@gmail.com"
     },
     {
       id: 4,
@@ -34,6 +43,9 @@ export const items = [
       song: "Favorite Song:   蘇打綠/魚丁糸<無眠>",
       description: "喜歡爬步道、看新風景、吃美食，但也喜歡宅在家看劇。最近在探索新餐廳、咖啡廳，歡迎大家推薦～很開心加入學聯，希望跟大家一起變熟、一起成長！",
       tags: ["Mountains", "Aesthetic", "Pretty", "Scenic", "Rugged"],
+      linkedin: "",
+      instagram: "https://www.instagram.com/hanji_ann",
+      email:"al1698@georgetown.edu"
     },
     {
       id: 5,
@@ -43,6 +55,9 @@ export const items = [
       song: "Favorite Song:   陳奕迅<十年>",
       description: "哈囉！說實在的，我真的是誤打誤撞的申請，然後誤打誤撞的加入學聯會呢 ʅ（◞‿◟）ʃ  有點意外又榮幸地被選為這個大家庭的一份子。之前有相關的社團經驗但是從來沒辦過跨校的活動，所以其實蠻緊張的。期待這一年會遇到新的挑戰也很期待認識各式各樣的新朋友！ 平常喜歡旅遊、爬山、做飯烘焙、看夕陽（嗯，就是老人生活）然後最近又開始打羽毛球了～ 如果有任何同好人士的話，約起來一起玩！啊還有！很想趕快財富自由，提早退休，環遊世界🤞 ",
       tags: ["Mountains", "Aesthetic", "Pretty", "Scenic", "Rugged"],
+      linkedin: "",
+      instagram: "https://www.instagram.com/melody_pcc",
+      email:"melodychou918@gmail.com"
     },
     {
       id: 6,
@@ -52,6 +67,9 @@ export const items = [
       song: "Favorite Song:   草東沒有派對<山海>",
       description: "嗨嗨大家好，我是陳誼軒，其實我很宅，但為了身體健康，還是會出門慢跑，身體健康第一！",
       tags: ["Mountains", "Aesthetic", "Pretty", "Scenic", "Rugged"],
+      linkedin: "",
+      instagram: "https://www.instagram.com/yixuan4877",
+      email:"yhchen91@umd.edu"
     },
     {
       id: 7,
@@ -61,6 +79,9 @@ export const items = [
       song: "Favorite Song:   謝震廷<你的行李>",
       description: "嗨嗨，我叫Maryanne。平常我喜歡嘗試各種運動、爬山、探索新地方，還有看房子！很期待在學聯認識大家。",
       tags: ["Mountains", "Aesthetic", "Pretty", "Scenic", "Rugged"],
+      linkedin: "",
+      instagram: "https://www.instagram.com/ll.maryanne",
+      email:"llm0316@gwu.edu"
     },
     {
       id: 8,
@@ -70,8 +91,9 @@ export const items = [
       song: "Favorite Song:   蛋堡<史詩>",
       description: "Recently I'm obsessed with TV series and stand-up comedy.(Breaking Bad, Better call Saul, Conan O'Brien needs a friend etc.) So if you wanna share any kinda idea or thought with me. It's my pleasure, then.I just started my LinkedIn journey, here is my profile link:www.linkedin.com/in/po-chun-huang-9a9876232 I really wish we can communicate with each other in business area someday! If you are willing to, you can connect with me!",
       tags: ["Mountains", "Aesthetic", "Pretty", "Scenic", "Rugged"],
-      out: "https://www.linkedin.com/in/po-chun-huang-9a9876232",
-      out_name: "linkIn"
+      linkedin: "www.linkedin.com/in/po-chun-huang-9a9876232",
+      instagram: "https://www.instagram.com/cces310444",
+      email:"cces31044@gmail.com"
     },
     {
       id: 9,
@@ -81,8 +103,9 @@ export const items = [
       song: "Favorite Song:   陳奕迅<Shall we talk>",
       description: "是位熱愛生活、勇於挑戰的資深維州居民（自己講）。也是被生化學界耽誤了的小小飛行員👨‍🔬🧑‍✈️。在學聯最重要的工作就是為大家找錢、錢、還有錢💰今年會努力把活動辦好，讓各位有愉快難忘的一年。",
       tags: ["Mountains", "Aesthetic", "Pretty", "Scenic", "Rugged"],
-      // out: "https://www.linkedin.com/in/daniel-huang-2468a3155/",
-      // out_name: "linkIn"
+      linkedin: "",
+      instagram: "https://www.instagram.com/marcoip64",
+      email:"cyi20@cam.ac.uk"
     },
     {
       id: 10,
@@ -92,8 +115,9 @@ export const items = [
       song: "Favorite Song:   林宥嘉<說謊>",
       description: "嗨～大家好 我叫Daniel 我喜歡出去玩，打遊戲，拉大提琴，再請大家多多關照啦～",
       tags: ["Mountains", "Aesthetic", "Pretty", "Scenic", "Rugged"],
-      out: "https://www.linkedin.com/in/daniel-huang-2468a3155/",
-      out_name: "linkIn"
+      linkedin: "https://www.linkedin.com/in/daniel-huang-2468a3155/",
+      instagram: "https://www.instagram.com/daniel87011354",
+      email:"phuang14@umd.edu"
     },
     {
       id: 11,
@@ -103,8 +127,9 @@ export const items = [
       song: "Favorite Song:   Leo王<陪妳過假日>",
       description: "Mike is a master's student at Virginia Tech, specializing in web development and product management. Holding a master's degree in computer science, he excels in supply chain logistics, large-scale applications, and banking technology. Mike's expertise empowers him to identify and enhance technical solutions effectively. Beyond his academic pursuits, Mike enjoys hiking and working out. He eagerly anticipates leveraging his skills and enthusiasm to drive positive changes in the realm of tech innovation.",
       tags: ["Mountains", "Aesthetic", "Pretty", "Scenic", "Rugged"],
-      out: "https://www.linkedin.com/in/hc-mike-l",
-      out_name: "linkIn"
+      linkedin: "https://www.linkedin.com/in/hc-mike-l/",
+      instagram: "",
+      email:"houchunlee@vt.edu"
     },
     {
       id: 12,
@@ -114,6 +139,9 @@ export const items = [
       song: "Favorite Song:   周杰倫<軌跡>",
       description: "哈囉大家～我很喜歡交朋友也很會聊天 無聊都可以找我出去！超級喜歡戶外活動 爬山排球什麼的 很希望能透過這個學聯認識更多朋友",
       tags: ["Mountains", "Aesthetic", "Pretty", "Scenic", "Rugged"],
+      linkedin: "",
+      instagram: "https://www.instagram.com/lyx._94",
+      email:"yahsilin0511@gmail.com"
     },
     {
       id: 13,
@@ -123,6 +151,9 @@ export const items = [
       song: "Favorite Song:   美秀集團<心悶>",
       description: "嗨！大家好，我是Justin。是新任的財務組長，很高興能夠為各位服務。雖然目前TSA有些拮据，但還是希望能夠盡可能幫助各位，為各位遠赴異地的同學朋友們能夠有一個互相交流協助的平台。我挺喜歡滑雪的，歡迎喜歡滑雪或是想要一起滑雪的朋友可以一起交流XD",
       tags: ["Mountains", "Aesthetic", "Pretty", "Scenic", "Rugged"],
+      linkedin: "",
+      instagram: "",
+      email:"justin4f@gmail.com"
     },
     {
       id: 14,
@@ -132,6 +163,9 @@ export const items = [
       song: "Favorite Song:   守夜人<我睡不著>",
       description: "大家好我是美宣! 目前是碩士新生，喜歡攝影、看動漫或是追劇，也喜歡登山露營，初來乍到還有許多事情等我挖掘，加入學聯會也讓我更快速熟悉這邊的人事物，歡迎大家一起來參與!",
       tags: ["Mountains", "Aesthetic", "Pretty", "Scenic", "Rugged"],
+      linkedin: "",
+      instagram: "https://www.instagram.com/yolo_photo.0u0",
+      email:"tttoy2483742244@gmail.com"
     },
     {
       id: 15,
@@ -141,6 +175,9 @@ export const items = [
       song: "Favorite Song:   滅火器<島嶼天光>",
       description: "大家好，我來自中壢，GWU MSBA畢業，目前在DC WFH，喜歡戶外活動，希望可以透過學聯幫助辛苦在異鄉奮鬥的台灣人！",
       tags: ["Mountains", "Aesthetic", "Pretty", "Scenic", "Rugged"],
+      linkedin: "",
+      instagram: "https://www.instagram.com/yuan_yu_wen",
+      email:"laurenyuan1230@gmail.com"
     },
     {
       id: 16,
@@ -150,6 +187,9 @@ export const items = [
       song: "Favorite Song:   方大同<特別的人>",
       description: "哈摟大家好！喜歡一切奇奇怪怪也新鮮的事物",
       tags: ["Mountains", "Aesthetic", "Pretty", "Scenic", "Rugged"],
+      linkedin: "",
+      instagram: "https://www.instagram.com/i_sheila_",
+      email:"isheilachuang@gmail.com"
     },
     // {
     //   id: 17,
