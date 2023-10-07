@@ -61,10 +61,24 @@ const services = [
 ];
 
 const contactConfig = {
-  YOUR_EMAIL: 'developer@javascript.com',
-  YOUR_FONE: '(555)123-4567',
+  YOUR_EMAIL: 'ftsadc.team@gmail.com',
+  // YOUR_FONE: '(555)123-4567',
   description:
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vehicula eu nunc et sollicitudin. Cras pulvinar, nisi at imperdiet pharetra. ',
+  `At the Federation of Taiwanese Student Association in Washington DC, we're dedicated to serving the community and fostering connections among students. Your feedback, inquiries, and suggestions are invaluable to us, helping drive our mission forward and ensure we remain aligned with the needs of our members. Whether you're a current member with a question, an alumnus looking to get involved, a potential partner organization, or just someone interested in learning more about Taiwanese culture and student life in the DC area, we want to hear from you!
+    
+  Use the form below or reach out via email or phone to get in touch with our dedicated team. We aim to respond promptly and appreciate your interest in FTSADC.`,
+  YOUR_SERVICE_ID: 'service_id',
+  YOUR_TEMPLATE_ID: 'template_id',
+  YOUR_USER_ID: 'user_id',
+};
+
+const contactConfigCN = {
+  YOUR_EMAIL: 'ftsadc.team@gmail.com',
+  // YOUR_FONE: '(555)123-4567',
+  description:
+  `At the Federation of Taiwanese Student Association in Washington DC, we're dedicated to serving the community and fostering connections among students. Your feedback, inquiries, and suggestions are invaluable to us, helping drive our mission forward and ensure we remain aligned with the needs of our members. Whether you're a current member with a question, an alumnus looking to get involved, a potential partner organization, or just someone interested in learning more about Taiwanese culture and student life in the DC area, we want to hear from you!
+    
+  Use the form below or reach out via email or phone to get in touch with our dedicated team. We aim to respond promptly and appreciate your interest in FTSADC.`,
   YOUR_SERVICE_ID: 'service_id',
   YOUR_TEMPLATE_ID: 'template_id',
   YOUR_USER_ID: 'user_id',

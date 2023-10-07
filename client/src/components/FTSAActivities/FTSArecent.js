@@ -1,6 +1,10 @@
 import React from 'react';
 import chipPowerEN from "../../assets/images/Activities/2023careerWorkShopEN.png";
 import chipPowerCN from "../../assets/images/Activities/2023careerWorkShopCN.png";
+import ReactiveButton from 'reactive-button';
+// import { useState } from 'react';
+
+
 
 
 function FTSArecent({state}) {
@@ -39,7 +43,6 @@ function FTSArecent({state}) {
         <a href="https://forms.gle/mNcjQmXganCpzbzGA" target="_blank" rel="noreferrer">
           <p className={`hover:text-primary mb-8 font-normal text-center text-gray-500 text-3xl sm:px-16 xl:pl-5 dark:text-gray-400 ${state.langMode ? "hidden" : "shown"}`}>2023 就業職達車 Career Workshop</p>
           <p className={`hover:text-primary mb-8 font-normal text-center text-gray-500 text-3xl sm:px-16 xl:pl-5 dark:text-gray-400 ${state.langMode ? "shown" : "hidden"}`}>2023 Career Workshop</p>
-
         </a>
           <p className={`mb-8 text-lg font-normal text-left text-gray-500 lg:text-xl px-10 sm:px-16 xl:pl-10 dark:text-gray-400 ${state.langMode ? "hidden" : "shown"}`}>
             2023 下半學年度的就業職達車要開跑啦～！
@@ -52,7 +55,7 @@ function FTSArecent({state}) {
             Or are you confused about how to find internships during your studies?
           </p>
           <p className={`mb-8 text-lg font-normal text-left text-gray-500 lg:text-xl px-10 sm:px-16 xl:pl-10 dark:text-gray-400 ${state.langMode ? "hidden" : "shown"}`}>
-            華府學聯聽到各位的心聲，為各位準備 hybrid 的職涯講座活動了！職涯講座範圍包括工作簽證申請相關辦理事項，以及撰寫履歷、面試技巧分享。此外，也有針對各個領域例如商學院、理工學院、政法學院邀請業界工作學長姐的經驗談。講座也開放了 Q&A 問答時間讓同學們更直接地解決自己的困惑，以及在講座尾聲實體參與者更有 networking event 讓各位同學包括講者能多交流、拓展人脈。這難能可貴的機會大家要更加善用資源～
+            華府學聯聽到各位的心聲，為各位準備 hybrid 的職涯講座活動了！職涯講座範圍包括工作簽證申請相關辦理事項，以及撰寫履歷、面試技巧分享。此外，也有針對各個領域例如商學院、理工學院、政法學院邀請業界工作學長姐的經驗談。講座也開放了 Q&A 問答時間讓同學們更直接地解決自己的困惑，以及在講座尾聲實體參與者更有 Networking Event 讓各位同學包括講者能多交流、拓展人脈。這難能可貴的機會大家要更加善用資源～
           </p>
           <p className={`mb-8 text-lg font-normal text-left text-gray-500 lg:text-xl px-10 sm:px-16 xl:pl-10 dark:text-gray-400 ${state.langMode ? "shown" : "hidden"}`}>
             FTSADC has heard your concerns and has prepared a hybrid career seminar for you all! The scope of the career seminar includes matters related to work visa applications, as well as tips on writing resumes and interview techniques. In addition, there are also experience-sharing sessions from working alumni from various fields, such as business schools, science and engineering schools, and schools of political and legal studies. The seminar also offers a Q&A session to directly address students' queries, and at the end of the seminar, there's a networking event for physical attendees to interact and expand their connections, including the speakers. Everyone should make the most of this valuable opportunity!
@@ -70,14 +73,14 @@ function FTSArecent({state}) {
           <p className={`mb-1 text-lg font-normal text-left text-gray-500 lg:text-md px-10 sm:px-16 xl:pl-10 dark:text-gray-400 ${state.langMode ? "shown" : "hidden"}`}>Actual Location: Van Munching Hall, UMD, College Park</p>
           <p className={`mb-1 text-lg font-normal text-left text-gray-500 lg:text-md px-10 sm:px-16 xl:pl-10 dark:text-gray-400 ${state.langMode ? "hidden" : "shown"}`}>線上地點: Zoom會議室</p>
           <p className={`mb-1 text-lg font-normal text-left text-gray-500 lg:text-md px-10 sm:px-16 xl:pl-10 dark:text-gray-400 ${state.langMode ? "shown" : "hidden"}`}>Online Location: Zoom</p>
-          <p className={`mb-1 text-lg font-normal text-left text-gray-500 lg:text-md px-10 sm:px-16 xl:pl-10 dark:text-gray-400 ${state.langMode ? "hidden" : "shown"}`}>
+          {/* <p className={`mb-1 text-lg font-normal text-left text-gray-500 lg:text-md px-10 sm:px-16 xl:pl-10 dark:text-gray-400 ${state.langMode ? "hidden" : "shown"}`}>
               報名方式: 
             <a href="https://forms.gle/mNcjQmXganCpzbzGA" target="_blank" rel="noopener noreferrer"> https://forms.gle/mNcjQmXganCpzbzGA</a>
           </p>
           <p className={`mb-1 text-lg font-normal text-left text-gray-500 lg:text-md px-10 sm:px-16 xl:pl-10 dark:text-gray-400 ${state.langMode ? "shown" : "hidden"}`}>
               Register: 
             <a href="https://forms.gle/mNcjQmXganCpzbzGA" target="_blank" rel="noopener noreferrer"> https://forms.gle/mNcjQmXganCpzbzGA</a>
-          </p>
+          </p> */}
           <p className={`mb-1 text-lg font-normal text-left text-gray-500 lg:text-md px-10 sm:px-16 xl:pl-10 dark:text-gray-400 ${state.langMode ? "hidden" : "shown"}`}>報名費用: 0元免費！</p>
           <p className={`mb-1 text-lg font-normal text-left text-gray-500 lg:text-md px-10 sm:px-16 xl:pl-10 dark:text-gray-400 ${state.langMode ? "shown" : "hidden"}`}>Cost: FREE!</p>
           <p className={`mb-1 text-lg font-normal text-left text-gray-500 lg:text-md px-10 sm:px-16 xl:pl-10 dark:text-gray-400 ${state.langMode ? "hidden" : "shown"}`}>發布時間: 10/2/2023 08:00 AM  美東時間</p>
@@ -85,6 +88,18 @@ function FTSArecent({state}) {
 
           <p className={`mb-1 text-lg font-normal text-left text-gray-500 lg:text-md px-10 sm:px-16 xl:pl-10 dark:text-gray-400 ${state.langMode ? "hidden" : "shown"}`}>主辦單位：大華府地區臺灣同學會聯合會</p>
           <p className={`mb-1 text-lg font-normal text-left text-gray-500 lg:text-md px-10 sm:px-16 xl:pl-10 dark:text-gray-400 ${state.langMode ? "shown" : "hidden"}`}>Host: The Federation of Taiwanese Student Association in Washington DC</p>
+          {/* <a href="https://github.com/" target="_blank">
+            <ReactiveButton idleText="Visit Github" />
+          </a> */}
+          <div className="text-center mt-8">
+            <a href="https://forms.gle/mNcjQmXganCpzbzGA" target="_blank" rel="noreferrer" className={`bg-primary hover:bg-primary-dark text-white text-lg font-medium py-2 px-6 rounded-full transition duration-300 ${state.langMode ? "hidden" : "shown"}`}>
+              立即報名
+            </a>
+
+            <a href="https://forms.gle/mNcjQmXganCpzbzGA" target="_blank" rel="noreferrer" className={`bg-primary hover:bg-primary-dark text-white text-lg font-medium py-2 px-6 rounded-full transition duration-300 ${state.langMode ? "shown" : "hidden"}`}>
+              Join Now
+            </a>
+          </div>
 
         </div>
       </div>

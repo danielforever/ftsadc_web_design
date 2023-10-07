@@ -40,6 +40,7 @@ function StateCardTSA() {
         {allstates.map((item) => (
           <Card key={item.id} item={item} />
         ))}
+        
       </div>
     </div>
   )

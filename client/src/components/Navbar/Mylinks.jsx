@@ -111,13 +111,13 @@ export const links = [
       {
         Head: "All Area",
         ch_Head:"各地區TSA",
-        link: "/TSA",
+        link: "/alltsa",
         sublink: [
-          { name: "DC", ch_name: "華府特區", link: "/DC" },
-          { name: "MD", ch_name: "馬里蘭", link: "/MD" },
-          { name: "VA", ch_name: "維吉尼亞", link: "/VA" },
-          { name: "NC", ch_name: "北卡羅來納", link: "/NC" },
-          { name: "SC", ch_name: "南卡羅來納", link: "/SC" },
+          // { name: "DC", ch_name: "華府特區", link: "/DC" },
+          // { name: "MD", ch_name: "馬里蘭", link: "/MD" },
+          // { name: "VA", ch_name: "維吉尼亞", link: "/VA" },
+          // { name: "NC", ch_name: "北卡羅來納", link: "/NC" },
+          // { name: "SC", ch_name: "南卡羅來納", link: "/SC" },
           
         ],
       },
